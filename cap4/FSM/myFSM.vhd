@@ -60,84 +60,85 @@ architecture dlx_cu_rtl of dlx_cu is
                                 "1111110011011", -- L_MEM itype
                                 "1111000011011"  --LMEM_ itype 
 				); 
-  signal IR_opcode : std_logic_vector(OP_CODE_SIZE -1 downto 0);  -- OpCode part of IR
-  signal IR_func : std_logic_vector(FUNC_SIZE downto 0);   -- Func part of IR when Rtype
   signal cw_s: std_logic_vector(CW_SIZE - 1 downto 0); -- full control word read from cw_mem
 
-        type TYPE_STATE is (
-		S_Reset, S_Fetch,
-		S_Decode, S_Execute  
+  type TYPE_STATE is (
+		S0, S1, S2  
 	);
-	signal CurrState : TYPE_STATE := S_Reset;
-	signal NextState: TYPE_STATE := S_Fetch;
+	signal CurrState : TYPE_STATE := S0;
+	signal NextState: TYPE_STATE := S1;
  
 begin  
-   	--cw <= cw_mem(conv_integer(IR_opcode));
-
-
+   	
 	--FSM
 
  	StateReg : process(Clk, Rst)		
 	begin
 		If Rst='0' then
-	            CurrState <= S_Reset;
+	      CurrState <= S0;
 		elsif (Clk ='1' and Clk'EVENT) then 
 		    CurrState <= NextState;
 		end if;
 	end process StateReg;
 
-	CombLogic : process(CurrState, OpCode)
+	DECODE : process(OPCODE, FUNC)
 	begin
-		--NEXT_STATE <= CURRENT_STATE;
-		CASE CurrState is
-			when S_reset =>
-				NEXT_STATE <= S_Fetch;
-		
-			when CW_READ => 	
-			    If OpCode = RTYPE then
-			        case FUNC_s is 
-                                     when RTYPE_ADD => cw_s <= cw_mem ( conv_integer (FUNC_s));
-                                     when RTYPE_SUB => cw_s <= cw_mem (conv_integer(FUNC_s));
-                                     when RTYPE_AND => cw_s <= cw_mem ( conv_integer(FUNC_s));
-                                     when RTYPE_OR => cw_s <= cw_mem (conv_integer(FUNC_s));
-                                     when others => cw_s <= cw_mem (conv_integer(NOP)); 
-                                end case;	
-			     elsif  
-			         when ITYPE_ADDI1 => cw_s <= cw_mem(conv_integer(OPCODE_s)+3); 
-                        	 when NOP => cw_s <= cw_mem(conv_integer(OPCODE_s)+3); 
-                        	 when ITYPE_SUBI1 => cw_s <= cw_mem(conv_integer(OPCODE_s)+3);
-                        	 when ITYPE_ANDI1 => cw_s <= cw_mem(conv_integer(OPCODE_s)+3);  
-                        	 when ITYPE_ORI1 => cw_s <= cw_mem(conv_integer(OPCODE_s)+3);
-                        	 when ITYPE_ADDI2 => cw_s <= cw_mem(conv_integer(OPCODE_s)+3);
-                        	 when ITYPE_SUBI2=> cw_s <= cw_mem(conv_integer(OPCODE_s)+3);
-                        	 when ITYPE_ANDI2 => cw_s <= cw_mem(conv_integer(OPCODE_s)+3);
-                        	 when ITYPE_ORI2=> cw_s <= cw_mem(conv_integer(OPCODE_s)+3); 
-                        	 when ITYPE_MOV => cw_s <= cw_mem(conv_integer(OPCODE_s)+3);
-                        	 when ITYPE_S_REG1 => cw_s <= cw_mem(conv_integer(OPCODE_s)+3);      
-                        	 when ITYPE_S_REG2 => cw_s <= cw_mem(conv_integer(OPCODE_s)+3);
-                        	 when ITYPE_S_MEM => cw_s <= cw_mem(conv_integer(OPCODE_s)+3);
-                         	 when ITYPE_L_MEM1 => cw_s <= cw_mem(conv_integer(OPCODE_s)+3);
-                         	 when ITYPE_L_MEM2 => cw_s <= cw_mem(conv_integer(OPCODE_s)+3);
-                        	 when OTHERS =>  cw_s <= cw_mem(conv_integer(NOP));	
-				
-			    end if;
-	   		end case;	
-	end process P_NEXT_STATE;
+		 	
+	If OpCode = RTYPE then                        
+		  case FUNC_s is 
+          when RTYPE_ADD => cw_s <= cw_mem (conv_integer(FUNC_s));
+          when RTYPE_SUB => cw_s <= cw_mem (conv_integer(FUNC_s));
+          when RTYPE_AND => cw_s <= cw_mem (conv_integer(FUNC_s));
+          when RTYPE_OR => cw_s <= cw_mem (conv_integer(FUNC_s));
+          when others => cw_s <= cw_mem (conv_integer(NOP)); 
+      end case;	
+	else                                      --instructions not RTYPE have their own OPCODE
+      CASE FUNC_s is  
+			    when ITYPE_ADDI1 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3); 
+          when NOP => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3); 
+          when ITYPE_SUBI1 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);
+          when ITYPE_ANDI1 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);  
+          when ITYPE_ORI1 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);
+          when ITYPE_ADDI2 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);
+          when ITYPE_SUBI2=> cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);
+          when ITYPE_ANDI2 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);
+          when ITYPE_ORI2=> cw_s <= cw_mem(conv_integer(OPCODE_s) + 3); 
+          when ITYPE_MOV => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);
+          when ITYPE_S_REG1 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);      
+          when ITYPE_S_REG2 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);
+          when ITYPE_S_MEM => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);
+          when ITYPE_L_MEM1 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);
+          when ITYPE_L_MEM2 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);
+  end if;  	
+	end process DECODE;
 	
 	
-	Ctrl_Signals: process(CURRENT_STATE)
+	Ctrl_Signals: process(CurrState)
 	begin
-		case CURRENT_STATE is	
-			when S_Reset => 
-			    	
+
+    NextState <= CurrState;
+		case CurrState is	
+			when S0 => 
+          EN1 <= cw_s(CW_SIZE);
+          RF1 <= cw_s(CW_SIZE - 1);
+          RF2 <= cw_s(CW_SIZE - 2);
+          NextState <= S1;
 			when S1 => 
-			    
-			when S2 => 
-
-			when S3 =>
-
+          EN2 <= cw_s(CW_SIZE - 3);
+          S1 <= cw_s(CW_SIZE - 4);
+          S2 <= cw_s(CW_SIZE - 5);
+          ALU1 <= cw_s(CW_SIZE - 6);
+          ALU2 <= cw_s(CW_SIZE - 7);
+          NextState <= S2
+			when S2 =>
+          EN3 <= cw_s(CW_SIZE - 8);
+          RM <= cw_s(CW_SIZE - 9);
+          WM <= cw_s(CW_SIZE - 10);
+          S3 <= cw_s(CW_SIZE - 11);
+          WF1 <= cw_s(CW_SIZE - 12);
+          NextState <= S0
 			when others =>  
-		
+          cw_s <= (OTHERS => '0');
 		end case; 	
 	end process Ctrl_Signals;
 
