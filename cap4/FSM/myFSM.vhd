@@ -6,7 +6,7 @@ use work.myTypes.all;
 --use ieee.numeric_std.all;
 --use work.all;
 
-entity dlx_cu is
+entity dlx_cu_fsm is
   generic (
     MICROCODE_MEM_SIZE :     integer := 10;  -- Microcode Memory Size
     FUNC_SIZE          :     integer := 11;  -- Func Field Size for R-Type Ops
@@ -36,9 +36,9 @@ entity dlx_cu is
     S3     : out std_logic;               -- input selection of the multiplexer
   );   
 
-end dlx_cu;
+end dlx_cu_fsm;
 
-architecture dlx_cu_rtl of dlx_cu is
+architecture Behavioral of dlx_cu_fsm is
   type mem_array is array (integer range 0 to MICROCODE_MEM_SIZE - 1) of std_logic_vector(CW_SIZE - 1 downto 0);
   signal cw_mem : mem_array := ("1111010010001"	 --ADD RTYPE
                                 "1111010110001", -- sub rtype
@@ -74,8 +74,9 @@ begin
 
  	StateReg : process(Clk, Rst)		
 	begin
-		If Rst='0' then
+		If Rst = '0' then
 	      CurrState <= S0;
+        cw_s <= (OTHERS => '0');
 		elsif (Clk ='1' and Clk'EVENT) then 
 		    CurrState <= NextState;
 		end if;
@@ -83,33 +84,33 @@ begin
 
 	DECODE : process(OPCODE, FUNC)
 	begin
-		 	
-	If OpCode = RTYPE then                        
+	  If OPCODE = RTYPE then                        
 		  case FUNC_s is 
-          when RTYPE_ADD => cw_s <= cw_mem (conv_integer(FUNC_s));
-          when RTYPE_SUB => cw_s <= cw_mem (conv_integer(FUNC_s));
-          when RTYPE_AND => cw_s <= cw_mem (conv_integer(FUNC_s));
-          when RTYPE_OR => cw_s <= cw_mem (conv_integer(FUNC_s));
-          when others => cw_s <= cw_mem (conv_integer(NOP)); 
+        when RTYPE_ADD => cw_s <= cw_mem (conv_integer(FUNC_s));
+        when RTYPE_SUB => cw_s <= cw_mem (conv_integer(FUNC_s));
+        when RTYPE_AND => cw_s <= cw_mem (conv_integer(FUNC_s));
+        when RTYPE_OR => cw_s <= cw_mem (conv_integer(FUNC_s));
+        when others => cw_s <= cw_mem (conv_integer(NOP)); 
       end case;	
-	else                                      --instructions not RTYPE have their own OPCODE
-      CASE FUNC_s is  
-			    when ITYPE_ADDI1 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3); 
-          when NOP => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3); 
-          when ITYPE_SUBI1 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);
-          when ITYPE_ANDI1 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);  
-          when ITYPE_ORI1 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);
-          when ITYPE_ADDI2 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);
-          when ITYPE_SUBI2=> cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);
-          when ITYPE_ANDI2 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);
-          when ITYPE_ORI2=> cw_s <= cw_mem(conv_integer(OPCODE_s) + 3); 
-          when ITYPE_MOV => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);
-          when ITYPE_S_REG1 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);      
-          when ITYPE_S_REG2 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);
-          when ITYPE_S_MEM => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);
-          when ITYPE_L_MEM1 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);
-          when ITYPE_L_MEM2 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);
-  end if;  	
+	  else                                                                     --each instruction not RTYPE have their own OPCODE and don't have the FUNC bits 
+      CASE OPCODE IS
+			  when ITYPE_ADDI1 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3); 
+        when NOP => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3); 
+        when ITYPE_SUBI1 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);
+        when ITYPE_ANDI1 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);  
+        when ITYPE_ORI1 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);
+        when ITYPE_ADDI2 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);
+        when ITYPE_SUBI2=> cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);
+        when ITYPE_ANDI2 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);
+        when ITYPE_ORI2=> cw_s <= cw_mem(conv_integer(OPCODE_s) + 3); 
+        when ITYPE_MOV => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);
+        when ITYPE_S_REG1 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);      
+        when ITYPE_S_REG2 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);
+        when ITYPE_S_MEM => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);
+        when ITYPE_L_MEM1 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);
+        when ITYPE_L_MEM2 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);
+      end CASE;
+    end if;  	
 	end process DECODE;
 	
 	
@@ -138,10 +139,8 @@ begin
           WF1 <= cw_s(CW_SIZE - 12);
           NextState <= S0
 			when others =>  
-          cw_s <= (OTHERS => '0');
+         NextState <= S0; 
 		end case; 	
 	end process Ctrl_Signals;
 
-
-
-end dlx_cu_rtl;
+end Behavioral;
