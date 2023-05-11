@@ -74,8 +74,9 @@ begin
 
  	StateReg : process(Clk, Rst)		
 	begin
-		If Rst='0' then
+		If Rst = '0' then
 	      CurrState <= S0;
+        cw_s <= (OTHERS => '0');
 		elsif (Clk ='1' and Clk'EVENT) then 
 		    CurrState <= NextState;
 		end if;
@@ -83,8 +84,7 @@ begin
 
 	DECODE : process(OPCODE, FUNC)
 	begin
-		 	
-	If OpCode = RTYPE then                        
+	  If OpCode = RTYPE then                        
 		  case FUNC_s is 
           when RTYPE_ADD => cw_s <= cw_mem (conv_integer(FUNC_s));
           when RTYPE_SUB => cw_s <= cw_mem (conv_integer(FUNC_s));
@@ -92,7 +92,7 @@ begin
           when RTYPE_OR => cw_s <= cw_mem (conv_integer(FUNC_s));
           when others => cw_s <= cw_mem (conv_integer(NOP)); 
       end case;	
-	else                                      --instructions not RTYPE have their own OPCODE
+	  else                                      --each instruction not RTYPE have their own OPCODE
       CASE FUNC_s is  
 			    when ITYPE_ADDI1 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3); 
           when NOP => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3); 
@@ -109,7 +109,7 @@ begin
           when ITYPE_S_MEM => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);
           when ITYPE_L_MEM1 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);
           when ITYPE_L_MEM2 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);
-  end if;  	
+    end if;  	
 	end process DECODE;
 	
 	
@@ -138,10 +138,8 @@ begin
           WF1 <= cw_s(CW_SIZE - 12);
           NextState <= S0
 			when others =>  
-          cw_s <= (OTHERS => '0');
+         NextState <= S0; 
 		end case; 	
 	end process Ctrl_Signals;
-
-
 
 end dlx_cu_rtl;
