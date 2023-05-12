@@ -145,7 +145,7 @@ end process;
 end architecture;
 
 configuration CFG_cu1 of cu1 is
-    for Behaviora
+    for Behavioral
     end for;
 end configuration;
 
