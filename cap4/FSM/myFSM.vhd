@@ -86,6 +86,9 @@ begin
 
 	DECODE : process(OPCODE, FUNC)
 	begin
+    opcode_s <= OPCODE;
+    func_s <= FUNC;
+    
 	  If OPCODE = RTYPE then                        
 		  case FUNC_s is 
         when RTYPE_ADD => cw_s <= cw_mem (conv_integer(FUNC_s));
