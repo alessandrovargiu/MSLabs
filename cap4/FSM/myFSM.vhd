@@ -33,14 +33,14 @@ entity dlx_cu_fsm is
     EN3    : out std_logic;               -- enables the memory and the pipeline registers
     RM     : out std_logic;               -- enables the read-out of the memory
     WM     : out std_logic;               -- enables the write-in of the memory
-    S3     : out std_logic;               -- input selection of the multiplexer
+    S3     : out std_logic               -- input selection of the multiplexer
   );   
 
 end dlx_cu_fsm;
 
 architecture Behavioral of dlx_cu_fsm is
   type mem_array is array (integer range 0 to MICROCODE_MEM_SIZE - 1) of std_logic_vector(CW_SIZE - 1 downto 0);
-  signal cw_mem : mem_array := ("1111010010001"	 --ADD RTYPE
+  signal cw_mem : mem_array := ("1111010010001",	 --ADD RTYPE
                                 "1111010110001", -- sub rtype
                                 "1111011010001", -- and rtype
                                 "1111011110001", -- or rtype
@@ -59,8 +59,10 @@ architecture Behavioral of dlx_cu_fsm is
                                 "1111000010100", -- S_MEM itype
                                 "1111110011011", -- L_MEM itype
                                 "1111000011011"  --LMEM_ itype 
-				); 
+				                      ); 
   signal cw_s: std_logic_vector(CW_SIZE - 1 downto 0); -- full control word read from cw_mem
+  signal opcode_s : std_logic_vector (6-1 downto 0);
+  signal func_s : std_logic_vector(11-1 downto 0);
 
   type TYPE_STATE is (
 		S0, S1, S2  
@@ -116,27 +118,26 @@ begin
 	
 	Ctrl_Signals: process(CurrState)
 	begin
-
     NextState <= CurrState;
 		case CurrState is	
 			when S0 => 
-          EN1 <= cw_s(CW_SIZE);
-          RF1 <= cw_s(CW_SIZE - 1);
-          RF2 <= cw_s(CW_SIZE - 2);
+          EN1 <= cw_s(CW_SIZE - 1);
+          RF1 <= cw_s(CW_SIZE - 2);
+          RF2 <= cw_s(CW_SIZE - 3);
           NextState <= S1;
 			when S1 => 
-          EN2 <= cw_s(CW_SIZE - 3);
-          S1 <= cw_s(CW_SIZE - 4);
-          S2 <= cw_s(CW_SIZE - 5);
-          ALU1 <= cw_s(CW_SIZE - 6);
-          ALU2 <= cw_s(CW_SIZE - 7);
+          EN2 <= cw_s(CW_SIZE - 4);
+          S1 <= cw_s(CW_SIZE - 5);
+          S2 <= cw_s(CW_SIZE - 6);
+          ALU1 <= cw_s(CW_SIZE - 7);
+          ALU2 <= cw_s(CW_SIZE - 8);
           NextState <= S2
 			when S2 =>
-          EN3 <= cw_s(CW_SIZE - 8);
-          RM <= cw_s(CW_SIZE - 9);
-          WM <= cw_s(CW_SIZE - 10);
-          S3 <= cw_s(CW_SIZE - 11);
-          WF1 <= cw_s(CW_SIZE - 12);
+          EN3 <= cw_s(CW_SIZE - 9);
+          RM <= cw_s(CW_SIZE - 10);
+          WM <= cw_s(CW_SIZE - 11);
+          S3 <= cw_s(CW_SIZE - 12);
+          WF1 <= cw_s(CW_SIZE - 13);
           NextState <= S0
 			when others =>  
          NextState <= S0; 
