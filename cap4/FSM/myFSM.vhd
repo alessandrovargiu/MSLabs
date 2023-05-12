@@ -65,10 +65,10 @@ architecture Behavioral of dlx_cu_fsm is
   signal func_s : std_logic_vector(11-1 downto 0);
 
   type TYPE_STATE is (
-		S0, S1, S2  
+		S_0, S_1, S_2  
 	);
-	signal CurrState : TYPE_STATE := S0;
-	signal NextState: TYPE_STATE := S1;
+	signal CurrState : TYPE_STATE := S_0;
+	signal NextState: TYPE_STATE := S_1;
  
 begin  
    	
@@ -88,7 +88,7 @@ begin
 	begin
     opcode_s <= OPCODE;
     func_s <= FUNC;
-    
+
 	  If OPCODE = RTYPE then                        
 		  case FUNC_s is 
         when RTYPE_ADD => cw_s <= cw_mem (conv_integer(FUNC_s));
@@ -123,27 +123,27 @@ begin
 	begin
     NextState <= CurrState;
 		case CurrState is	
-			when S0 => 
+			when S_0 => 
           EN1 <= cw_s(CW_SIZE - 1);
           RF1 <= cw_s(CW_SIZE - 2);
           RF2 <= cw_s(CW_SIZE - 3);
-          NextState <= S1;
-			when S1 => 
+          NextState <= S_1;
+			when S_1 => 
           EN2 <= cw_s(CW_SIZE - 4);
           S1 <= cw_s(CW_SIZE - 5);
           S2 <= cw_s(CW_SIZE - 6);
           ALU1 <= cw_s(CW_SIZE - 7);
           ALU2 <= cw_s(CW_SIZE - 8);
-          NextState <= S2
-			when S2 =>
+          NextState <= S_2
+			when S_2 =>
           EN3 <= cw_s(CW_SIZE - 9);
           RM <= cw_s(CW_SIZE - 10);
           WM <= cw_s(CW_SIZE - 11);
           S3 <= cw_s(CW_SIZE - 12);
           WF1 <= cw_s(CW_SIZE - 13);
-          NextState <= S0
+          NextState <= S_0
 			when others =>  
-         NextState <= S0; 
+         NextState <= S_0; 
 		end case; 	
 	end process Ctrl_Signals;
 
