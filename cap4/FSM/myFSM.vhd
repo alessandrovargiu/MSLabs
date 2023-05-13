@@ -65,7 +65,7 @@ architecture Behavioral of dlx_cu_fsm is
   signal func_s : std_logic_vector(11-1 downto 0);
 
   type TYPE_STATE is (
-		S_0, S_1, S_2  
+		S_0, S_1, S_2, S_Reset  
 	);
 	signal CurrState : TYPE_STATE;
 	signal NextState: TYPE_STATE;
@@ -80,7 +80,7 @@ begin
  	StateReg : process(Clk, Rst)		
 	begin
 		If Rst = '0' then
-	      CurrState <= S_0;
+	      CurrState <= S_Reset;
         cw_s <= cw_mem(conv_integer(NOP));
 		elsif (Clk ='1' and Clk'EVENT) then 
 		    CurrState <= NextState;
@@ -123,31 +123,43 @@ begin
 	Ctrl_Signals: process(CurrState)
 	begin
     --NextState <= CurrState;
-    If(Rst = '1') then
 		    case CurrState is	
+            when S_Reset =>
+                EN1 <= '0';
+                RF1 <= '0';
+                RF2 <= '0';
+                WF1 <= '0';
+                S1 <= '0';
+                S2 <= '0';
+                ALU1 <= '0';
+                ALU2 <= '0';
+                EN3 <= '0';
+                RM <= '0';
+                WM <= '0';
+                S3 <= '0';
+                NextState <= S_0;
 			      when S_0 =>
                 EN1 <= cw_s(CW_SIZE - 1);
                 RF1 <= cw_s(CW_SIZE - 2);
                 RF2 <= cw_s(CW_SIZE - 3);
+                WF1 <= cw_s(CW_SIZE - 4);
                 NextState <= S_1;
 			      when S_1 => 
-                EN2 <= cw_s(CW_SIZE - 4);
-                S1 <= cw_s(CW_SIZE - 5);
-                S2 <= cw_s(CW_SIZE - 6);
-                ALU1 <= cw_s(CW_SIZE - 7);
-                ALU2 <= cw_s(CW_SIZE - 8);
+                EN2 <= cw_s(CW_SIZE - 5);
+                S1 <= cw_s(CW_SIZE - 6);
+                S2 <= cw_s(CW_SIZE - 7);
+                ALU1 <= cw_s(CW_SIZE - 8);
+                ALU2 <= cw_s(CW_SIZE - 9);
                 NextState <= S_2;
 			      when S_2 =>
-                EN3 <= cw_s(CW_SIZE - 9);
-                RM <= cw_s(CW_SIZE - 10);
-                WM <= cw_s(CW_SIZE - 11);
-                S3 <= cw_s(CW_SIZE - 12);
-                WF1 <= cw_s(CW_SIZE - 13);
+                EN3 <= cw_s(CW_SIZE - 10);
+                RM <= cw_s(CW_SIZE - 11);
+                WM <= cw_s(CW_SIZE - 12);
+                S3 <= cw_s(CW_SIZE - 13);
                 NextState <= S_0;
 			      when others =>  
-                NextState <= S_0; 
-		    end case;
-    end if; 	
+                NextState <= S_Reset; 
+		    end case;	
 	end process Ctrl_Signals;
 
 end Behavioral;
