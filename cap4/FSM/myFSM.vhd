@@ -11,7 +11,6 @@ entity dlx_cu_fsm is
     MICROCODE_MEM_SIZE :     integer := 10;  -- Microcode Memory Size
     FUNC_SIZE          :     integer := 11;  -- Func Field Size for R-Type Ops
     OP_CODE_SIZE       :     integer := 6;  -- Op Code Size
-    -- ALU_OPC_SIZE       :     integer := 6;  -- ALU Op Code Word Size
     IR_SIZE            :     integer := 32;  -- Instruction Register Size    
     CW_SIZE            :     integer := 15);  -- Control Word Size
   port (
@@ -33,14 +32,14 @@ entity dlx_cu_fsm is
     EN3    : out std_logic;               -- enables the memory and the pipeline registers
     RM     : out std_logic;               -- enables the read-out of the memory
     WM     : out std_logic;               -- enables the write-in of the memory
-    S3     : out std_logic;               -- input selection of the multiplexer
+    S3     : out std_logic               -- input selection of the multiplexer
   );   
 
 end dlx_cu_fsm;
 
 architecture Behavioral of dlx_cu_fsm is
   type mem_array is array (integer range 0 to MICROCODE_MEM_SIZE - 1) of std_logic_vector(CW_SIZE - 1 downto 0);
-  signal cw_mem : mem_array := ("1111010010001"	 --ADD RTYPE
+  signal cw_mem : mem_array := ("1111010010001",	 --ADD RTYPE
                                 "1111010110001", -- sub rtype
                                 "1111011010001", -- and rtype
                                 "1111011110001", -- or rtype
@@ -59,14 +58,16 @@ architecture Behavioral of dlx_cu_fsm is
                                 "1111000010100", -- S_MEM itype
                                 "1111110011011", -- L_MEM itype
                                 "1111000011011"  --LMEM_ itype 
-				); 
+				                      ); 
   signal cw_s: std_logic_vector(CW_SIZE - 1 downto 0); -- full control word read from cw_mem
+  signal opcode_s : std_logic_vector (6-1 downto 0);
+  signal func_s : std_logic_vector(11-1 downto 0);
 
   type TYPE_STATE is (
-		S0, S1, S2  
+		S_0, S_1, S_2  
 	);
-	signal CurrState : TYPE_STATE := S0;
-	signal NextState: TYPE_STATE := S1;
+	signal CurrState : TYPE_STATE;
+	signal NextState: TYPE_STATE;
  
 begin  
    	
@@ -75,7 +76,7 @@ begin
  	StateReg : process(Clk, Rst)		
 	begin
 		If Rst = '0' then
-	      CurrState <= S0;
+	      CurrState <= S_0;
         cw_s <= (OTHERS => '0');
 		elsif (Clk ='1' and Clk'EVENT) then 
 		    CurrState <= NextState;
@@ -84,17 +85,19 @@ begin
 
 	DECODE : process(OPCODE, FUNC)
 	begin
-	  If OPCODE = RTYPE then                        
-		  case FUNC_s is 
-        when RTYPE_ADD => cw_s <= cw_mem (conv_integer(FUNC_s));
-        when RTYPE_SUB => cw_s <= cw_mem (conv_integer(FUNC_s));
-        when RTYPE_AND => cw_s <= cw_mem (conv_integer(FUNC_s));
-        when RTYPE_OR => cw_s <= cw_mem (conv_integer(FUNC_s));
-        when others => cw_s <= cw_mem (conv_integer(NOP)); 
-      end case;	
-	  else                                                                     --each instruction not RTYPE have their own OPCODE and don't have the FUNC bits 
-      CASE OPCODE IS
-			  when ITYPE_ADDI1 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3); 
+    opcode_s <= OPCODE;
+    func_s <= FUNC;
+
+	  CASE opcode_s IS
+        when RTYPE =>
+            case FUNC_s is 
+                when RTYPE_ADD => cw_s <= cw_mem (conv_integer(FUNC_s));
+                when RTYPE_SUB => cw_s <= cw_mem (conv_integer(FUNC_s));
+                when RTYPE_AND => cw_s <= cw_mem (conv_integer(FUNC_s));
+                when RTYPE_OR => cw_s <= cw_mem (conv_integer(FUNC_s));
+                when others => cw_s <= cw_mem (conv_integer(NOP)); 
+            end case;
+			  when ITYPE_ADDI1 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);                 --ITYPE operations have their own OPCODE and don't use FUNC bits
         when NOP => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3); 
         when ITYPE_SUBI1 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);
         when ITYPE_ANDI1 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);  
@@ -109,37 +112,36 @@ begin
         when ITYPE_S_MEM => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);
         when ITYPE_L_MEM1 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);
         when ITYPE_L_MEM2 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);
-      end CASE;
-    end if;  	
+        when OTHERS => cw_s <= (OTHERS => '0');
+    end CASE; 	
 	end process DECODE;
 	
 	
-	Ctrl_Signals: process(CurrState)
+	Ctrl_Signals: process(CurrState, cw_s)
 	begin
-
-    NextState <= CurrState;
+    --NextState <= CurrState;
 		case CurrState is	
-			when S0 => 
-          EN1 <= cw_s(CW_SIZE);
-          RF1 <= cw_s(CW_SIZE - 1);
-          RF2 <= cw_s(CW_SIZE - 2);
-          NextState <= S1;
-			when S1 => 
-          EN2 <= cw_s(CW_SIZE - 3);
-          S1 <= cw_s(CW_SIZE - 4);
-          S2 <= cw_s(CW_SIZE - 5);
-          ALU1 <= cw_s(CW_SIZE - 6);
-          ALU2 <= cw_s(CW_SIZE - 7);
-          NextState <= S2
-			when S2 =>
-          EN3 <= cw_s(CW_SIZE - 8);
-          RM <= cw_s(CW_SIZE - 9);
-          WM <= cw_s(CW_SIZE - 10);
-          S3 <= cw_s(CW_SIZE - 11);
-          WF1 <= cw_s(CW_SIZE - 12);
-          NextState <= S0
+			when S_0 =>
+          EN1 <= cw_s(CW_SIZE - 1);
+          RF1 <= cw_s(CW_SIZE - 2);
+          RF2 <= cw_s(CW_SIZE - 3);
+          NextState <= S_1;
+			when S_1 => 
+          EN2 <= cw_s(CW_SIZE - 4);
+          S1 <= cw_s(CW_SIZE - 5);
+          S2 <= cw_s(CW_SIZE - 6);
+          ALU1 <= cw_s(CW_SIZE - 7);
+          ALU2 <= cw_s(CW_SIZE - 8);
+          NextState <= S_2;
+			when S_2 =>
+          EN3 <= cw_s(CW_SIZE - 9);
+          RM <= cw_s(CW_SIZE - 10);
+          WM <= cw_s(CW_SIZE - 11);
+          S3 <= cw_s(CW_SIZE - 12);
+          WF1 <= cw_s(CW_SIZE - 13);
+          NextState <= S_0;
 			when others =>  
-         NextState <= S0; 
+         NextState <= S_0; 
 		end case; 	
 	end process Ctrl_Signals;
 
