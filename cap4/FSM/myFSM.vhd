@@ -18,6 +18,7 @@ entity dlx_cu_fsm is
     Rst                : in  std_logic;  -- Reset:Active-Low
     OPCODE : in std_logic_vector(OP_CODE_SIZE-1 downto 0);
     FUNC   : in std_logic_vector(FUNC_SIZE-1 downto 0);
+    -- FIRST PIPE STAGE OUTPUTS
     EN1	   : out std_logic;
     RF1    : out std_logic;               -- enables the read port 1 of the register file
     RF2    : out std_logic;               -- enables the read port 2 of the register file
@@ -73,21 +74,22 @@ begin
    	
 	--FSM
 
+  opcode_s <= OPCODE;
+  func_s <= FUNC;
+
  	StateReg : process(Clk, Rst)		
 	begin
 		If Rst = '0' then
 	      CurrState <= S_0;
-        cw_s <= (OTHERS => '0');
+        cw_s <= cw_mem(conv_integer(NOP));
 		elsif (Clk ='1' and Clk'EVENT) then 
 		    CurrState <= NextState;
 		end if;
 	end process StateReg;
 
-	DECODE : process(OPCODE, FUNC)
+	DECODE : process(opcode_s, func_s)        --when OPCODE is received by CU, cw_s updated with correct current instruction
 	begin
-    opcode_s <= OPCODE;
-    func_s <= FUNC;
-
+    
 	  CASE opcode_s IS
         when RTYPE =>
             case FUNC_s is 
@@ -97,7 +99,8 @@ begin
                 when RTYPE_OR => cw_s <= cw_mem (conv_integer(FUNC_s));
                 when others => cw_s <= cw_mem (conv_integer(NOP)); 
             end case;
-			  when ITYPE_ADDI1 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);                 --ITYPE operations have their own OPCODE and don't use FUNC bits
+        --ITYPE operations have their own OPCODE and don't use FUNC bits
+			  when ITYPE_ADDI1 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);  
         when NOP => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3); 
         when ITYPE_SUBI1 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);
         when ITYPE_ANDI1 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);  
@@ -112,37 +115,39 @@ begin
         when ITYPE_S_MEM => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);
         when ITYPE_L_MEM1 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);
         when ITYPE_L_MEM2 => cw_s <= cw_mem(conv_integer(OPCODE_s) + 3);
-        when OTHERS => cw_s <= (OTHERS => '0');
+        when OTHERS => cw_s <= cw_mem(conv_integer(NOP));
     end CASE; 	
 	end process DECODE;
 	
 	
-	Ctrl_Signals: process(CurrState, cw_s)
+	Ctrl_Signals: process(CurrState)
 	begin
     --NextState <= CurrState;
-		case CurrState is	
-			when S_0 =>
-          EN1 <= cw_s(CW_SIZE - 1);
-          RF1 <= cw_s(CW_SIZE - 2);
-          RF2 <= cw_s(CW_SIZE - 3);
-          NextState <= S_1;
-			when S_1 => 
-          EN2 <= cw_s(CW_SIZE - 4);
-          S1 <= cw_s(CW_SIZE - 5);
-          S2 <= cw_s(CW_SIZE - 6);
-          ALU1 <= cw_s(CW_SIZE - 7);
-          ALU2 <= cw_s(CW_SIZE - 8);
-          NextState <= S_2;
-			when S_2 =>
-          EN3 <= cw_s(CW_SIZE - 9);
-          RM <= cw_s(CW_SIZE - 10);
-          WM <= cw_s(CW_SIZE - 11);
-          S3 <= cw_s(CW_SIZE - 12);
-          WF1 <= cw_s(CW_SIZE - 13);
-          NextState <= S_0;
-			when others =>  
-         NextState <= S_0; 
-		end case; 	
+    If(Rst = '1') then
+		    case CurrState is	
+			      when S_0 =>
+                EN1 <= cw_s(CW_SIZE - 1);
+                RF1 <= cw_s(CW_SIZE - 2);
+                RF2 <= cw_s(CW_SIZE - 3);
+                NextState <= S_1;
+			      when S_1 => 
+                EN2 <= cw_s(CW_SIZE - 4);
+                S1 <= cw_s(CW_SIZE - 5);
+                S2 <= cw_s(CW_SIZE - 6);
+                ALU1 <= cw_s(CW_SIZE - 7);
+                ALU2 <= cw_s(CW_SIZE - 8);
+                NextState <= S_2;
+			      when S_2 =>
+                EN3 <= cw_s(CW_SIZE - 9);
+                RM <= cw_s(CW_SIZE - 10);
+                WM <= cw_s(CW_SIZE - 11);
+                S3 <= cw_s(CW_SIZE - 12);
+                WF1 <= cw_s(CW_SIZE - 13);
+                NextState <= S_0;
+			      when others =>  
+                NextState <= S_0; 
+		    end case;
+    end if; 	
 	end process Ctrl_Signals;
 
 end Behavioral;
