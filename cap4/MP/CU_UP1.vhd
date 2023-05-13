@@ -17,7 +17,6 @@ entity CU_UP1 is
               EN1    : out std_logic;               -- enables the register file and the pipeline registers
               RF1    : out std_logic;               -- enables the read port 1 of the register file
               RF2    : out std_logic;               -- enables the read port 2 of the register file
-              WF1    : out std_logic;               -- enables the write port of the register file
               -- SECOND PIPE STAGE OUTPUTS
               EN2    : out std_logic;               -- enables the pipe registers
               S1     : out std_logic;               -- input selection of the first multiplexer
@@ -29,6 +28,7 @@ entity CU_UP1 is
               RM     : out std_logic;               -- enables the read-out of the memory
               WM     : out std_logic;               -- enables the write-in of the memory
               S3     : out std_logic;               -- input selection of the multiplexer
+              WF1    : out std_logic;               -- enables the write port of the register file
               -- INPUTS
               OPCODE : in  std_logic_vector(OP_CODE_SIZE - 1 downto 0);
               FUNC   : in  std_logic_vector(FUNC_SIZE - 1 downto 0);              
@@ -38,26 +38,39 @@ end CU_UP1;
 
 architecture behavioral of CU1 is
 type mem_array is array (integer range 0 to MICROCODE_MEM_SIZE - 1) of std_logic_vector(CW_SIZE - 1 downto 0);
-  signal cw_mem : mem_array := ("1110000000000", --ADD RTYPE control signal related to first stage
-								"0000100100000",
-								"0000000000101",
-								"1111101011000", -- sub rtype
-								"1111101101000", -- and rtype
-								"1111101111000", -- or rtype
-								"1011111001000", -- addi1 itype
-								"0000000000000", -- nop
-								"1011111011000", -- subi1 itype
-								"1011111101000", -- andi1 itype
-								"1011111111000", -- ori1 itype
-								"1101100001000", -- addi2 itype
-								"1101100011000", -- subi2 itype
-								"1101100101000", -- andi2 itype
-								"1101100111000", -- ori2 itype
-								"1101100001000", -- MOV itype , non sicuro sia giusto
-								"1011111000000", -- S_REG1 itype
-								"1101100000000", -- S_REG2 itype
-								"1110100001010", -- S_MEM itype
-								"1111111001101", -- L_MEM itype
-								"1111100001101"  --LMEM_ itype
+  signal cw_mem : mem_array := ("1110000000000", --ADDI1 (usingINP1) cc1
+								"0000100100000", --cc2
+								"0000000000101", --cc3
+								"1110000000000", --SUBI1 (usingINP1) cc1
+								"0000101100000", --cc2
+								"0000000000101", --cc3
+								"1110000000000", --ANDI1 (usingINP1) cc1
+								"0000110100000", --cc2
+								"0000000000101", --cc3
+								"1110000000000", --ORI1 (usingINP1) cc1
+								"0000111100000", --cc2
+								"0000000000101", --cc3
+								"1110000000000", --ADDI2 (usingINP2) cc1
+								"0001000100000", --cc2
+								"0000000000101", --cc3
+								"1110000000000", --SUBI2 (usingINP2) cc1
+								"0001001100000", --cc2
+								"0000000000101", --cc3
+								"1110000000000", --ANDI2 (usingINP2) cc1
+								"0001010100000", --cc2
+								"0000000000101", --cc3
+								"1110000000000", --ORI2 (usingINP2) cc1
+								"0001011100000", --cc2
+								"0000000000101", --cc3
+								"1110000000000", --MOVI cc1 (l'ho interpretata come una subI che sottrae il valore immediato(INP1)0)
+								"0000101100000", --cc2
+								"0000000000101", --cc3
+								"1110000000000", --SAVI1 cc1 
+								"0000100100000", --cc2
+								"0000000000101", --cc3
+								"1110000000000", --SAVI2 cc1 
+								"0001000100000", --cc2
+								"0000000000101", --cc3
+
 								);-- to be completed (enlarged and filled)
 
