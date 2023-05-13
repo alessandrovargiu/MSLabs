@@ -74,12 +74,12 @@ begin
                );
 
         Clock <= not Clock after 1 ns;
-	Reset <= '0', '1' after 0.5 ns;                         --async reset
+	Reset <= '0', '1' after 1.5 ns;                         --async reset
 
         CONTROL: process
         begin
 
-        wait for 1 ns;          
+        wait for 2 ns;          
         
         -- ADD RS1,RS2,RD -> Rtype
         cu_opcode_i <= RTYPE;
