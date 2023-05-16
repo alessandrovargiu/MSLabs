@@ -81,7 +81,7 @@ begin
 	begin
 		If Rst = '0' then
 	      CurrState <= S_Reset;
-        cw_s <= cw_mem(conv_integer(NOP));
+        --cw_s <= cw_mem(conv_integer(NOP));
 		elsif (Clk ='1' and Clk'EVENT) then 
 		    CurrState <= NextState;
 		end if;
