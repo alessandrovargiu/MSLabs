@@ -56,7 +56,6 @@ begin
                  EN1    => EN1_i,
                  RF1    => RF1_i,
                  RF2    => RF2_i,
-                 WF1    => WF1_i,
                  EN2    => EN2_i,
                  S1     => S1_i,
                  S2     => S2_i,
@@ -66,6 +65,7 @@ begin
                  RM     => RM_i,
                  WM     => WM_i,
                  S3     => S3_i,
+                 WF1    => WF1_i,
                  -- INPUTS
                  OPCODE => cu_opcode_i,
                  FUNC   => cu_func_i,            
