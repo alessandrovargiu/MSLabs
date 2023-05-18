@@ -97,22 +97,15 @@ CW_PIPE: process (Clk, Rst)
       cw1_s <= (others => '0');
       cw2_s <= (others => '0');
       cw3_s <= (others => '0');
-      --aluOpcode1 <= NOP;
-      --aluOpcode2 <= NOP;
-      --aluOpcode3 <= NOP;
+      
     elsif Clk'event and Clk = '1' then  -- rising clock edge
       cw1_s <= cw_s;
       cw2_s <= cw1_s(CW_SIZE - 1 - 3 downto 0);
       cw3_s <= cw2_s(CW_SIZE - 1 -3 - 5 downto 0);
-     -- cw4 <= cw3(CW_SIZE - 1 - 9 downto 0);
-     -- cw5 <= cw4(CW_SIZE -1 - 13 downto 0);
-
-      --aluOpcode1 <= aluOpcode_i;
-      --aluOpcode2 <= aluOpcode1;
-      --aluOpcode3 <= aluOpcode2;
+     
     end if;
   end process CW_PIPE;
---ALU_OPCODE <= aluOpcode3;
+-- works on OPCODE and FUNC to take the correct control word.
 process (OPCODE_s , FUNC_s)
 begin
 	case OPCODE_s is	
