@@ -63,8 +63,8 @@ architecture behavioral of CU_UP1 is
 begin
 
 	EN1 	<= cw(CW_SIZE-3);
-	RF1 	<= cw(CW_SIZE-2);
-	RF2 	<= cw(CW_SIZE-1);
+	RF1 	<= cw(CW_SIZE-1);
+	RF2 	<= cw(CW_SIZE-2);
 
 	EN2 	<= cw(CW_SIZE-8);
 	S1  	<= cw(CW_SIZE-4);
