@@ -1,18 +1,18 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
-use ieee.std_logic_arith.all;
+use ieee.numeric_std.all;
+--use ieee.std_logic_arith.all;
 use work.myTypes.all;
---use ieee.numeric_std.all;
 --use work.all;
 
 entity dlx_cu_fsm is
   generic (
-    MICROCODE_MEM_SIZE :     integer := 10;  -- Microcode Memory Size
+    MICROCODE_MEM_SIZE :     integer := 19;  -- Microcode Memory Size
     FUNC_SIZE          :     integer := 11;  -- Func Field Size for R-Type Ops
     OP_CODE_SIZE       :     integer := 6;  -- Op Code Size
     IR_SIZE            :     integer := 32;  -- Instruction Register Size    
-    CW_SIZE            :     integer := 15);  -- Control Word Size
+    CW_SIZE            :     integer := 13);  -- Control Word Size
   port (
     Clk                : in  std_logic;  -- Clock
     Rst                : in  std_logic;  -- Reset:Active-Low
@@ -22,7 +22,6 @@ entity dlx_cu_fsm is
     EN1	   : out std_logic;
     RF1    : out std_logic;               -- enables the read port 1 of the register file
     RF2    : out std_logic;               -- enables the read port 2 of the register file
-    WF1    : out std_logic;               -- enables the write port of the register file
     -- SECOND PIPE STAGE OUTPUTS
     EN2    : out std_logic;               -- enables the pipe registers
     S1     : out std_logic;               -- input selection of the first multiplexer
@@ -33,7 +32,8 @@ entity dlx_cu_fsm is
     EN3    : out std_logic;               -- enables the memory and the pipeline registers
     RM     : out std_logic;               -- enables the read-out of the memory
     WM     : out std_logic;               -- enables the write-in of the memory
-    S3     : out std_logic               -- input selection of the multiplexer
+    S3     : out std_logic;               -- input selection of the multiplexer
+    WF1    : out std_logic               -- enables the write port of the register file
   );   
 
 end dlx_cu_fsm;
@@ -58,11 +58,11 @@ architecture Behavioral of dlx_cu_fsm is
                                 "1101000000001", -- S_REG2 itype
                                 "1111000010100", -- S_MEM itype
                                 "1111110011011", -- L_MEM itype
-                                "1111000011011"  --LMEM_ itype 
+                                "1111000011011"  -- LMEM2 itype 
 				                      ); 
-  signal cw_s: std_logic_vector(CW_SIZE - 1 downto 0); -- full control word read from cw_mem
-  signal opcode_s : std_logic_vector (6-1 downto 0);
-  signal func_s : std_logic_vector(11-1 downto 0);
+  signal cw_s: std_logic_vector(CW_SIZE - 1 downto 0);                -- full control word read from cw_mem
+  signal opcode_s : std_logic_vector(6-1 downto 0);
+  signal func_s : std_logic_vector(11-1 downto 0);                    --for some unknown reasons, using generics gives error
 
   type TYPE_STATE is (
 		S_0, S_1, S_2, S_Reset  
@@ -81,7 +81,7 @@ begin
 	begin
 		If Rst = '0' then
 	      CurrState <= S_Reset;
-        cw_s <= cw_mem(conv_integer(NOP));
+        --cw_s <= cw_mem(conv_integer(NOP));
 		elsif (Clk ='1' and Clk'EVENT) then 
 		    CurrState <= NextState;
 		end if;
@@ -128,34 +128,35 @@ begin
                 EN1 <= '0';
                 RF1 <= '0';
                 RF2 <= '0';
-                WF1 <= '0';
                 S1 <= '0';
                 S2 <= '0';
+                EN2 <= '0';
                 ALU1 <= '0';
                 ALU2 <= '0';
                 EN3 <= '0';
                 RM <= '0';
                 WM <= '0';
                 S3 <= '0';
+                WF1 <= '0';
                 NextState <= S_0;
 			      when S_0 =>
                 EN1 <= cw_s(CW_SIZE - 1);
                 RF1 <= cw_s(CW_SIZE - 2);
                 RF2 <= cw_s(CW_SIZE - 3);
-                WF1 <= cw_s(CW_SIZE - 4);
                 NextState <= S_1;
 			      when S_1 => 
-                EN2 <= cw_s(CW_SIZE - 5);
-                S1 <= cw_s(CW_SIZE - 6);
-                S2 <= cw_s(CW_SIZE - 7);
-                ALU1 <= cw_s(CW_SIZE - 8);
-                ALU2 <= cw_s(CW_SIZE - 9);
+                EN2 <= cw_s(CW_SIZE - 4);
+                S1 <= cw_s(CW_SIZE - 5);
+                S2 <= cw_s(CW_SIZE - 6);
+                ALU1 <= cw_s(CW_SIZE - 7);
+                ALU2 <= cw_s(CW_SIZE - 8);
                 NextState <= S_2;
 			      when S_2 =>
-                EN3 <= cw_s(CW_SIZE - 10);
-                RM <= cw_s(CW_SIZE - 11);
-                WM <= cw_s(CW_SIZE - 12);
-                S3 <= cw_s(CW_SIZE - 13);
+                EN3 <= cw_s(CW_SIZE - 9);
+                RM <= cw_s(CW_SIZE - 10);
+                WM <= cw_s(CW_SIZE - 11);
+                S3 <= cw_s(CW_SIZE - 12);
+                WF1 <= cw_s(CW_SIZE - 13);
                 NextState <= S_0;
 			      when others =>  
                 NextState <= S_Reset; 

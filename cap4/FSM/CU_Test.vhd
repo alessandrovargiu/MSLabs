@@ -25,7 +25,6 @@ architecture TEST of cu_test is
               EN1    : out std_logic;               -- enables the register file and the pipeline registers
               RF1    : out std_logic;               -- enables the read port 1 of the register file
               RF2    : out std_logic;               -- enables the read port 2 of the register file
-              WF1    : out std_logic;               -- enables the write port of the register file
               -- SECOND PIPE STAGE OUTPUTS
               EN2    : out std_logic;               -- enables the pipe registers
               S1     : out std_logic;               -- input selection of the first multiplexer
@@ -36,16 +35,17 @@ architecture TEST of cu_test is
               EN3    : out std_logic;               -- enables the memory and the pipeline registers
               RM     : out std_logic;               -- enables the read-out of the memory
               WM     : out std_logic;               -- enables the write-in of the memory
-              S3     : out std_logic               -- input selection of the multiplexer
+              S3     : out std_logic;              -- input selection of the multiplexer
+              WF1    : out std_logic               -- enables the write port of the register file
        );
     end component;
 
     signal Clock: std_logic := '0';
     signal Reset: std_logic := '1';
 
-    signal cu_opcode_i: std_logic_vector(OP_CODE_SIZE - 1 downto 0) := (others => '0');
-    signal cu_func_i: std_logic_vector(FUNC_SIZE - 1 downto 0) := (others => '0');
-    signal EN1_i, RF1_i, RF2_i, WF1_i, EN2_i, S1_i, S2_i, ALU1_i, ALU2_i, EN3_i, RM_i, WM_i, S3_i: std_logic := '0';
+    signal cu_opcode_i: std_logic_vector(OP_CODE_SIZE - 1 downto 0); --:= (others => '0');
+    signal cu_func_i: std_logic_vector(FUNC_SIZE - 1 downto 0);      -- := (others => '0');
+    signal EN1_i, RF1_i, RF2_i, WF1_i, EN2_i, S1_i, S2_i, ALU1_i, ALU2_i, EN3_i, RM_i, WM_i, S3_i: std_logic; -- := '0';
 
 begin
 
@@ -56,7 +56,6 @@ begin
                  EN1    => EN1_i,
                  RF1    => RF1_i,
                  RF2    => RF2_i,
-                 WF1    => WF1_i,
                  EN2    => EN2_i,
                  S1     => S1_i,
                  S2     => S2_i,
@@ -66,6 +65,7 @@ begin
                  RM     => RM_i,
                  WM     => WM_i,
                  S3     => S3_i,
+                 WF1    => WF1_i,
                  -- INPUTS
                  OPCODE => cu_opcode_i,
                  FUNC   => cu_func_i,            
