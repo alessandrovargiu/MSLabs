@@ -95,70 +95,70 @@ begin
         -- ADD RS1,RS2,RD -> Rtype
         cu_opcode_i <= RTYPE;
         cu_func_i <= RTYPE_ADD;
-        wait for 8 ns;
+        wait for 6 ns;
 
         cu_opcode_i <= RTYPE;
         cu_func_i <= RTYPE_SUB;
-        wait for 8 ns;
+        wait for 6 ns;
         
         cu_opcode_i <= RTYPE;
         cu_func_i <= RTYPE_AND;
-        wait for 8 ns;
+        wait for 6 ns;
         
         cu_opcode_i <= RTYPE;
         cu_func_i <= RTYPE_OR;
-        wait for 8 ns;
+        wait for 6 ns;
 
 		--immidiate instructions tests
         -- ADDI1 RS1,RD,INP1 -> Itype
         cu_opcode_i <= ITYPE_ADDI1;
         cu_func_i <= RANDOM_IMMIDIATE_VALUE; 
-        wait for 8 ns;
+        wait for 6 ns;
 
         cu_opcode_i <= ITYPE_SUBI1;
-        wait for 8 ns;
+        wait for 6 ns;
          
         cu_opcode_i <= ITYPE_ANDI1;
-        wait for 8 ns;
+        wait for 6 ns;
          
         cu_opcode_i <= ITYPE_ORI1;
-        wait for 8 ns;
+        wait for 6 ns;
 
         cu_opcode_i <= ITYPE_ADDI1;
-        wait for 8 ns;
+        wait for 6 ns;
 
         cu_opcode_i <= ITYPE_SUBI1;
-        wait for 8 ns;
+        wait for 6 ns;
 
         cu_opcode_i <= ITYPE_ORI1;
-        wait for 8 ns;
+        wait for 6 ns;
 
         cu_opcode_i <= ITYPE_SUBI2;
-        wait for 8 ns;
+        wait for 6 ns;
 
         cu_opcode_i <= ITYPE_ANDI2;
-        wait for 8 ns;
+        wait for 6 ns;
 
         cu_opcode_i <= ITYPE_ORI2;
-        wait for 8 ns;
+        wait for 6 ns;
 
         cu_opcode_i <= ITYPE_MOV;
-        wait for 8 ns;
+        wait for 6 ns;
 
         cu_opcode_i <= ITYPE_S_REG1;
-        wait for 8 ns;
+        wait for 6 ns;
 
         cu_opcode_i <= ITYPE_S_REG2;
-        wait for 8 ns;
+        wait for 6 ns;
 
         cu_opcode_i <= ITYPE_S_MEM;
-        wait for 8 ns;
+        wait for 6 ns;
 
         cu_opcode_i <= ITYPE_L_MEM1;
-        wait for 8 ns;
+        wait for 6 ns;
 
         cu_opcode_i <= ITYPE_L_MEM2;
-        wait for 8 ns;
+        wait for 6 ns;
 
         wait;
         end process;
