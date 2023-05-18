@@ -3,15 +3,22 @@ use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
 use ieee.std_logic_arith.all;
 use work.myTypes.all;
+use work.microcode_mem_pckg.all;				--microcode memory array
+
 --USE ieee.numeric_std.ALL;
 
 entity CU_UP1 is
 	generic(
-			MICROCODE_MEM_SIZE :     integer := 19;  -- Microcode Memory Size
-    		FUNC_SIZE          :     integer := 11;  -- Func Field Size for R-Type Ops
-    		OP_CODE_SIZE       :     integer := 6;  -- Op Code Size
-			CW_SIZE : integer := 13;				-- output signals of CU
-			ALU_SIZE : Integer := 2    --2 bits for 4 operations 0 1 2 3
+    INSTRUCTIONS_EXECUTION_CYCLES : integer := 3;  -- Instructions Execution
+                                                   -- Clock Cycles
+    MICROCODE_MEM_SIZE            : integer := 195;  -- Microcode Memory Size 
+    --RELOC_MEM_SIZE                : integer := 64;  -- Microcode Relocation      
+                                                   -- Memory Size
+    OP_CODE_SIZE : integer := 6;        -- Op Code Size
+    ALU_OPC_SIZE : integer := 2;        -- ALU Op Code Word Size
+    IR_SIZE      : integer := 32;       -- Instruction Register Size
+    FUNC_SIZE    : integer := 11;       -- Func Field Size for R-Type Ops
+    CW_SIZE      : integer := 13        -- Control Word Size
 			); 
 	port(-- FIRST PIPE STAGE OUTPUTS
               EN1    : out std_logic;               -- enables the register file and the pipeline registers
@@ -29,48 +36,84 @@ entity CU_UP1 is
               WM     : out std_logic;               -- enables the write-in of the memory
               S3     : out std_logic;               -- input selection of the multiplexer
               WF1    : out std_logic;               -- enables the write port of the register file
+			  cw_Debug: out std_logic_vector( CW_SIZE - 1 downto 0);
               -- INPUTS
               OPCODE : in  std_logic_vector(OP_CODE_SIZE - 1 downto 0);
               FUNC   : in  std_logic_vector(FUNC_SIZE - 1 downto 0);              
               Clk : in std_logic;
               Rst : in std_logic);                  -- Active Low
+				
 end CU_UP1;
 
-architecture behavioral of CU1 is
-type mem_array is array (integer range 0 to MICROCODE_MEM_SIZE - 1) of std_logic_vector(CW_SIZE - 1 downto 0);
-  signal cw_mem : mem_array := ("1110000000000", --ADDI1 (usingINP1) cc1
-								"0000100100000", --cc2
-								"0000000000101", --cc3
-								"1110000000000", --SUBI1 (usingINP1) cc1
-								"0000101100000", --cc2
-								"0000000000101", --cc3
-								"1110000000000", --ANDI1 (usingINP1) cc1
-								"0000110100000", --cc2
-								"0000000000101", --cc3
-								"1110000000000", --ORI1 (usingINP1) cc1
-								"0000111100000", --cc2
-								"0000000000101", --cc3
-								"1110000000000", --ADDI2 (usingINP2) cc1
-								"0001000100000", --cc2
-								"0000000000101", --cc3
-								"1110000000000", --SUBI2 (usingINP2) cc1
-								"0001001100000", --cc2
-								"0000000000101", --cc3
-								"1110000000000", --ANDI2 (usingINP2) cc1
-								"0001010100000", --cc2
-								"0000000000101", --cc3
-								"1110000000000", --ORI2 (usingINP2) cc1
-								"0001011100000", --cc2
-								"0000000000101", --cc3
-								"1110000000000", --MOVI cc1 (l'ho interpretata come una subI che sottrae il valore immediato(INP1)0)
-								"0000101100000", --cc2
-								"0000000000101", --cc3
-								"1110000000000", --SAVI1 cc1 
-								"0000100100000", --cc2
-								"0000000000101", --cc3
-								"1110000000000", --SAVI2 cc1 
-								"0001000100000", --cc2
-								"0000000000101", --cc3
+architecture behavioral of CU_UP1 is
 
-								);-- to be completed (enlarged and filled)
+  signal CurrBaseAddress : std_logic_vector( FUNC_SIZE+OP_CODE_SIZE-1 downto 0);  
+
+  signal cw : std_logic_vector(CW_SIZE - 1 downto 0);
+
+  signal uPC : integer range 0 to 194; --maximum memory address is decimal value 194 ( 00000000011 000010 )
+  signal ICount : integer range 0 to INSTRUCTIONS_EXECUTION_CYCLES;
+  signal start: integer range 0 to 1;
+  --signal OpCode : unsigned(OP_CODE_SIZE -1 downto 0);
+  
+  --constant R_OPCODE : unsigned(OP_CODE_SIZE -1 downto 0) := "000000"; --when opcode is all zeros, the instruction is an Rtype 
+                                                        
+  --signal func : unsigned(FUNC_SIZE - 1 downto 0);
+
+begin
+
+	EN1 	<= cw(CW_SIZE-1);
+	RF1 	<= cw(CW_SIZE-2);
+	RF2 	<= cw(CW_SIZE-3);
+
+	EN2 	<= cw(CW_SIZE-4);
+	S1  	<= cw(CW_SIZE-5);
+	S2  	<= cw(CW_SIZE-6);
+	ALU1	<= cw(CW_SIZE-7);
+	ALU2	<= cw(CW_SIZE-8);
+
+	EN3 	<= cw(CW_SIZE-9);
+	RM  	<= cw(CW_SIZE-10);
+	WM  	<= cw(CW_SIZE-11);
+	S3  	<= cw(CW_SIZE-12);
+	WF1 	<= cw(CW_SIZE-13);
+
+	cw <= microcode(uPC); --cw is the current control word.
+	cw_Debug <= cw;
+
+	BaseAddress_Proc: process(OpCode,func,Clk)
+	begin
+		if (OpCode = "000000") then 	-- Rtype instruction, func field composes the msbs of the address. 
+			CurrBaseAddress <= (func & OpCode );
+		else					
+			CurrBaseAddress <= ("00000000000" & OpCode ) ;
+		end if;
+	end process BaseAddress_Proc;
+	
+	
+  uPC_Proc: process (Clk, Rst, OpCode, CurrBaseAddress)
+  begin  -- process uPC_Proc
+	if Rst = '0' then                   -- asynchronous reset (active low)
+      uPC <= 179; --in the 179th entry of the microcode, the control word stored is 00000000000
+	  ICount <= 0;
+
+    elsif Clk'event and Clk = '1' then  -- rising clock edge
+	
+		if(ICount < 1) then
+			ICount <= ICount +1;
+			uPC <= conv_integer(CurrBaseAddress);
+		elsif(ICount < INSTRUCTIONS_EXECUTION_CYCLES) then
+	        uPC <= uPC + 1;
+	        ICount <= ICount + 1;
+        else	--it s done, and moves to next control words for the next instruction, 
+				--during this clock cycle of idleness, a new base address of microcode is sampled.
+				--during this clock cycle of idleness the control signals are temporarely all zeros			
+			ICount <=0;
+			uPC <=179;
+   	    end if;
+
+  end if;
+end process uPC_Proc;
+
+end behavioral;
 
