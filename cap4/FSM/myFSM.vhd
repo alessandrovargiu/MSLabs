@@ -71,23 +71,20 @@ architecture Behavioral of dlx_cu_fsm is
 	signal NextState: TYPE_STATE;
  
 begin  
-   	
-	--FSM
 
   opcode_s <= OPCODE;
   func_s <= FUNC;
 
- 	StateReg : process(Clk, Rst)		
+ 	StateReg : process(Clk, Rst)		          --state registers of the FSM
 	begin
 		If Rst = '0' then
 	      CurrState <= S_Reset;
-        --cw_s <= cw_mem(conv_integer(NOP));
 		elsif (Clk ='1' and Clk'EVENT) then 
 		    CurrState <= NextState;
 		end if;
 	end process StateReg;
 
-	DECODE : process(opcode_s, func_s)        --when OPCODE is received by CU, cw_s updated with correct current instruction
+	DECODE : process(opcode_s, func_s)        --when OPCODE is received by CU, cw_s (control word) is updated with correct current instruction
 	begin
     
 	  CASE opcode_s IS
@@ -122,7 +119,6 @@ begin
 	
 	Ctrl_Signals: process(CurrState)
 	begin
-    --NextState <= CurrState;
 		    case CurrState is	
             when S_Reset =>
                 EN1 <= '0';
@@ -139,19 +135,19 @@ begin
                 S3 <= '0';
                 WF1 <= '0';
                 NextState <= S_0;
-			      when S_0 =>
+			      when S_0 =>                                                   --first cycle
                 EN1 <= cw_s(CW_SIZE - 1);
                 RF1 <= cw_s(CW_SIZE - 2);
                 RF2 <= cw_s(CW_SIZE - 3);
                 NextState <= S_1;
-			      when S_1 => 
+			      when S_1 =>                                                   --second cycle
                 EN2 <= cw_s(CW_SIZE - 4);
                 S1 <= cw_s(CW_SIZE - 5);
                 S2 <= cw_s(CW_SIZE - 6);
                 ALU1 <= cw_s(CW_SIZE - 7);
                 ALU2 <= cw_s(CW_SIZE - 8);
                 NextState <= S_2;
-			      when S_2 =>
+			      when S_2 =>                                                   --third cycle
                 EN3 <= cw_s(CW_SIZE - 9);
                 RM <= cw_s(CW_SIZE - 10);
                 WM <= cw_s(CW_SIZE - 11);
