@@ -37,8 +37,7 @@ architecture TEST of cu_test is
               	RM     : out std_logic;               -- enables the read-out of the memory
               	WM     : out std_logic;               -- enables the write-in of the memory
               	S3     : out std_logic;               -- input selection of the multiplexer
-				WF1    : out std_logic;               -- enables the write port of the register file
-				cw_Debug: out std_logic_vector( CW_SIZE - 1 downto 0);
+				        WF1    : out std_logic;               -- enables the write port of the register file
               -- INPUTS
               OPCODE : in  std_logic_vector(OP_CODE_SIZE - 1 downto 0);
               FUNC   : in  std_logic_vector(FUNC_SIZE - 1 downto 0);              
@@ -52,7 +51,6 @@ architecture TEST of cu_test is
     signal cu_opcode_i: std_logic_vector(OP_CODE_SIZE - 1 downto 0) := (others => '0');
     signal cu_func_i: std_logic_vector(FUNC_SIZE - 1 downto 0) := (others => '0');
     signal EN1_i, RF1_i, RF2_i, WF1_i, EN2_i, S1_i, S2_i, ALU1_i, ALU2_i, EN3_i, RM_i, WM_i, S3_i: std_logic := '0';
-	signal cw_Debug_i: std_logic_vector(CW_SIZE - 1 downto 0) ;
 
 begin
 
@@ -74,8 +72,7 @@ begin
                  RM     => RM_i,
                  WM     => WM_i,
                  S3     => S3_i,
-				 WF1    => WF1_i,
-				 cw_Debug=> cw_Debug_i,
+				         WF1    => WF1_i,
                  -- INPUTS
                  OPCODE => cu_opcode_i,
                  FUNC   => cu_func_i,            
@@ -95,70 +92,70 @@ begin
         -- ADD RS1,RS2,RD -> Rtype
         cu_opcode_i <= RTYPE;
         cu_func_i <= RTYPE_ADD;
-        wait for 8 ns;
+        wait for 6 ns;
 
         cu_opcode_i <= RTYPE;
         cu_func_i <= RTYPE_SUB;
-        wait for 8 ns;
+        wait for 6 ns;
         
         cu_opcode_i <= RTYPE;
         cu_func_i <= RTYPE_AND;
-        wait for 8 ns;
+        wait for 6 ns;
         
         cu_opcode_i <= RTYPE;
         cu_func_i <= RTYPE_OR;
-        wait for 8 ns;
+        wait for 6 ns;
 
 		--immidiate instructions tests
         -- ADDI1 RS1,RD,INP1 -> Itype
         cu_opcode_i <= ITYPE_ADDI1;
         cu_func_i <= RANDOM_IMMIDIATE_VALUE; 
-        wait for 8 ns;
+        wait for 6 ns;
 
         cu_opcode_i <= ITYPE_SUBI1;
-        wait for 8 ns;
+        wait for 6 ns;
          
         cu_opcode_i <= ITYPE_ANDI1;
-        wait for 8 ns;
+        wait for 6 ns;
          
         cu_opcode_i <= ITYPE_ORI1;
-        wait for 8 ns;
+        wait for 6 ns;
 
         cu_opcode_i <= ITYPE_ADDI1;
-        wait for 8 ns;
+        wait for 6 ns;
 
         cu_opcode_i <= ITYPE_SUBI1;
-        wait for 8 ns;
+        wait for 6 ns;
 
         cu_opcode_i <= ITYPE_ORI1;
-        wait for 8 ns;
+        wait for 6 ns;
 
         cu_opcode_i <= ITYPE_SUBI2;
-        wait for 8 ns;
+        wait for 6 ns;
 
         cu_opcode_i <= ITYPE_ANDI2;
-        wait for 8 ns;
+        wait for 6 ns;
 
         cu_opcode_i <= ITYPE_ORI2;
-        wait for 8 ns;
+        wait for 6 ns;
 
         cu_opcode_i <= ITYPE_MOV;
-        wait for 8 ns;
+        wait for 6 ns;
 
         cu_opcode_i <= ITYPE_S_REG1;
-        wait for 8 ns;
+        wait for 6 ns;
 
         cu_opcode_i <= ITYPE_S_REG2;
-        wait for 8 ns;
+        wait for 6 ns;
 
         cu_opcode_i <= ITYPE_S_MEM;
-        wait for 8 ns;
+        wait for 6 ns;
 
         cu_opcode_i <= ITYPE_L_MEM1;
-        wait for 8 ns;
+        wait for 6 ns;
 
         cu_opcode_i <= ITYPE_L_MEM2;
-        wait for 8 ns;
+        wait for 6 ns;
 
         wait;
         end process;
