@@ -9,13 +9,13 @@ entity dlx_cu is
     INSTRUCTIONS_EXECUTION_CYCLES : integer := 5;  -- Instructions Execution
                                                    -- Clock Cycles
     MICROCODE_MEM_SIZE            : integer := 164;  -- Microcode Memory Size
-    RELOC_MEM_SIZE                : integer := 64;  -- Microcode Relocation       --?
+    RELOC_MEM_SIZE                : integer := 64;  -- Microcode Relocation      
                                                    -- Memory Size
     OP_CODE_SIZE : integer := 6;        -- Op Code Size
     ALU_OPC_SIZE : integer := 2;        -- ALU Op Code Word Size
     IR_SIZE      : integer := 32;       -- Instruction Register Size
     FUNC_SIZE    : integer := 11;       -- Func Field Size for R-Type Ops
-    CW_SIZE      : integer := 15);      -- Control Word Size					control word is the string of bits where each bit rapresent a control 																					variable
+    CW_SIZE      : integer := 15);      -- Control Word Size					
   port (
     Clk             : in  std_logic;    -- Clock
     Rst             : in  std_logic;    -- Reset:Active-Low
@@ -329,7 +329,7 @@ begin  -- dlx_cu_rtl
 
   PC_LATCH_EN <= cw(CW_SIZE - 15);
 
-  OpCode <= unsigned(IR_IN(IR_SIZE -1 downto 26));
+  OpCode <= unsigned(IR_IN(IR_SIZE -1 downto 26)); --ricaviamo l opcode dall instruction register
   OpCode_Reloc <= reloc_mem(conv_integer(OpCode));
   func <= unsigned(IR_IN(FUNC_SIZE - 3 downto 0)) & "00";  -- Multiply func value by 4 (
                                                  -- Shift left)
