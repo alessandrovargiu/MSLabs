@@ -94,6 +94,7 @@ begin
 	        ICount <= ICount + 1;
           If(Icount = INSTRUCTIONS_EXECUTION_CYCLES-1) then
             ICount <= 0;
+          end if;
     end if;
   end if;
 end process uPC_Proc;
