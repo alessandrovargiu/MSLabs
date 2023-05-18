@@ -71,33 +71,48 @@ begin
 	WF1 	<= cw(CW_SIZE-13);
 
 	cw <= microcode(uPC); --cw is the current control word.
-	cw_Debug <= cw;
+	
 
-	BaseAddress_Proc: process(OpCode,func)
-	begin
-		if (OpCode = "000000") then 	-- Rtype instruction, func field composes the msbs of the address. 
-			uPC <= conv_integer(func & OpCode);
-		else					
-			uPC <= conv_integer("00000000000" & OpCode) ;
-		end if;
-	end process BaseAddress_Proc;
-	
-	
-  uPC_Proc: process (Clk, Rst)
-  begin  
-	if Rst = '0' then                   -- asynchronous reset (active low)
-      uPC <= 179;                     --in the 179th entry of the microcode, the control word stored is 00000000000
-	    ICount <= 0;
-  elsif Clk'event and Clk = '1' then          -- rising clock edge
-		If(ICount < INSTRUCTIONS_EXECUTION_CYCLES) then
-	        uPC <= uPC + 1;
-	        ICount <= ICount + 1;
-          If(Icount = INSTRUCTIONS_EXECUTION_CYCLES-1) then
+  uPC_Proc2: process (Clk, Rst)
+  begin
+    If Rst = '0' then
+      ICount <= 0;
+      uPC <= 179;
+    else
+      If(rising_edge(Clk)) then
+        case ICount is
+          when 0 =>
+            ICount <= ICount + 1;
+            if (OpCode = "000000") then 	      -- Rtype instruction, func field composes the msbs of the address. 
+			          uPC <= conv_integer(func & OpCode);
+		        else					
+			          uPC <= conv_integer("00000000000" & OpCode) ;
+		        end if;
+            
+          when 1 =>                   -- ICount = 0
+            ICount <= ICount + 1;
+            uPC <= uPC + 1;
+          when 2 =>                   -- ICount = 1
+            uPC <= uPC + 1;
+            ICount <= Icount + 1;
+
+          when 3 =>                   -- Icount = 2
+            ICount <= 1;
+            if (OpCode = "000000") then 	      -- Rtype instruction, func field composes the msbs of the address. 
+			          uPC <= conv_integer(func & OpCode);
+		        else					
+			          uPC <= conv_integer("00000000000" & OpCode) ;
+		        end if;
+          when OTHERS =>
             ICount <= 0;
-          end if;
+        end case;
+      end if;
     end if;
-  end if;
-end process uPC_Proc;
+  end process;
+
+
+
+
 
 end behavioral;
 
