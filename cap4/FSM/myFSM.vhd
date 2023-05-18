@@ -58,7 +58,7 @@ architecture Behavioral of dlx_cu_fsm is
                                 "1101000000001", -- S_REG2 itype
                                 "1111000010100", -- S_MEM itype
                                 "1111110011011", -- L_MEM itype
-                                "1111000011011"  --LMEM_ itype 
+                                "1111000011011"  -- LMEM2 itype 
 				                      ); 
   signal cw_s: std_logic_vector(CW_SIZE - 1 downto 0);                -- full control word read from cw_mem
   signal opcode_s : std_logic_vector(6-1 downto 0);
