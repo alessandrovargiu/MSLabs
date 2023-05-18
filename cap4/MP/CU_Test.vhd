@@ -9,7 +9,18 @@ end cu_test;
 
 architecture TEST of cu_test is
 
-    component cu
+    component CU_UP1
+		generic(
+   			INSTRUCTIONS_EXECUTION_CYCLES : integer := 3;  -- Instructions Execution
+                                                   -- Clock Cycles
+    		MICROCODE_MEM_SIZE            : integer := 195;  -- Microcode Memory Size 
+    		--RELOC_MEM_SIZE                : integer := 64;  -- Microcode Relocation      
+                                                   -- Memory Size
+    		OP_CODE_SIZE : integer := 6;        -- Op Code Size
+    		ALU_OPC_SIZE : integer := 2;        -- ALU Op Code Word Size
+    		IR_SIZE      : integer := 32;       -- Instruction Register Size
+    		FUNC_SIZE    : integer := 11;       -- Func Field Size for R-Type Ops
+    		CW_SIZE      : integer := 13);      -- Control Word Size
        port (
               -- FIRST PIPE STAGE OUTPUTS
               	EN1    : out std_logic;               -- enables the register file and the pipeline registers
@@ -27,6 +38,7 @@ architecture TEST of cu_test is
               	WM     : out std_logic;               -- enables the write-in of the memory
               	S3     : out std_logic;               -- input selection of the multiplexer
 				WF1    : out std_logic;               -- enables the write port of the register file
+				cw_Debug: out std_logic_vector( CW_SIZE - 1 downto 0);
               -- INPUTS
               OPCODE : in  std_logic_vector(OP_CODE_SIZE - 1 downto 0);
               FUNC   : in  std_logic_vector(FUNC_SIZE - 1 downto 0);              
@@ -40,26 +52,30 @@ architecture TEST of cu_test is
     signal cu_opcode_i: std_logic_vector(OP_CODE_SIZE - 1 downto 0) := (others => '0');
     signal cu_func_i: std_logic_vector(FUNC_SIZE - 1 downto 0) := (others => '0');
     signal EN1_i, RF1_i, RF2_i, WF1_i, EN2_i, S1_i, S2_i, ALU1_i, ALU2_i, EN3_i, RM_i, WM_i, S3_i: std_logic := '0';
+	signal cw_Debug_i: std_logic_vector(CW_SIZE - 1 downto 0) ;
 
 begin
 
         -- instance of DLX
-       dut: cu
+       dut: CU_UP1
        port map (
                  -- OUTPUTS
                  EN1    => EN1_i,
                  RF1    => RF1_i,
                  RF2    => RF2_i,
-                 WF1    => WF1_i,
+                 
                  EN2    => EN2_i,
                  S1     => S1_i,
                  S2     => S2_i,
                  ALU1   => ALU1_i,
                  ALU2   => ALU2_i,
+
                  EN3    => EN3_i,
                  RM     => RM_i,
                  WM     => WM_i,
                  S3     => S3_i,
+				 WF1    => WF1_i,
+				 cw_Debug=> cw_Debug_i,
                  -- INPUTS
                  OPCODE => cu_opcode_i,
                  FUNC   => cu_func_i,            
@@ -68,30 +84,83 @@ begin
                );
 
         Clock <= not Clock after 1 ns;
-	Reset <= '0', '1' after 6 ns;
-
+	Reset <= '0', '1' after 4 ns;
 
         CONTROL: process
         begin
 
-        wait for 5 ns;  ----- be careful! the wait statement is ok in test
+        wait for 4 ns;  ----- be careful! the wait statement is ok in test
                         ----- benches, but do not use it in normal processes!
 
         -- ADD RS1,RS2,RD -> Rtype
         cu_opcode_i <= RTYPE;
         cu_func_i <= RTYPE_ADD;
-        wait for 2 ns;
+        wait for 8 ns;
 
+        cu_opcode_i <= RTYPE;
+        cu_func_i <= RTYPE_SUB;
+        wait for 8 ns;
+        
+        cu_opcode_i <= RTYPE;
+        cu_func_i <= RTYPE_AND;
+        wait for 8 ns;
+        
+        cu_opcode_i <= RTYPE;
+        cu_func_i <= RTYPE_OR;
+        wait for 8 ns;
+
+		--immidiate instructions tests
         -- ADDI1 RS1,RD,INP1 -> Itype
         cu_opcode_i <= ITYPE_ADDI1;
-        cu_func_i <= NOP;
-        wait for 2 ns;
+        cu_func_i <= RANDOM_IMMIDIATE_VALUE; 
+        wait for 8 ns;
 
-        -- .............
-        -- add all the others instructions
-        -- .............
+        cu_opcode_i <= ITYPE_SUBI1;
+        wait for 8 ns;
+         
+        cu_opcode_i <= ITYPE_ANDI1;
+        wait for 8 ns;
+         
+        cu_opcode_i <= ITYPE_ORI1;
+        wait for 8 ns;
+
+        cu_opcode_i <= ITYPE_ADDI1;
+        wait for 8 ns;
+
+        cu_opcode_i <= ITYPE_SUBI1;
+        wait for 8 ns;
+
+        cu_opcode_i <= ITYPE_ORI1;
+        wait for 8 ns;
+
+        cu_opcode_i <= ITYPE_SUBI2;
+        wait for 8 ns;
+
+        cu_opcode_i <= ITYPE_ANDI2;
+        wait for 8 ns;
+
+        cu_opcode_i <= ITYPE_ORI2;
+        wait for 8 ns;
+
+        cu_opcode_i <= ITYPE_MOV;
+        wait for 8 ns;
+
+        cu_opcode_i <= ITYPE_S_REG1;
+        wait for 8 ns;
+
+        cu_opcode_i <= ITYPE_S_REG2;
+        wait for 8 ns;
+
+        cu_opcode_i <= ITYPE_S_MEM;
+        wait for 8 ns;
+
+        cu_opcode_i <= ITYPE_L_MEM1;
+        wait for 8 ns;
+
+        cu_opcode_i <= ITYPE_L_MEM2;
+        wait for 8 ns;
 
         wait;
         end process;
 
-end cu_test;
+end TEST;
