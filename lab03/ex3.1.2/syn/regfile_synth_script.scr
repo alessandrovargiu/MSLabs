@@ -1,0 +1,10 @@
+analyze -library WORK -format vhdl {registerfilegeneric.vhd}
+elaborate register_file -architecture Behavioral -library WORK
+compile -exact_map
+
+write -hierarchy -format vhdl -output 'reg_file_vhdldesign_no_opt.vhdl'
+
+report_timing > reg_file_timing_no_opt.txt
+
+report_area > reg_file_area_no_opt.txt
+

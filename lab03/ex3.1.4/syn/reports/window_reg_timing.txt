@@ -1,0 +1,38 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : top_entity
+Version: S-2021.06-SP4
+Date   : Thu May  4 21:24:16 2023
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: regfile/OUT1_tri_enable_reg[31]
+              (rising edge-triggered flip-flop)
+  Endpoint: OUT1[31] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_entity         5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  regfile/OUT1_tri_enable_reg[31]/CK (DFF_X1)             0.00       0.00 r
+  regfile/OUT1_tri_enable_reg[31]/Q (DFF_X1)              0.10       0.10 r
+  regfile/OUT1_tri[31]/Z (TBUF_X1)                        0.13       0.23 f
+  regfile/OUT1[31] (register_file_nbit32_addr_bits5)      0.00       0.23 f
+  OUT1[31] (out)                                          0.00       0.23 f
+  data arrival time                                                  0.23
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

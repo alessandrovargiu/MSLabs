@@ -1,0 +1,5 @@
+In the unconstrained version, the critical path traverses a series of G blocks which are located in the last levels of the sparse tree, then it goes through the carry-select blocks until it reaches the last bit of the Adder output signal S.
+
+The constrained version saves 0.12 ns and traverses a series of internal nodes of the sparse tree, both PG and G nodes, then it goes through the carry-select component until the 29th bit of the Adder output signal S.
+
+Full critical paths are displayed in the timing reports, in the reports folder.

@@ -1,0 +1,8 @@
+vcom -reportprogress 300 -work work /home/ms23.51/Desktop/MSLabs/gr51_lab02/ex2.1.2/sim/constants.vhd
+vcom -reportprogress 300 -work work /home/ms23.51/Desktop/MSLabs/gr51_lab02/ex2.1.2/sim/iv.vhd
+vcom -reportprogress 300 -work work /home/ms23.51/Desktop/MSLabs/gr51_lab02/ex2.1.2/sim/nd2.vhd
+vcom -reportprogress 300 -work work /home/ms23.51/Desktop/MSLabs/gr51_lab02/ex2.1.2/sim/mux21_generic.vhd
+vcom -reportprogress 300 -work work /home/ms23.51/Desktop/MSLabs/gr51_lab02/ex2.1.2/sim/fa.vhd
+vcom -reportprogress 300 -work work /home/ms23.51/Desktop/MSLabs/gr51_lab02/ex2.1.2/sim/carryselect.vhd
+vcom -reportprogress 300 -work work /home/ms23.51/Desktop/MSLabs/gr51_lab02/ex2.1.2/sim/sum_generator.vhd
+vcom -reportprogress 300 -work work /home/ms23.51/Desktop/MSLabs/gr51_lab02/ex2.1.2/sim/tb_sum_generator.vhd

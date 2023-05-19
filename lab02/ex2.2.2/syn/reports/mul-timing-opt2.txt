@@ -1,0 +1,399 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'BOOTHMUL' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : BOOTHMUL
+Version: S-2021.06-SP4
+Date   : Wed Apr 19 01:12:25 2023
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: A[0] (input port)
+  Endpoint: P[63] (output port)
+  Path Group: default
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  BOOTHMUL           5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 r
+  A[0] (in)                                               0.00       0.00 r
+  inverterI_0/A (IV_0)                                    0.00       0.00 r
+  inverterI_0/U1/ZN (INV_X1)                              0.03       0.03 f
+  inverterI_0/Y (IV_0)                                    0.00       0.03 f
+  FinilizingNegativeSignal/A[0] (RCA_NbitRca64_0)         0.00       0.03 f
+  FinilizingNegativeSignal/FAI_1/A (FA_0)                 0.00       0.03 f
+  FinilizingNegativeSignal/FAI_1/U2/ZN (AOI21_X1)         0.04       0.07 r
+  FinilizingNegativeSignal/FAI_1/U3/ZN (NOR2_X1)          0.03       0.09 f
+  FinilizingNegativeSignal/FAI_1/Co (FA_0)                0.00       0.09 f
+  FinilizingNegativeSignal/FAI_2/Ci (FA_1023)             0.00       0.09 f
+  FinilizingNegativeSignal/FAI_2/U2/ZN (AOI22_X1)         0.05       0.14 r
+  FinilizingNegativeSignal/FAI_2/U3/ZN (INV_X1)           0.03       0.17 f
+  FinilizingNegativeSignal/FAI_2/Co (FA_1023)             0.00       0.17 f
+  FinilizingNegativeSignal/FAI_3/Ci (FA_1022)             0.00       0.17 f
+  FinilizingNegativeSignal/FAI_3/U2/ZN (NAND2_X1)         0.03       0.20 r
+  FinilizingNegativeSignal/FAI_3/U3/ZN (NAND2_X1)         0.03       0.23 f
+  FinilizingNegativeSignal/FAI_3/Co (FA_1022)             0.00       0.23 f
+  FinilizingNegativeSignal/FAI_4/Ci (FA_1021)             0.00       0.23 f
+  FinilizingNegativeSignal/FAI_4/U5/ZN (XNOR2_X1)         0.08       0.30 f
+  FinilizingNegativeSignal/FAI_4/S (FA_1021)              0.00       0.30 f
+  FinilizingNegativeSignal/S[3] (RCA_NbitRca64_0)         0.00       0.30 f
+  MUX0_0/A_neg[3] (MUX51_MuxNbit64_0)                     0.00       0.30 f
+  MUX0_0/U247/ZN (AOI22_X1)                               0.06       0.36 r
+  MUX0_0/U244/ZN (NAND2_X1)                               0.03       0.39 f
+  MUX0_0/Y[3] (MUX51_MuxNbit64_0)                         0.00       0.39 f
+  SUM0/A[3] (RCA_NbitRca64_15)                            0.00       0.39 f
+  SUM0/FAI_4/A (FA_957)                                   0.00       0.39 f
+  SUM0/FAI_4/U4/Z (XOR2_X1)                               0.07       0.47 f
+  SUM0/FAI_4/U5/ZN (AOI22_X1)                             0.06       0.52 r
+  SUM0/FAI_4/U6/ZN (INV_X1)                               0.02       0.55 f
+  SUM0/FAI_4/Co (FA_957)                                  0.00       0.55 f
+  SUM0/FAI_5/Ci (FA_956)                                  0.00       0.55 f
+  SUM0/FAI_5/U4/ZN (NOR2_X1)                              0.04       0.58 r
+  SUM0/FAI_5/U5/ZN (NOR2_X1)                              0.03       0.61 f
+  SUM0/FAI_5/Co (FA_956)                                  0.00       0.61 f
+  SUM0/FAI_6/Ci (FA_955)                                  0.00       0.61 f
+  SUM0/FAI_6/U1/ZN (AOI22_X1)                             0.06       0.67 r
+  SUM0/FAI_6/U2/ZN (INV_X1)                               0.03       0.70 f
+  SUM0/FAI_6/Co (FA_955)                                  0.00       0.70 f
+  SUM0/FAI_7/Ci (FA_954)                                  0.00       0.70 f
+  SUM0/FAI_7/U3/Z (XOR2_X1)                               0.07       0.77 f
+  SUM0/FAI_7/S (FA_954)                                   0.00       0.77 f
+  SUM0/S[6] (RCA_NbitRca64_15)                            0.00       0.77 f
+  SUMI_1/B[6] (RCA_NbitRca64_14)                          0.00       0.77 f
+  SUMI_1/FAI_7/B (FA_890)                                 0.00       0.77 f
+  SUMI_1/FAI_7/U4/Z (XOR2_X1)                             0.07       0.84 f
+  SUMI_1/FAI_7/U1/ZN (AOI22_X1)                           0.06       0.90 r
+  SUMI_1/FAI_7/U2/ZN (INV_X1)                             0.03       0.93 f
+  SUMI_1/FAI_7/Co (FA_890)                                0.00       0.93 f
+  SUMI_1/FAI_8/Ci (FA_889)                                0.00       0.93 f
+  SUMI_1/FAI_8/U1/ZN (AOI22_X1)                           0.06       0.99 r
+  SUMI_1/FAI_8/U2/ZN (INV_X1)                             0.03       1.02 f
+  SUMI_1/FAI_8/Co (FA_889)                                0.00       1.02 f
+  SUMI_1/FAI_9/Ci (FA_888)                                0.00       1.02 f
+  SUMI_1/FAI_9/U1/ZN (AOI22_X1)                           0.06       1.07 r
+  SUMI_1/FAI_9/U2/ZN (INV_X1)                             0.03       1.10 f
+  SUMI_1/FAI_9/Co (FA_888)                                0.00       1.10 f
+  SUMI_1/FAI_10/Ci (FA_887)                               0.00       1.10 f
+  SUMI_1/FAI_10/U1/ZN (AOI22_X1)                          0.06       1.16 r
+  SUMI_1/FAI_10/U2/ZN (INV_X1)                            0.03       1.18 f
+  SUMI_1/FAI_10/Co (FA_887)                               0.00       1.18 f
+  SUMI_1/FAI_11/Ci (FA_886)                               0.00       1.18 f
+  SUMI_1/FAI_11/U1/ZN (AOI22_X1)                          0.06       1.24 r
+  SUMI_1/FAI_11/U5/ZN (INV_X1)                            0.03       1.27 f
+  SUMI_1/FAI_11/Co (FA_886)                               0.00       1.27 f
+  SUMI_1/FAI_12/Ci (FA_885)                               0.00       1.27 f
+  SUMI_1/FAI_12/U1/ZN (AOI22_X1)                          0.06       1.32 r
+  SUMI_1/FAI_12/U2/ZN (INV_X1)                            0.03       1.35 f
+  SUMI_1/FAI_12/Co (FA_885)                               0.00       1.35 f
+  SUMI_1/FAI_13/Ci (FA_884)                               0.00       1.35 f
+  SUMI_1/FAI_13/U2/ZN (AOI22_X1)                          0.06       1.41 r
+  SUMI_1/FAI_13/U5/ZN (INV_X1)                            0.03       1.44 f
+  SUMI_1/FAI_13/Co (FA_884)                               0.00       1.44 f
+  SUMI_1/FAI_14/Ci (FA_883)                               0.00       1.44 f
+  SUMI_1/FAI_14/U1/ZN (AOI22_X1)                          0.06       1.49 r
+  SUMI_1/FAI_14/U2/ZN (INV_X1)                            0.03       1.52 f
+  SUMI_1/FAI_14/Co (FA_883)                               0.00       1.52 f
+  SUMI_1/FAI_15/Ci (FA_882)                               0.00       1.52 f
+  SUMI_1/FAI_15/U1/ZN (AOI22_X1)                          0.06       1.58 r
+  SUMI_1/FAI_15/U2/ZN (INV_X1)                            0.03       1.61 f
+  SUMI_1/FAI_15/Co (FA_882)                               0.00       1.61 f
+  SUMI_1/FAI_16/Ci (FA_881)                               0.00       1.61 f
+  SUMI_1/FAI_16/U5/ZN (AOI22_X1)                          0.06       1.66 r
+  SUMI_1/FAI_16/U4/ZN (INV_X1)                            0.03       1.69 f
+  SUMI_1/FAI_16/Co (FA_881)                               0.00       1.69 f
+  SUMI_1/FAI_17/Ci (FA_880)                               0.00       1.69 f
+  SUMI_1/FAI_17/U2/ZN (AOI22_X1)                          0.06       1.75 r
+  SUMI_1/FAI_17/U5/ZN (INV_X1)                            0.03       1.77 f
+  SUMI_1/FAI_17/Co (FA_880)                               0.00       1.77 f
+  SUMI_1/FAI_18/Ci (FA_879)                               0.00       1.77 f
+  SUMI_1/FAI_18/U1/ZN (AOI22_X1)                          0.06       1.83 r
+  SUMI_1/FAI_18/U2/ZN (INV_X1)                            0.03       1.86 f
+  SUMI_1/FAI_18/Co (FA_879)                               0.00       1.86 f
+  SUMI_1/FAI_19/Ci (FA_878)                               0.00       1.86 f
+  SUMI_1/FAI_19/U1/ZN (AOI22_X1)                          0.06       1.91 r
+  SUMI_1/FAI_19/U2/ZN (INV_X1)                            0.03       1.94 f
+  SUMI_1/FAI_19/Co (FA_878)                               0.00       1.94 f
+  SUMI_1/FAI_20/Ci (FA_877)                               0.00       1.94 f
+  SUMI_1/FAI_20/U5/ZN (AOI22_X1)                          0.06       2.00 r
+  SUMI_1/FAI_20/U6/ZN (INV_X1)                            0.03       2.03 f
+  SUMI_1/FAI_20/Co (FA_877)                               0.00       2.03 f
+  SUMI_1/FAI_21/Ci (FA_876)                               0.00       2.03 f
+  SUMI_1/FAI_21/U2/ZN (AOI22_X1)                          0.06       2.08 r
+  SUMI_1/FAI_21/U5/ZN (INV_X1)                            0.03       2.11 f
+  SUMI_1/FAI_21/Co (FA_876)                               0.00       2.11 f
+  SUMI_1/FAI_22/Ci (FA_875)                               0.00       2.11 f
+  SUMI_1/FAI_22/U2/ZN (AOI22_X1)                          0.06       2.17 r
+  SUMI_1/FAI_22/U1/ZN (INV_X1)                            0.03       2.20 f
+  SUMI_1/FAI_22/Co (FA_875)                               0.00       2.20 f
+  SUMI_1/FAI_23/Ci (FA_874)                               0.00       2.20 f
+  SUMI_1/FAI_23/U5/ZN (AOI22_X1)                          0.06       2.25 r
+  SUMI_1/FAI_23/U6/ZN (INV_X1)                            0.03       2.28 f
+  SUMI_1/FAI_23/Co (FA_874)                               0.00       2.28 f
+  SUMI_1/FAI_24/Ci (FA_873)                               0.00       2.28 f
+  SUMI_1/FAI_24/U4/ZN (AOI22_X1)                          0.06       2.34 r
+  SUMI_1/FAI_24/U5/ZN (INV_X1)                            0.03       2.36 f
+  SUMI_1/FAI_24/Co (FA_873)                               0.00       2.36 f
+  SUMI_1/FAI_25/Ci (FA_872)                               0.00       2.36 f
+  SUMI_1/FAI_25/U5/ZN (AOI22_X1)                          0.06       2.42 r
+  SUMI_1/FAI_25/U4/ZN (INV_X1)                            0.03       2.45 f
+  SUMI_1/FAI_25/Co (FA_872)                               0.00       2.45 f
+  SUMI_1/FAI_26/Ci (FA_871)                               0.00       2.45 f
+  SUMI_1/FAI_26/U4/ZN (AOI22_X1)                          0.06       2.50 r
+  SUMI_1/FAI_26/U5/ZN (INV_X1)                            0.03       2.53 f
+  SUMI_1/FAI_26/Co (FA_871)                               0.00       2.53 f
+  SUMI_1/FAI_27/Ci (FA_870)                               0.00       2.53 f
+  SUMI_1/FAI_27/U1/ZN (AOI22_X1)                          0.06       2.59 r
+  SUMI_1/FAI_27/U2/ZN (INV_X1)                            0.03       2.62 f
+  SUMI_1/FAI_27/Co (FA_870)                               0.00       2.62 f
+  SUMI_1/FAI_28/Ci (FA_869)                               0.00       2.62 f
+  SUMI_1/FAI_28/U5/ZN (AOI22_X1)                          0.06       2.67 r
+  SUMI_1/FAI_28/U4/ZN (INV_X1)                            0.03       2.70 f
+  SUMI_1/FAI_28/Co (FA_869)                               0.00       2.70 f
+  SUMI_1/FAI_29/Ci (FA_868)                               0.00       2.70 f
+  SUMI_1/FAI_29/U1/ZN (AOI22_X1)                          0.06       2.76 r
+  SUMI_1/FAI_29/U2/ZN (INV_X1)                            0.03       2.79 f
+  SUMI_1/FAI_29/Co (FA_868)                               0.00       2.79 f
+  SUMI_1/FAI_30/Ci (FA_867)                               0.00       2.79 f
+  SUMI_1/FAI_30/U2/ZN (AOI22_X1)                          0.06       2.84 r
+  SUMI_1/FAI_30/U1/ZN (INV_X1)                            0.03       2.87 f
+  SUMI_1/FAI_30/Co (FA_867)                               0.00       2.87 f
+  SUMI_1/FAI_31/Ci (FA_866)                               0.00       2.87 f
+  SUMI_1/FAI_31/U2/ZN (AOI22_X1)                          0.06       2.93 r
+  SUMI_1/FAI_31/U5/ZN (INV_X1)                            0.03       2.95 f
+  SUMI_1/FAI_31/Co (FA_866)                               0.00       2.95 f
+  SUMI_1/FAI_32/Ci (FA_865)                               0.00       2.95 f
+  SUMI_1/FAI_32/U4/ZN (AOI22_X1)                          0.06       3.01 r
+  SUMI_1/FAI_32/U5/ZN (INV_X1)                            0.03       3.04 f
+  SUMI_1/FAI_32/Co (FA_865)                               0.00       3.04 f
+  SUMI_1/FAI_33/Ci (FA_864)                               0.00       3.04 f
+  SUMI_1/FAI_33/U2/ZN (AOI22_X1)                          0.06       3.10 r
+  SUMI_1/FAI_33/U1/ZN (INV_X1)                            0.03       3.12 f
+  SUMI_1/FAI_33/Co (FA_864)                               0.00       3.12 f
+  SUMI_1/FAI_34/Ci (FA_863)                               0.00       3.12 f
+  SUMI_1/FAI_34/U1/ZN (AOI22_X1)                          0.06       3.18 r
+  SUMI_1/FAI_34/U2/ZN (INV_X1)                            0.03       3.21 f
+  SUMI_1/FAI_34/Co (FA_863)                               0.00       3.21 f
+  SUMI_1/FAI_35/Ci (FA_862)                               0.00       3.21 f
+  SUMI_1/FAI_35/U2/ZN (AOI22_X1)                          0.06       3.26 r
+  SUMI_1/FAI_35/U1/ZN (INV_X1)                            0.03       3.29 f
+  SUMI_1/FAI_35/Co (FA_862)                               0.00       3.29 f
+  SUMI_1/FAI_36/Ci (FA_861)                               0.00       3.29 f
+  SUMI_1/FAI_36/U1/ZN (AOI22_X1)                          0.06       3.35 r
+  SUMI_1/FAI_36/U2/ZN (INV_X1)                            0.03       3.38 f
+  SUMI_1/FAI_36/Co (FA_861)                               0.00       3.38 f
+  SUMI_1/FAI_37/Ci (FA_860)                               0.00       3.38 f
+  SUMI_1/FAI_37/U2/ZN (AOI22_X1)                          0.06       3.43 r
+  SUMI_1/FAI_37/U5/ZN (INV_X1)                            0.03       3.46 f
+  SUMI_1/FAI_37/Co (FA_860)                               0.00       3.46 f
+  SUMI_1/FAI_38/Ci (FA_859)                               0.00       3.46 f
+  SUMI_1/FAI_38/U2/ZN (AOI22_X1)                          0.06       3.52 r
+  SUMI_1/FAI_38/U1/ZN (INV_X1)                            0.03       3.54 f
+  SUMI_1/FAI_38/Co (FA_859)                               0.00       3.54 f
+  SUMI_1/FAI_39/Ci (FA_858)                               0.00       3.54 f
+  SUMI_1/FAI_39/U1/ZN (AOI22_X1)                          0.06       3.60 r
+  SUMI_1/FAI_39/U2/ZN (INV_X1)                            0.03       3.63 f
+  SUMI_1/FAI_39/Co (FA_858)                               0.00       3.63 f
+  SUMI_1/FAI_40/Ci (FA_857)                               0.00       3.63 f
+  SUMI_1/FAI_40/U2/ZN (AOI22_X1)                          0.06       3.69 r
+  SUMI_1/FAI_40/U1/ZN (INV_X1)                            0.03       3.71 f
+  SUMI_1/FAI_40/Co (FA_857)                               0.00       3.71 f
+  SUMI_1/FAI_41/Ci (FA_856)                               0.00       3.71 f
+  SUMI_1/FAI_41/U2/ZN (AOI22_X1)                          0.06       3.77 r
+  SUMI_1/FAI_41/U5/ZN (INV_X1)                            0.03       3.80 f
+  SUMI_1/FAI_41/Co (FA_856)                               0.00       3.80 f
+  SUMI_1/FAI_42/Ci (FA_855)                               0.00       3.80 f
+  SUMI_1/FAI_42/U2/ZN (AOI22_X1)                          0.06       3.85 r
+  SUMI_1/FAI_42/U5/ZN (INV_X1)                            0.03       3.88 f
+  SUMI_1/FAI_42/Co (FA_855)                               0.00       3.88 f
+  SUMI_1/FAI_43/Ci (FA_854)                               0.00       3.88 f
+  SUMI_1/FAI_43/U2/ZN (AOI22_X1)                          0.06       3.94 r
+  SUMI_1/FAI_43/U1/ZN (INV_X1)                            0.03       3.97 f
+  SUMI_1/FAI_43/Co (FA_854)                               0.00       3.97 f
+  SUMI_1/FAI_44/Ci (FA_853)                               0.00       3.97 f
+  SUMI_1/FAI_44/U1/ZN (AOI22_X1)                          0.06       4.02 r
+  SUMI_1/FAI_44/U2/ZN (INV_X1)                            0.03       4.05 f
+  SUMI_1/FAI_44/Co (FA_853)                               0.00       4.05 f
+  SUMI_1/FAI_45/Ci (FA_852)                               0.00       4.05 f
+  SUMI_1/FAI_45/U3/Z (XOR2_X1)                            0.07       4.12 f
+  SUMI_1/FAI_45/S (FA_852)                                0.00       4.12 f
+  SUMI_1/S[44] (RCA_NbitRca64_14)                         0.00       4.12 f
+  SUMI_2/B[44] (RCA_NbitRca64_13)                         0.00       4.12 f
+  SUMI_2/FAI_45/B (FA_788)                                0.00       4.12 f
+  SUMI_2/FAI_45/U4/Z (XOR2_X1)                            0.07       4.20 f
+  SUMI_2/FAI_45/U5/ZN (AOI22_X1)                          0.06       4.26 r
+  SUMI_2/FAI_45/U2/ZN (INV_X1)                            0.03       4.29 f
+  SUMI_2/FAI_45/Co (FA_788)                               0.00       4.29 f
+  SUMI_2/FAI_46/Ci (FA_787)                               0.00       4.29 f
+  SUMI_2/FAI_46/U5/ZN (AOI22_X1)                          0.06       4.35 r
+  SUMI_2/FAI_46/U6/ZN (INV_X1)                            0.03       4.37 f
+  SUMI_2/FAI_46/Co (FA_787)                               0.00       4.37 f
+  SUMI_2/FAI_47/Ci (FA_786)                               0.00       4.37 f
+  SUMI_2/FAI_47/U2/ZN (AOI22_X1)                          0.06       4.43 r
+  SUMI_2/FAI_47/U1/ZN (INV_X1)                            0.03       4.46 f
+  SUMI_2/FAI_47/Co (FA_786)                               0.00       4.46 f
+  SUMI_2/FAI_48/Ci (FA_785)                               0.00       4.46 f
+  SUMI_2/FAI_48/U2/ZN (AOI22_X1)                          0.06       4.52 r
+  SUMI_2/FAI_48/U5/ZN (INV_X1)                            0.03       4.54 f
+  SUMI_2/FAI_48/Co (FA_785)                               0.00       4.54 f
+  SUMI_2/FAI_49/Ci (FA_784)                               0.00       4.54 f
+  SUMI_2/FAI_49/U5/ZN (AOI22_X1)                          0.06       4.60 r
+  SUMI_2/FAI_49/U2/ZN (INV_X1)                            0.03       4.63 f
+  SUMI_2/FAI_49/Co (FA_784)                               0.00       4.63 f
+  SUMI_2/FAI_50/Ci (FA_783)                               0.00       4.63 f
+  SUMI_2/FAI_50/U5/ZN (AOI22_X1)                          0.06       4.68 r
+  SUMI_2/FAI_50/U4/ZN (INV_X1)                            0.03       4.71 f
+  SUMI_2/FAI_50/Co (FA_783)                               0.00       4.71 f
+  SUMI_2/FAI_51/Ci (FA_782)                               0.00       4.71 f
+  SUMI_2/FAI_51/U4/ZN (AOI22_X1)                          0.06       4.77 r
+  SUMI_2/FAI_51/U5/ZN (INV_X1)                            0.03       4.80 f
+  SUMI_2/FAI_51/Co (FA_782)                               0.00       4.80 f
+  SUMI_2/FAI_52/Ci (FA_781)                               0.00       4.80 f
+  SUMI_2/FAI_52/U5/ZN (AOI22_X1)                          0.06       4.86 r
+  SUMI_2/FAI_52/U4/ZN (INV_X1)                            0.03       4.88 f
+  SUMI_2/FAI_52/Co (FA_781)                               0.00       4.88 f
+  SUMI_2/FAI_53/Ci (FA_780)                               0.00       4.88 f
+  SUMI_2/FAI_53/U4/ZN (AOI22_X1)                          0.06       4.94 r
+  SUMI_2/FAI_53/U5/ZN (INV_X1)                            0.03       4.97 f
+  SUMI_2/FAI_53/Co (FA_780)                               0.00       4.97 f
+  SUMI_2/FAI_54/Ci (FA_779)                               0.00       4.97 f
+  SUMI_2/FAI_54/U5/ZN (AOI22_X1)                          0.06       5.02 r
+  SUMI_2/FAI_54/U4/ZN (INV_X1)                            0.03       5.05 f
+  SUMI_2/FAI_54/Co (FA_779)                               0.00       5.05 f
+  SUMI_2/FAI_55/Ci (FA_778)                               0.00       5.05 f
+  SUMI_2/FAI_55/U5/ZN (AOI22_X1)                          0.06       5.11 r
+  SUMI_2/FAI_55/U4/ZN (INV_X1)                            0.03       5.14 f
+  SUMI_2/FAI_55/Co (FA_778)                               0.00       5.14 f
+  SUMI_2/FAI_56/Ci (FA_777)                               0.00       5.14 f
+  SUMI_2/FAI_56/U1/ZN (AOI22_X1)                          0.06       5.20 r
+  SUMI_2/FAI_56/U2/ZN (INV_X1)                            0.03       5.22 f
+  SUMI_2/FAI_56/Co (FA_777)                               0.00       5.22 f
+  SUMI_2/FAI_57/Ci (FA_776)                               0.00       5.22 f
+  SUMI_2/FAI_57/U5/ZN (AOI22_X1)                          0.06       5.28 r
+  SUMI_2/FAI_57/U4/ZN (INV_X1)                            0.03       5.31 f
+  SUMI_2/FAI_57/Co (FA_776)                               0.00       5.31 f
+  SUMI_2/FAI_58/Ci (FA_775)                               0.00       5.31 f
+  SUMI_2/FAI_58/U4/ZN (AOI22_X1)                          0.06       5.37 r
+  SUMI_2/FAI_58/U5/ZN (INV_X1)                            0.03       5.39 f
+  SUMI_2/FAI_58/Co (FA_775)                               0.00       5.39 f
+  SUMI_2/FAI_59/Ci (FA_774)                               0.00       5.39 f
+  SUMI_2/FAI_59/U5/ZN (AOI22_X1)                          0.06       5.45 r
+  SUMI_2/FAI_59/U4/ZN (INV_X1)                            0.03       5.48 f
+  SUMI_2/FAI_59/Co (FA_774)                               0.00       5.48 f
+  SUMI_2/FAI_60/Ci (FA_773)                               0.00       5.48 f
+  SUMI_2/FAI_60/U5/ZN (AOI22_X1)                          0.06       5.54 r
+  SUMI_2/FAI_60/U4/ZN (INV_X1)                            0.03       5.57 f
+  SUMI_2/FAI_60/Co (FA_773)                               0.00       5.57 f
+  SUMI_2/FAI_61/Ci (FA_772)                               0.00       5.57 f
+  SUMI_2/FAI_61/U5/ZN (AOI22_X1)                          0.06       5.62 r
+  SUMI_2/FAI_61/U6/ZN (INV_X1)                            0.03       5.65 f
+  SUMI_2/FAI_61/Co (FA_772)                               0.00       5.65 f
+  SUMI_2/FAI_62/Ci (FA_771)                               0.00       5.65 f
+  SUMI_2/FAI_62/U3/Z (XOR2_X1)                            0.07       5.72 f
+  SUMI_2/FAI_62/S (FA_771)                                0.00       5.72 f
+  SUMI_2/S[61] (RCA_NbitRca64_13)                         0.00       5.72 f
+  SUMI_3/B[61] (RCA_NbitRca64_12)                         0.00       5.72 f
+  SUMI_3/FAI_62/B (FA_707)                                0.00       5.72 f
+  SUMI_3/FAI_62/U6/ZN (XNOR2_X1)                          0.06       5.79 r
+  SUMI_3/FAI_62/U3/Z (XOR2_X1)                            0.08       5.87 r
+  SUMI_3/FAI_62/S (FA_707)                                0.00       5.87 r
+  SUMI_3/S[61] (RCA_NbitRca64_12)                         0.00       5.87 r
+  SUMI_4/B[61] (RCA_NbitRca64_11)                         0.00       5.87 r
+  SUMI_4/FAI_62/B (FA_643)                                0.00       5.87 r
+  SUMI_4/FAI_62/U2/ZN (XNOR2_X1)                          0.07       5.93 r
+  SUMI_4/FAI_62/U3/Z (XOR2_X1)                            0.08       6.01 r
+  SUMI_4/FAI_62/S (FA_643)                                0.00       6.01 r
+  SUMI_4/S[61] (RCA_NbitRca64_11)                         0.00       6.01 r
+  SUMI_5/B[61] (RCA_NbitRca64_10)                         0.00       6.01 r
+  SUMI_5/FAI_62/B (FA_579)                                0.00       6.01 r
+  SUMI_5/FAI_62/U6/ZN (XNOR2_X1)                          0.07       6.08 r
+  SUMI_5/FAI_62/U3/Z (XOR2_X1)                            0.08       6.16 r
+  SUMI_5/FAI_62/S (FA_579)                                0.00       6.16 r
+  SUMI_5/S[61] (RCA_NbitRca64_10)                         0.00       6.16 r
+  SUMI_6/B[61] (RCA_NbitRca64_9)                          0.00       6.16 r
+  SUMI_6/FAI_62/B (FA_515)                                0.00       6.16 r
+  SUMI_6/FAI_62/U6/ZN (XNOR2_X1)                          0.07       6.23 r
+  SUMI_6/FAI_62/U3/Z (XOR2_X1)                            0.08       6.31 r
+  SUMI_6/FAI_62/S (FA_515)                                0.00       6.31 r
+  SUMI_6/S[61] (RCA_NbitRca64_9)                          0.00       6.31 r
+  SUMI_7/B[61] (RCA_NbitRca64_8)                          0.00       6.31 r
+  SUMI_7/FAI_62/B (FA_451)                                0.00       6.31 r
+  SUMI_7/FAI_62/U2/ZN (XNOR2_X1)                          0.07       6.38 r
+  SUMI_7/FAI_62/U3/Z (XOR2_X1)                            0.08       6.46 r
+  SUMI_7/FAI_62/S (FA_451)                                0.00       6.46 r
+  SUMI_7/S[61] (RCA_NbitRca64_8)                          0.00       6.46 r
+  SUMI_8/B[61] (RCA_NbitRca64_7)                          0.00       6.46 r
+  SUMI_8/FAI_62/B (FA_387)                                0.00       6.46 r
+  SUMI_8/FAI_62/U2/ZN (XNOR2_X1)                          0.07       6.53 r
+  SUMI_8/FAI_62/U3/Z (XOR2_X1)                            0.08       6.61 r
+  SUMI_8/FAI_62/S (FA_387)                                0.00       6.61 r
+  SUMI_8/S[61] (RCA_NbitRca64_7)                          0.00       6.61 r
+  SUMI_9/B[61] (RCA_NbitRca64_6)                          0.00       6.61 r
+  SUMI_9/FAI_62/B (FA_323)                                0.00       6.61 r
+  SUMI_9/FAI_62/U4/ZN (XNOR2_X1)                          0.07       6.68 r
+  SUMI_9/FAI_62/U3/Z (XOR2_X1)                            0.08       6.76 r
+  SUMI_9/FAI_62/S (FA_323)                                0.00       6.76 r
+  SUMI_9/S[61] (RCA_NbitRca64_6)                          0.00       6.76 r
+  SUMI_10/B[61] (RCA_NbitRca64_5)                         0.00       6.76 r
+  SUMI_10/FAI_62/B (FA_259)                               0.00       6.76 r
+  SUMI_10/FAI_62/U4/ZN (XNOR2_X1)                         0.07       6.83 r
+  SUMI_10/FAI_62/U6/ZN (AOI22_X1)                         0.04       6.87 f
+  SUMI_10/FAI_62/U5/ZN (INV_X1)                           0.04       6.90 r
+  SUMI_10/FAI_62/Co (FA_259)                              0.00       6.90 r
+  SUMI_10/FAI_63/Ci (FA_258)                              0.00       6.90 r
+  SUMI_10/FAI_63/U3/Z (XOR2_X1)                           0.08       6.98 r
+  SUMI_10/FAI_63/S (FA_258)                               0.00       6.98 r
+  SUMI_10/S[62] (RCA_NbitRca64_5)                         0.00       6.98 r
+  SUMI_11/B[62] (RCA_NbitRca64_4)                         0.00       6.98 r
+  SUMI_11/FAI_63/B (FA_194)                               0.00       6.98 r
+  SUMI_11/FAI_63/U6/ZN (XNOR2_X1)                         0.07       7.05 r
+  SUMI_11/FAI_63/U3/Z (XOR2_X1)                           0.08       7.13 r
+  SUMI_11/FAI_63/S (FA_194)                               0.00       7.13 r
+  SUMI_11/S[62] (RCA_NbitRca64_4)                         0.00       7.13 r
+  SUMI_12/B[62] (RCA_NbitRca64_3)                         0.00       7.13 r
+  SUMI_12/FAI_63/B (FA_130)                               0.00       7.13 r
+  SUMI_12/FAI_63/U4/ZN (XNOR2_X1)                         0.07       7.20 r
+  SUMI_12/FAI_63/U3/Z (XOR2_X1)                           0.08       7.28 r
+  SUMI_12/FAI_63/S (FA_130)                               0.00       7.28 r
+  SUMI_12/S[62] (RCA_NbitRca64_3)                         0.00       7.28 r
+  SUMI_13/B[62] (RCA_NbitRca64_2)                         0.00       7.28 r
+  SUMI_13/FAI_63/B (FA_66)                                0.00       7.28 r
+  SUMI_13/FAI_63/U2/ZN (XNOR2_X1)                         0.07       7.35 r
+  SUMI_13/FAI_63/U4/ZN (AOI22_X1)                         0.04       7.39 f
+  SUMI_13/FAI_63/U6/ZN (INV_X1)                           0.03       7.42 r
+  SUMI_13/FAI_63/Co (FA_66)                               0.00       7.42 r
+  SUMI_13/FAI_64/Ci (FA_65)                               0.00       7.42 r
+  SUMI_13/FAI_64/U3/ZN (XNOR2_X1)                         0.06       7.48 r
+  SUMI_13/FAI_64/S (FA_65)                                0.00       7.48 r
+  SUMI_13/S[63] (RCA_NbitRca64_2)                         0.00       7.48 r
+  SUMI_14/B[63] (RCA_NbitRca64_1)                         0.00       7.48 r
+  SUMI_14/FAI_64/B (FA_1)                                 0.00       7.48 r
+  SUMI_14/FAI_64/U5/ZN (XNOR2_X1)                         0.07       7.55 r
+  SUMI_14/FAI_64/U4/ZN (XNOR2_X1)                         0.06       7.60 r
+  SUMI_14/FAI_64/S (FA_1)                                 0.00       7.60 r
+  SUMI_14/S[63] (RCA_NbitRca64_1)                         0.00       7.60 r
+  P[63] (out)                                             0.00       7.61 r
+  data arrival time                                                  7.61
+
+  max_delay                                               6.66       6.66
+  output external delay                                   0.00       6.66
+  data required time                                                 6.66
+  --------------------------------------------------------------------------
+  data required time                                                 6.66
+  data arrival time                                                 -7.61
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.95
+
+
+1
