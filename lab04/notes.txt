@@ -1,0 +1,3 @@
+The microcode version of the Control Unit has a different order of the bits related to the control signals.
+It has the bits ordered in the same way as the example shown in Figure 4.6 of the lab pdf.
+The other two versions have the bits ordered using the 4.1.4 example as a reference for the signals.
