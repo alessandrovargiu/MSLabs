@@ -49,20 +49,27 @@ load
 
 **********************************************************
 *    Measuring rising and rising times
-.measure tran rnand TRIG v(out) VAL='alim*0.1' RISE=1
-+TARG v(out) VAL='alim*0.9' RISE=1
-.measure tran fnand TRIG v(out) VAL='alim*0.9' FALL=1
-+TARG v(out) VAL='alim*0.1' FALL=1
-
+* outbis or out8 same value?
+.measure tran rnand TRIG v(outbis) VAL='alim*0.1' RISE=1
++TARG v(outbis) VAL='alim*0.9' RISE=1
+.measure tran fnand TRIG v(outbis) VAL='alim*0.9' FALL=1
++TARG v(outbis) VAL='alim*0.1' FALL=1
 *    Measuring delay
-.measure tran nanddelay TRIG V(inB) VAL='alim*0.5' RISE=1 
-+ TARG V(out) VAL='alim*0.5' FALL=1
+.measure tran nanddelay TRIG V(inB8) VAL='alim*0.5' RISE=1 
++ TARG V(outbis) VAL='alim*0.5' FALL=1
 
 * ADD THE RISE propagation time measure
-
+.measure tran nanddelay2 TRIG V(inB8) VAL='alim*0.5' FALL=1 
++ TARG V(outbis) VAL='alim*0.5' RISE=1
 * Measuring peak current
 
 * ADD THE CORRECT MEASURES FOR GND and CDD CURRENTS
+.measure tran maxIgndF MAX I(vdummy_gnd8) FROM=1n TO 2ns 
+.measure tran maxIvddR MIN I(vdummy_vdd8) FROM=2n TO 3ns 
+.measure tran maxIgndR MAX I(vdummy_gnd8) FROM=2n TO 3ns 
+.measure tran maxIvddF MIN I(vdummy_vdd8) FROM=1n TO 2ns 
+.measure tran maxIloadF MIN I(vdummy_c8) FROM=1n TO 2ns 
+.measure tran maxIloadR MAX I(vdummy_c8) FROM=2n TO 3ns 
 
 **********************************************************
 * defining the simulation step and duration  

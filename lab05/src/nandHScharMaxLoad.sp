@@ -58,10 +58,17 @@ load
 + TARG V(out) VAL='alim*0.5' FALL=1
 
 * ADD THE RISE propagation time measure
-
+.measure tran nanddelay2 TRIG V(inB) VAL='alim*0.5' FALL=1 
++ TARG V(out) VAL='alim*0.5' RISE=1
 * Measuring peak current
 
 * ADD THE CORRECT MEASURES FOR GND and CDD CURRENTS
+.measure tran maxIgndF MAX I(vdummy_gnd) FROM=1n TO 2ns 
+.measure tran maxIvddR MIN I(vdummy_vdd) FROM=2n TO 3ns 
+.measure tran maxIgndR MAX I(vdummy_gnd) FROM=2n TO 3ns 
+.measure tran maxIvddF MIN I(vdummy_vdd) FROM=1n TO 2ns 
+.measure tran maxIloadF MIN I(vdummy_c) FROM=1n TO 2ns 
+.measure tran maxIloadR MAX I(vdummy_c) FROM=2n TO 3ns 
 
 
 **********************************************************

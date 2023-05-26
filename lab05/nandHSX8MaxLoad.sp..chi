@@ -1,0 +1,23 @@
+  Run on localhost.localdomain (Linux 3.10.0-957.5.1.el7.x86_64)
+
+-----------| System Information |---------------
+
+*** User  : ms23.51
+*** OS    : CentOS Linux release 7.6.1810 (Core)  [VCO = aol]
+*** CPU   :
+    Intel Core i7 9xx (Nehalem Class Core i7)
+    Number of physical processors     : 12
+    Hyper-Threading Technology        : N/A
+    Number of cpu cores               : N/A
+    Number of logical processors      : N/A
+*** Freq  : 1994.996MHz
+*** Cache : 4096 KB
+*** MEM   : 65975116 kB
+*** Date  : Fri May 26 09:52:29 2023
+
+*** Eldo VERSION : ELDO 2020.4 (64 bits) Thu Oct 15 15:59:13 GMT 2020
+
+/eda/mentor/2020-21/RHELx86/AMSV_2020.4/amsv/aol/bin/eldo_64.exe -i nandHSX8MaxLoad.sp.
+
+ERROR 1: Unable to open file nandHSX8MaxLoad.sp.
++   No such file or directory
