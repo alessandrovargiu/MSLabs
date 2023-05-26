@@ -1,0 +1,35 @@
+//###########################################################
+//# EZwave - Saved Window File
+//# Friday, May 26, 2023 at 5:25:44 PM CEST
+//#
+//# Note: This is an auto-generated file.
+//#
+//# Any edits that you make may cause the restore of
+//# this window to fail - EDIT AT YOUR OWN RISK
+//###########################################################
+
+SET DOFILE VERSION 2.1
+
+// ===== Open required Database =====
+open wdb /home/ms23.51/Desktop/labs/lab05/src/ex5.3/nandHScharTran.wdb nandHScharTran
+
+// ===== Open the window =====
+open window -maximized -divider 0.85
+
+// ===== Create row #1 =====
+add waveform -expand <nandHScharTran/TRAN>V(OUT) -transform "< none >"
+set axis properties -axis X -scale linear
+add waveform -row 1 -axis Y1 -expand <nandHScharTran/TRAN>V(INB) -transform "< none >"
+set axis properties -row 1 -axis Y1 -autorange
+set user scale Voltage 1.0 V -row 1 -axis Y1
+set row height -row 1 -init 490
+
+// ===== Set X-axis data units =====
+set user scale Time 1.0 s -axis X
+
+// ===== Set X-axis min/max extents =====
+set axis properties -axis X -min 1.994E-9 -max 2.0174374999999992E-9
+
+// ====== Create the cursors, markers and measurements =====
+add cursor -name C4 -position 2.0101033333333336E-9
+add cursor -name C3 -position 1.9992283333333337E-9 -base

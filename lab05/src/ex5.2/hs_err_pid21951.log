@@ -1,0 +1,598 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 32682016768 bytes for committing reserved memory.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_linux.cpp:2640), pid=21951, tid=0x00007efd2a957700
+#
+# JRE version:  (8.0_131-b11) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.131-b11 mixed mode linux-amd64 compressed oops)
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007efd24009800):  JavaThread "Unknown thread" [_thread_in_vm, id=21952, stack(0x00007efd2a858000,0x00007efd2a958000)]
+
+Stack: [0x00007efd2a858000,0x00007efd2a958000],  sp=0x00007efd2a956330,  free space=1016k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0xac826a]  VMError::report_and_die()+0x2ba
+V  [libjvm.so+0x4fd4cb]  report_vm_out_of_memory(char const*, int, unsigned long, VMErrorType, char const*)+0x8b
+V  [libjvm.so+0x924f53]  os::Linux::commit_memory_impl(char*, unsigned long, bool)+0x103
+V  [libjvm.so+0x9254a9]  os::pd_commit_memory(char*, unsigned long, unsigned long, bool)+0x29
+V  [libjvm.so+0x91f6ca]  os::commit_memory(char*, unsigned long, unsigned long, bool)+0x2a
+V  [libjvm.so+0xac3fc9]  VirtualSpace::expand_by(unsigned long, bool)+0x199
+V  [libjvm.so+0xac4b1e]  VirtualSpace::initialize(ReservedSpace, unsigned long)+0xee
+V  [libjvm.so+0x5fb921]  CardGeneration::CardGeneration(ReservedSpace, unsigned long, int, GenRemSet*)+0xf1
+V  [libjvm.so+0x4e6b9e]  ConcurrentMarkSweepGeneration::ConcurrentMarkSweepGeneration(ReservedSpace, unsigned long, int, CardTableRS*, bool, FreeBlockDictionary<FreeChunk>::DictionaryChoice)+0x4e
+V  [libjvm.so+0x5fc9e2]  GenerationSpec::init(ReservedSpace, int, GenRemSet*)+0xf2
+V  [libjvm.so+0x5eb81e]  GenCollectedHeap::initialize()+0x1de
+V  [libjvm.so+0xa902e3]  Universe::initialize_heap()+0xf3
+V  [libjvm.so+0xa9084e]  universe_init()+0x3e
+V  [libjvm.so+0x63e3e5]  init_globals()+0x65
+V  [libjvm.so+0xa73f3e]  Threads::create_vm(JavaVMInitArgs*, bool*)+0x23e
+V  [libjvm.so+0x6d2ce4]  JNI_CreateJavaVM+0x74
+C  [libjli.so+0x745e]  JavaMain+0x9e
+C  [libpthread.so.0+0x7dd5]  start_thread+0xc5
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x00007efd24009800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=21952, stack(0x00007efd2a858000,0x00007efd2a958000)]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 00:2a 3018180                            /eda/mentor/2020-21/RHELx86/AMSV_2020.4/amsv/JRE/v1.8.0_131/aol/bin/java
+00600000-00601000 rw-p 00000000 00:2a 3018180                            /eda/mentor/2020-21/RHELx86/AMSV_2020.4/amsv/JRE/v1.8.0_131/aol/bin/java
+011da000-011fb000 rw-p 00000000 00:00 0                                  [heap]
+7ef5176f9000-7ef517e00000 rw-p 00000000 00:00 0 
+7ef517e00000-7ef518000000 ---p 00000000 00:00 0 
+7ef518000000-7ef54c000000 rw-p 00000000 00:00 0 
+7efce7d79000-7efce8000000 rw-p 00000000 00:00 0 
+7efce8000000-7efce8021000 rw-p 00000000 00:00 0 
+7efce8021000-7efcec000000 ---p 00000000 00:00 0 
+7efcec07e000-7efcec31f000 rw-p 00000000 00:00 0 
+7efcec31f000-7efceffff000 ---p 00000000 00:00 0 
+7efceffff000-7efcf0000000 rw-p 00000000 00:00 0 
+7efcf0000000-7efcf0021000 rw-p 00000000 00:00 0 
+7efcf0021000-7efcf4000000 ---p 00000000 00:00 0 
+7efcf4000000-7efcf4021000 rw-p 00000000 00:00 0 
+7efcf4021000-7efcf8000000 ---p 00000000 00:00 0 
+7efcf8000000-7efcf8021000 rw-p 00000000 00:00 0 
+7efcf8021000-7efcfc000000 ---p 00000000 00:00 0 
+7efcfc000000-7efcfc021000 rw-p 00000000 00:00 0 
+7efcfc021000-7efd00000000 ---p 00000000 00:00 0 
+7efd00000000-7efd00021000 rw-p 00000000 00:00 0 
+7efd00021000-7efd04000000 ---p 00000000 00:00 0 
+7efd04000000-7efd04021000 rw-p 00000000 00:00 0 
+7efd04021000-7efd08000000 ---p 00000000 00:00 0 
+7efd08000000-7efd08021000 rw-p 00000000 00:00 0 
+7efd08021000-7efd0c000000 ---p 00000000 00:00 0 
+7efd0c000000-7efd0c021000 rw-p 00000000 00:00 0 
+7efd0c021000-7efd10000000 ---p 00000000 00:00 0 
+7efd10000000-7efd10021000 rw-p 00000000 00:00 0 
+7efd10021000-7efd14000000 ---p 00000000 00:00 0 
+7efd14034000-7efd14236000 rw-p 00000000 00:00 0 
+7efd14236000-7efd14237000 ---p 00000000 00:00 0 
+7efd14237000-7efd14337000 rw-p 00000000 00:00 0 
+7efd14337000-7efd14338000 ---p 00000000 00:00 0 
+7efd14338000-7efd14438000 rw-p 00000000 00:00 0 
+7efd14438000-7efd14439000 ---p 00000000 00:00 0 
+7efd14439000-7efd14539000 rw-p 00000000 00:00 0 
+7efd14539000-7efd1453a000 ---p 00000000 00:00 0 
+7efd1453a000-7efd1463a000 rw-p 00000000 00:00 0 
+7efd1463a000-7efd1463b000 ---p 00000000 00:00 0 
+7efd1463b000-7efd1473b000 rw-p 00000000 00:00 0 
+7efd1473b000-7efd1473c000 ---p 00000000 00:00 0 
+7efd1473c000-7efd1483c000 rw-p 00000000 00:00 0 
+7efd1483c000-7efd1483d000 ---p 00000000 00:00 0 
+7efd1483d000-7efd1493d000 rw-p 00000000 00:00 0 
+7efd1493d000-7efd1493e000 ---p 00000000 00:00 0 
+7efd1493e000-7efd14a3e000 rw-p 00000000 00:00 0 
+7efd14a3e000-7efd14a3f000 ---p 00000000 00:00 0 
+7efd14a3f000-7efd14b3f000 rw-p 00000000 00:00 0 
+7efd14b3f000-7efd14b40000 ---p 00000000 00:00 0 
+7efd14b40000-7efd14c4a000 rw-p 00000000 00:00 0 
+7efd14c4a000-7efd15000000 ---p 00000000 00:00 0 
+7efd15000000-7efd15270000 rwxp 00000000 00:00 0 
+7efd15270000-7efd24000000 ---p 00000000 00:00 0 
+7efd24000000-7efd24047000 rw-p 00000000 00:00 0 
+7efd24047000-7efd28000000 ---p 00000000 00:00 0 
+7efd28003000-7efd2801d000 r-xp 00000000 00:2a 3018257                    /eda/mentor/2020-21/RHELx86/AMSV_2020.4/amsv/JRE/v1.8.0_131/aol/lib/amd64/libzip.so
+7efd2801d000-7efd2821d000 ---p 0001a000 00:2a 3018257                    /eda/mentor/2020-21/RHELx86/AMSV_2020.4/amsv/JRE/v1.8.0_131/aol/lib/amd64/libzip.so
+7efd2821d000-7efd2821e000 rw-p 0001a000 00:2a 3018257                    /eda/mentor/2020-21/RHELx86/AMSV_2020.4/amsv/JRE/v1.8.0_131/aol/lib/amd64/libzip.so
+7efd2821e000-7efd2822a000 r-xp 00000000 fd:00 134342947                  /usr/lib64/libnss_files-2.17.so
+7efd2822a000-7efd28429000 ---p 0000c000 fd:00 134342947                  /usr/lib64/libnss_files-2.17.so
+7efd28429000-7efd2842a000 r--p 0000b000 fd:00 134342947                  /usr/lib64/libnss_files-2.17.so
+7efd2842a000-7efd2842b000 rw-p 0000c000 fd:00 134342947                  /usr/lib64/libnss_files-2.17.so
+7efd2842b000-7efd28431000 rw-p 00000000 00:00 0 
+7efd28431000-7efd2845c000 r-xp 00000000 00:2a 3018222                    /eda/mentor/2020-21/RHELx86/AMSV_2020.4/amsv/JRE/v1.8.0_131/aol/lib/amd64/libjava.so
+7efd2845c000-7efd2865b000 ---p 0002b000 00:2a 3018222                    /eda/mentor/2020-21/RHELx86/AMSV_2020.4/amsv/JRE/v1.8.0_131/aol/lib/amd64/libjava.so
+7efd2865b000-7efd2865d000 rw-p 0002a000 00:2a 3018222                    /eda/mentor/2020-21/RHELx86/AMSV_2020.4/amsv/JRE/v1.8.0_131/aol/lib/amd64/libjava.so
+7efd2865d000-7efd2866a000 r-xp 00000000 00:2a 3018256                    /eda/mentor/2020-21/RHELx86/AMSV_2020.4/amsv/JRE/v1.8.0_131/aol/lib/amd64/libverify.so
+7efd2866a000-7efd28869000 ---p 0000d000 00:2a 3018256                    /eda/mentor/2020-21/RHELx86/AMSV_2020.4/amsv/JRE/v1.8.0_131/aol/lib/amd64/libverify.so
+7efd28869000-7efd2886b000 rw-p 0000c000 00:2a 3018256                    /eda/mentor/2020-21/RHELx86/AMSV_2020.4/amsv/JRE/v1.8.0_131/aol/lib/amd64/libverify.so
+7efd2886b000-7efd28872000 r-xp 00000000 fd:00 134342964                  /usr/lib64/librt-2.17.so
+7efd28872000-7efd28a71000 ---p 00007000 fd:00 134342964                  /usr/lib64/librt-2.17.so
+7efd28a71000-7efd28a72000 r--p 00006000 fd:00 134342964                  /usr/lib64/librt-2.17.so
+7efd28a72000-7efd28a73000 rw-p 00007000 fd:00 134342964                  /usr/lib64/librt-2.17.so
+7efd28a73000-7efd28b74000 r-xp 00000000 fd:00 134342936                  /usr/lib64/libm-2.17.so
+7efd28b74000-7efd28d73000 ---p 00101000 fd:00 134342936                  /usr/lib64/libm-2.17.so
+7efd28d73000-7efd28d74000 r--p 00100000 fd:00 134342936                  /usr/lib64/libm-2.17.so
+7efd28d74000-7efd28d75000 rw-p 00101000 fd:00 134342936                  /usr/lib64/libm-2.17.so
+7efd28d75000-7efd29a44000 r-xp 00000000 00:2a 3018260                    /eda/mentor/2020-21/RHELx86/AMSV_2020.4/amsv/JRE/v1.8.0_131/aol/lib/amd64/server/libjvm.so
+7efd29a44000-7efd29c44000 ---p 00ccf000 00:2a 3018260                    /eda/mentor/2020-21/RHELx86/AMSV_2020.4/amsv/JRE/v1.8.0_131/aol/lib/amd64/server/libjvm.so
+7efd29c44000-7efd29d1d000 rw-p 00ccf000 00:2a 3018260                    /eda/mentor/2020-21/RHELx86/AMSV_2020.4/amsv/JRE/v1.8.0_131/aol/lib/amd64/server/libjvm.so
+7efd29d1d000-7efd29d68000 rw-p 00000000 00:00 0 
+7efd29d68000-7efd29f2a000 r-xp 00000000 fd:00 134342928                  /usr/lib64/libc-2.17.so
+7efd29f2a000-7efd2a12a000 ---p 001c2000 fd:00 134342928                  /usr/lib64/libc-2.17.so
+7efd2a12a000-7efd2a12e000 r--p 001c2000 fd:00 134342928                  /usr/lib64/libc-2.17.so
+7efd2a12e000-7efd2a130000 rw-p 001c6000 fd:00 134342928                  /usr/lib64/libc-2.17.so
+7efd2a130000-7efd2a135000 rw-p 00000000 00:00 0 
+7efd2a135000-7efd2a137000 r-xp 00000000 fd:00 134342934                  /usr/lib64/libdl-2.17.so
+7efd2a137000-7efd2a337000 ---p 00002000 fd:00 134342934                  /usr/lib64/libdl-2.17.so
+7efd2a337000-7efd2a338000 r--p 00002000 fd:00 134342934                  /usr/lib64/libdl-2.17.so
+7efd2a338000-7efd2a339000 rw-p 00003000 fd:00 134342934                  /usr/lib64/libdl-2.17.so
+7efd2a339000-7efd2a34e000 r-xp 00000000 00:2a 3018197                    /eda/mentor/2020-21/RHELx86/AMSV_2020.4/amsv/JRE/v1.8.0_131/aol/lib/amd64/jli/libjli.so
+7efd2a34e000-7efd2a54e000 ---p 00015000 00:2a 3018197                    /eda/mentor/2020-21/RHELx86/AMSV_2020.4/amsv/JRE/v1.8.0_131/aol/lib/amd64/jli/libjli.so
+7efd2a54e000-7efd2a54f000 rw-p 00015000 00:2a 3018197                    /eda/mentor/2020-21/RHELx86/AMSV_2020.4/amsv/JRE/v1.8.0_131/aol/lib/amd64/jli/libjli.so
+7efd2a54f000-7efd2a566000 r-xp 00000000 fd:00 134342960                  /usr/lib64/libpthread-2.17.so
+7efd2a566000-7efd2a765000 ---p 00017000 fd:00 134342960                  /usr/lib64/libpthread-2.17.so
+7efd2a765000-7efd2a766000 r--p 00016000 fd:00 134342960                  /usr/lib64/libpthread-2.17.so
+7efd2a766000-7efd2a767000 rw-p 00017000 fd:00 134342960                  /usr/lib64/libpthread-2.17.so
+7efd2a767000-7efd2a76b000 rw-p 00000000 00:00 0 
+7efd2a76b000-7efd2a78d000 r-xp 00000000 fd:00 134342922                  /usr/lib64/ld-2.17.so
+7efd2a857000-7efd2a85b000 ---p 00000000 00:00 0 
+7efd2a85b000-7efd2a95d000 rw-p 00000000 00:00 0 
+7efd2a97c000-7efd2a981000 rw-p 00000000 00:00 0 
+7efd2a981000-7efd2a989000 rw-s 00000000 fd:00 72528424                   /tmp/hsperfdata_ms23.51/21951
+7efd2a989000-7efd2a98a000 rw-p 00000000 00:00 0 
+7efd2a98a000-7efd2a98b000 r--p 00000000 00:00 0 
+7efd2a98b000-7efd2a98c000 rw-p 00000000 00:00 0 
+7efd2a98c000-7efd2a98d000 r--p 00021000 fd:00 134342922                  /usr/lib64/ld-2.17.so
+7efd2a98d000-7efd2a98e000 rw-p 00022000 fd:00 134342922                  /usr/lib64/ld-2.17.so
+7efd2a98e000-7efd2a98f000 rw-p 00000000 00:00 0 
+7ffc62495000-7ffc624b7000 rw-p 00000000 00:00 0                          [stack]
+7ffc625d3000-7ffc625d5000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -DHOME=/home/ms23.51 -DEZ_HOME=/home/ms23.51 -DMGC_TMPDIR=/tmp -DMGC_AMS_HOME=/eda/mentor/2020-21/RHELx86/AMSV_2020.4/amsv -DAMS_VCO=aol -Djava.library.path=/eda/mentor/2020-21/RHELx86/AMSV_2020.4/amsv/aol/lib/lib -Xms32000M -Xmx32000M -XX:+UseConcMarkSweepGC -XX:+UseParNewGC -XX:CMSInitiatingOccupancyFraction=30 -XX:+UseCMSInitiatingOccupancyOnly -XX:-UseGCOverheadLimit -XX:+OptimizeStringConcat -Dswing.metalTheme=steel -Dsun.java2d.pmoffscreen=false -Dsun.java2d.xrender=false 
+java_command: /eda/mentor/2020-21/RHELx86/AMSV_2020.4/amsv/aol/lib/ezwave.jar -nosplash
+java_class_path (initial): /eda/mentor/2020-21/RHELx86/AMSV_2020.4/amsv/aol/lib/ezwave.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=/eda/mentor/2020-21/RHELx86/AMSV_2020.4/amsv/bin:/eda/mentor/2020-21/RHELx86/AMSV_2020.4/amsv/devenv_tools/aol/bin:/eda/mentor/2020-21/RHELx86/AMSV_2020.4/amsv/modeltech/linux_x86_64:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/ms23.51/.local/bin:/home/ms23.51/bin:/home/ms23.51/.local/bin:/home/ms23.51/bin:/eda/mentor/2020-21/RHELx86/AMSV_2020.4/amsv/bin:/eda/mentor/2020-21/RHELx86/AMSV_2020.4/amsv/modeltech/bin:/eda/mentor/2020-21/RHELx86/AMSV_2020.4/amsv/bin:/eda/mentor/2020-21/RHELx86/AMSV_2020.4/amsv/modeltech/bin
+LD_LIBRARY_PATH=/eda/mentor/2020-21/RHELx86/AMSV_2020.4/amsv/devenv_tools/aol/lib64:/eda/mentor/2020-21/RHELx86/AMSV_2020.4/amsv/devenv_tools/aol/lib64:/eda/mentor/2020-21/RHELx86/AMSV_2020.4/amsv/devenv_tools/aol/lib:/eda/mentor/2020-21/RHELx86/AMSV_2020.4/amsv/devenv_tools/aol/lib:/eda/mentor/2020-21/RHELx86/AMSV_2020.4/amsv/aol/lib/patch_rhe:/eda/mentor/2020-21/RHELx86/AMSV_2020.4/amsv/modeltech/linux_x86_64:/eda/mentor/2020-21/RHELx86/AMSV_2020.4/amsv/aol/lib:
+SHELL=/bin/bash
+DISPLAY=:81.0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xac8af0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xac8af0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x921dd0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x921dd0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x921dd0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x921dd0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x923610], sa_mask[0]=00000000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGINT: SIG_IGN, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGTERM: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGQUIT: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+
+
+---------------  S Y S T E M  ---------------
+
+OS:CentOS Linux release 7.6.1810 (Core) 
+
+uname:Linux 3.10.0-957.5.1.el7.x86_64 #1 SMP Fri Feb 1 14:54:57 UTC 2019 x86_64
+libc:glibc 2.17 NPTL 2.17 
+rlimit: STACK 10240k, CORE 0k, NPROC 4096, NOFILE 4096, AS infinity
+load average:5.02 5.08 5.30
+
+/proc/meminfo:
+MemTotal:       65975116 kB
+MemFree:        17233780 kB
+MemAvailable:   27345356 kB
+Buffers:            2108 kB
+Cached:          8312444 kB
+SwapCached:            0 kB
+Active:         39410668 kB
+Inactive:        4616160 kB
+Active(anon):   35753056 kB
+Inactive(anon):   658604 kB
+Active(file):    3657612 kB
+Inactive(file):  3957556 kB
+Unevictable:          32 kB
+Mlocked:              32 kB
+SwapTotal:       4063228 kB
+SwapFree:        4063228 kB
+Dirty:               296 kB
+Writeback:             0 kB
+AnonPages:      35710280 kB
+Mapped:           923236 kB
+Shmem:            699384 kB
+Slab:            3396424 kB
+SReclaimable:    3026220 kB
+SUnreclaim:       370204 kB
+KernelStack:       88272 kB
+PageTables:       578516 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    37050784 kB
+Committed_AS:   755023664 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:      121020 kB
+VmallocChunk:   34359610832 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:  25581568 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:      176112 kB
+DirectMap2M:    66932736 kB
+
+
+CPU:total 12 (initial active 12) (1 cores per cpu, 1 threads per core) family 6 model 26 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, tsc
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 26
+model name	: Intel Core i7 9xx (Nehalem Class Core i7)
+stepping	: 3
+microcode	: 0x1
+cpu MHz		: 1994.996
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 4
+wp		: yes
+flags		: fpu de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx lm constant_tsc nopl eagerfpu pni ssse3 cx16 sse4_1 sse4_2 x2apic popcnt hypervisor lahf_lm
+bogomips	: 3989.99
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 44 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 26
+model name	: Intel Core i7 9xx (Nehalem Class Core i7)
+stepping	: 3
+microcode	: 0x1
+cpu MHz		: 1994.996
+cache size	: 4096 KB
+physical id	: 1
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 4
+wp		: yes
+flags		: fpu de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx lm constant_tsc nopl eagerfpu pni ssse3 cx16 sse4_1 sse4_2 x2apic popcnt hypervisor lahf_lm
+bogomips	: 3989.99
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 44 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 26
+model name	: Intel Core i7 9xx (Nehalem Class Core i7)
+stepping	: 3
+microcode	: 0x1
+cpu MHz		: 1994.996
+cache size	: 4096 KB
+physical id	: 2
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 4
+wp		: yes
+flags		: fpu de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx lm constant_tsc nopl eagerfpu pni ssse3 cx16 sse4_1 sse4_2 x2apic popcnt hypervisor lahf_lm
+bogomips	: 3989.99
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 44 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 26
+model name	: Intel Core i7 9xx (Nehalem Class Core i7)
+stepping	: 3
+microcode	: 0x1
+cpu MHz		: 1994.996
+cache size	: 4096 KB
+physical id	: 3
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 4
+wp		: yes
+flags		: fpu de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx lm constant_tsc nopl eagerfpu pni ssse3 cx16 sse4_1 sse4_2 x2apic popcnt hypervisor lahf_lm
+bogomips	: 3989.99
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 44 bits physical, 48 bits virtual
+power management:
+
+processor	: 4
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 26
+model name	: Intel Core i7 9xx (Nehalem Class Core i7)
+stepping	: 3
+microcode	: 0x1
+cpu MHz		: 1994.996
+cache size	: 4096 KB
+physical id	: 4
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 4
+initial apicid	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 4
+wp		: yes
+flags		: fpu de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx lm constant_tsc nopl eagerfpu pni ssse3 cx16 sse4_1 sse4_2 x2apic popcnt hypervisor lahf_lm
+bogomips	: 3989.99
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 44 bits physical, 48 bits virtual
+power management:
+
+processor	: 5
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 26
+model name	: Intel Core i7 9xx (Nehalem Class Core i7)
+stepping	: 3
+microcode	: 0x1
+cpu MHz		: 1994.996
+cache size	: 4096 KB
+physical id	: 5
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 5
+initial apicid	: 5
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 4
+wp		: yes
+flags		: fpu de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx lm constant_tsc nopl eagerfpu pni ssse3 cx16 sse4_1 sse4_2 x2apic popcnt hypervisor lahf_lm
+bogomips	: 3989.99
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 44 bits physical, 48 bits virtual
+power management:
+
+processor	: 6
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 26
+model name	: Intel Core i7 9xx (Nehalem Class Core i7)
+stepping	: 3
+microcode	: 0x1
+cpu MHz		: 1994.996
+cache size	: 4096 KB
+physical id	: 6
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 6
+initial apicid	: 6
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 4
+wp		: yes
+flags		: fpu de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx lm constant_tsc nopl eagerfpu pni ssse3 cx16 sse4_1 sse4_2 x2apic popcnt hypervisor lahf_lm
+bogomips	: 3989.99
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 44 bits physical, 48 bits virtual
+power management:
+
+processor	: 7
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 26
+model name	: Intel Core i7 9xx (Nehalem Class Core i7)
+stepping	: 3
+microcode	: 0x1
+cpu MHz		: 1994.996
+cache size	: 4096 KB
+physical id	: 7
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 7
+initial apicid	: 7
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 4
+wp		: yes
+flags		: fpu de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx lm constant_tsc nopl eagerfpu pni ssse3 cx16 sse4_1 sse4_2 x2apic popcnt hypervisor lahf_lm
+bogomips	: 3989.99
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 44 bits physical, 48 bits virtual
+power management:
+
+processor	: 8
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 26
+model name	: Intel Core i7 9xx (Nehalem Class Core i7)
+stepping	: 3
+microcode	: 0x1
+cpu MHz		: 1994.996
+cache size	: 4096 KB
+physical id	: 8
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 8
+initial apicid	: 8
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 4
+wp		: yes
+flags		: fpu de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx lm constant_tsc nopl eagerfpu pni ssse3 cx16 sse4_1 sse4_2 x2apic popcnt hypervisor lahf_lm
+bogomips	: 3989.99
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 44 bits physical, 48 bits virtual
+power management:
+
+processor	: 9
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 26
+model name	: Intel Core i7 9xx (Nehalem Class Core i7)
+stepping	: 3
+microcode	: 0x1
+cpu MHz		: 1994.996
+cache size	: 4096 KB
+physical id	: 9
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 9
+initial apicid	: 9
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 4
+wp		: yes
+flags		: fpu de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx lm constant_tsc nopl eagerfpu pni ssse3 cx16 sse4_1 sse4_2 x2apic popcnt hypervisor lahf_lm
+bogomips	: 3989.99
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 44 bits physical, 48 bits virtual
+power management:
+
+processor	: 10
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 26
+model name	: Intel Core i7 9xx (Nehalem Class Core i7)
+stepping	: 3
+microcode	: 0x1
+cpu MHz		: 1994.996
+cache size	: 4096 KB
+physical id	: 10
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 10
+initial apicid	: 10
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 4
+wp		: yes
+flags		: fpu de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx lm constant_tsc nopl eagerfpu pni ssse3 cx16 sse4_1 sse4_2 x2apic popcnt hypervisor lahf_lm
+bogomips	: 3989.99
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 44 bits physical, 48 bits virtual
+power management:
+
+processor	: 11
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 26
+model name	: Intel Core i7 9xx (Nehalem Class Core i7)
+stepping	: 3
+microcode	: 0x1
+cpu MHz		: 1994.996
+cache size	: 4096 KB
+physical id	: 11
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 11
+initial apicid	: 11
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 4
+wp		: yes
+flags		: fpu de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx lm constant_tsc nopl eagerfpu pni ssse3 cx16 sse4_1 sse4_2 x2apic popcnt hypervisor lahf_lm
+bogomips	: 3989.99
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 44 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 65975116k(17233780k free), swap 4063228k(4063228k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.131-b11) for linux-amd64 JRE (1.8.0_131-b11), built on Mar 15 2017 01:23:40 by "java_re" with gcc 4.3.0 20080428 (Red Hat 4.3.0-8)
+
+time: Thu May 25 11:13:28 2023
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
