@@ -2,6 +2,8 @@ dx fall (out)   ->  8.10541p
 
 dx rise (out) 	->  10.8750p	
 
+TRAN = 5.248E-16
+
 50% delay between input and output -> find dx for both rising and falling
 compare with eldo results
 
