@@ -1,4 +1,4 @@
-* Characterizing a simple nand with load variation
+* Characterizing a nand with low subthreshold power dissipation
 
 * including MOS model 
 .lib '$ST_HSPICE_LIB/include_CMOS013.lib' CMOS013lib
@@ -15,17 +15,17 @@
 
 * instance of the nand: can be the same as for mynand
 * only the reference to the template name must be changed 
-xnand inA inB outbis gnd_int vdd_int ND2HS
+xnand inA inB outbis gnd_int vdd_int ND2LL
 cload out 0 load
 
-* dummy 0 voltage generator used for measuring current
 vdummy_c outbis out dc 0
 vdummy_gnd gnd_int 0 dc 0
 vdummy_vdd vdd_int vdd dc 0
 
-.plot i(vdummy_c) 
+.plot i(vdummy_c)
 .plot i(vdummy_gnd)
 .plot i(vdummy_vdd)
+
 *****************************************************
 * defining inputs
 vina inA 0 dc 1.2
@@ -42,10 +42,7 @@ v_vdd vdd 0 DC alim
 * defining load variations
 .data vectorload
 load
-0.005f
 0.05f
-0.5f
-5.0f
 50.0f
 .enddata
 
@@ -60,14 +57,12 @@ load
 .measure tran nanddelay TRIG V(inB) VAL='alim*0.5' RISE=1 
 + TARG V(out) VAL='alim*0.5' FALL=1
 
-.measure tran nanddelayLH TRIG V(inB) VAL='alim*0.5' FALL=1 
+* ADD THE RISE propagation time measure
+.measure tran nanddelay2 TRIG V(inB) VAL='alim*0.5' FALL=1 
 + TARG V(out) VAL='alim*0.5' RISE=1
-
-** ADD THE instruction for the fall delay!!!
-
-
 * Measuring peak current
- 
+
+* ADD THE CORRECT MEASURES FOR GND and CDD CURRENTS
 .measure tran maxIgndF MAX I(vdummy_gnd) FROM=1n TO 2ns 
 .measure tran maxIvddR MIN I(vdummy_vdd) FROM=2n TO 3ns 
 .measure tran maxIgndR MAX I(vdummy_gnd) FROM=2n TO 3ns 

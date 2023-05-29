@@ -1,4 +1,4 @@
-* Characterizing a simple nand X8 with maximum load
+* Characterizing a simple nand X8 with low subthreshold power dissipation
 
 * including MOS model 
 .lib '$ST_HSPICE_LIB/include_CMOS013.lib' CMOS013lib
@@ -15,7 +15,7 @@
 
 * instance of the nand: can be the same as for mynand
 * only the reference to the template name must be changed 
-xnand inA8 inB8 outbis gnd_int vdd_int ND2HSX8
+xnand inA8 inB8 outbis gnd_int vdd_int ND2LLX8 
 cload out8 0 load
 
 vdummy_c8 outbis out8 dc 0
