@@ -13,17 +13,17 @@
 *** Freq  : 1994.996MHz
 *** Cache : 4096 KB
 *** MEM   : 65975116 kB
-*** Date  : Thu May 25 10:58:18 2023
+*** Date  : Thu Jun  1 10:24:58 2023
 
 *** Eldo VERSION : ELDO 2020.4 (64 bits) Thu Oct 15 15:59:13 GMT 2020
 
 /eda/mentor/2020-21/RHELx86/AMSV_2020.4/amsv/aol/bin/eldo_64.exe -i nandHScharTran.sp
 
 
-***> 25-May-2023 10:58:18 - STARTING PARSING PHASE ...
+***>  1-Jun-2023 10:24:58 - STARTING PARSING PHASE ...
 
 ***** PRE-PROCESSING ...
-1*******25-May-23 *******  ELDO 2020.4 (64 bits)  (v20.4_0.1)  *******10:58:18******
+1******* 1-Jun-23 *******  ELDO 2020.4 (64 bits)  (v20.4_0.1)  *******10:24:58******
 
 0* Characterizing a simple nand with load variation
 
@@ -2146,11 +2146,11 @@ Warning 902: In file "/home/repository/ms/cap5/lib/diode.lib" line 181:
    42  * defining load variations
    43  .DATA vectorload
    44  + t_tran 			
-   45  + 0.0048f
-   46  + 0.1088f
-   47  + 0.2608f
-   48  + 0.5248f
-   49  + 0.8000f
+   45  + 0.0048n
+   46  + 0.1088n
+   47  + 0.2608n
+   48  + 0.5248n
+   49  + 0.8000n
    50  .ENDDATA
    51  
    52  **********************************************************
@@ -2197,10 +2197,10 @@ End of file
 ***** 18  warning(s). 
 
 
-***> 25-May-2023 10:58:18 - PARSING completed: WALL CLOCK ELAPSED TIME 0s <***
+***>  1-Jun-2023 10:24:58 - PARSING completed: WALL CLOCK ELAPSED TIME 0s <***
 
 
-***> 25-May-2023 10:58:18 - STARTING ELABORATION PHASE ...
+***>  1-Jun-2023 10:24:58 - STARTING ELABORATION PHASE ...
 Warning 252: In file "/home/repository/ms/cap5/lib/CMOS013.spi" line 14:
 +   OBJECT "XNAND.C2": Self-connected object not created.
 
@@ -2250,22 +2250,18 @@ Note 108: Acquiring license Analog Simulator Kernel (eldokernel)
 
 
 run number 1 out of 5
-   value of parameter T_TRAN is 4.800000E-18
+   value of parameter T_TRAN is 4.800000E-12
 1************************************************************************************************************************
 
-*** DATE: 25-May-2023 10:58:19
+*** DATE:  1-Jun-2023 10:24:58
 *** TITLE: * Characterizing a simple nand with load variation
 
 TEMPERATURE : 27.000000 degrees C
 
 
 
-Warning: A transition time < HMIN (1.000000e-12Sec) found on VINB
-HMIN assumed.. Set Eldo option 'HMIN' to a lower value if needed.
 
-
-
-1***************25-May-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************10:58:19*****************
+1*************** 1-Jun-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************10:24:58*****************
 
 0* Characterizing a simple nand with load variation
 0****                 OPTION SUMMARY                                         TEMPERATURE =   27.000 DEG C
@@ -2335,420 +2331,18 @@ TIMING         = 0        MODWL          = 1        ULOGIC         = 0
 
 
 
-***> 25-May-2023 10:58:19 - ELABORATION completed: WALL CLOCK ELAPSED TIME 1s <***
+***>  1-Jun-2023 10:24:58 - ELABORATION completed: WALL CLOCK ELAPSED TIME 0s <***
 
 
-***> 25-May-2023 10:58:19 - STARTING SIMULATION PHASE ...
+***>  1-Jun-2023 10:24:58 - STARTING SIMULATION PHASE ...
 
-***> 25-May-2023 10:58:19 - DC FOR TRAN completed: TOTAL WALL CLOCK ELAPSED TIME 0s <***
+***>  1-Jun-2023 10:24:58 - DC FOR TRAN completed: TOTAL WALL CLOCK ELAPSED TIME 0s <***
 
 
 
 
 
-1***************25-May-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************10:58:19*****************
-
-0* Characterizing a simple nand with load variation
-0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
-
-0*************************************************************************************************************************
-
-
-  NODE         VOLTAGE      NODE         VOLTAGE      NODE         VOLTAGE    
-GND_INT      0.0         INA          1.2000E+00  INB          0.0         
-OUT          1.2000E+00  OUTBIS       1.2000E+00  VDD          1.2000E+00  
-VDD_INT      1.2000E+00  XNAND.NET15  4.0840E-06  
-
-
-   VOLTAGE SOURCE CURRENT
-
-NAME      CURRENT      VOLTAGE      POWER        
-VDUMMY_C   0.0          0.0          0.0         
-VDUMMY_GND   5.6590E-09   0.0          0.0         
-VDUMMY_VDD  -5.6590E-09   0.0          0.0         
-VINA       0.0          1.2000E+00   0.0         
-VINB       0.0          0.0          0.0         
-V_VDD     -5.6590E-09   1.2000E+00  -6.7908E-09  
-
-   TOTAL POWER DISSIPATION:  6.7908E-09 WATTS
-
-
-
-
-
-Eldo NEWTON: VNTOL=1.000000e-09 RELTOL=1.000000e-06
-
-................................................
-Simulation progress                : 25% (t = 817.5000 P)
-Thread CPU time                    :  0h  0mn  0s  10   ( 0h  0mn  0s  10)
-CPU Usage                          : 100%               (100%)
-................................................
-Simulation progress                : 50% (t = 1.6055 N)
-Thread CPU time                    :  0h  0mn  0s  10   ( 0h  0mn  0s  20)
-CPU Usage                          :  62%               (100%)
-................................................
-Simulation progress                : 75% (t = 2.2547 N)
-Thread CPU time                    :  0h  0mn  0s  20   ( 0h  0mn  0s  40)
-CPU Usage                          : 100%               (100%)
-................................................
-Simulation progress                : 100% (t = 3.0000 N)
-Thread CPU time                    :  0h  0mn  0s   0   ( 0h  0mn  0s  40)
-CPU Usage                          :   0%               (100%)
-
-***> 25-May-2023 10:58:20 - TRAN completed: TOTAL WALL CLOCK ELAPSED TIME 0s <***
-
-
-
-1***************25-May-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************10:58:19*****************
-
-0* Characterizing a simple nand with load variation
-0****                 EXTRACT INFORMATION                                    
-0****   PARAM T_TRAN =  4.8000E-18
-0****   TEMPERATURE =  2.7000E+01 Celsius
-
-0*************************************************************************************************************************
-
-
-
-  RNAND       =  1.6916E-11   targ=  2.0216E-09     trig=  2.0047E-09
-  FNAND       =  1.4217E-11   targ=  1.0188E-09     trig=  1.0046E-09
-  NANDDELAY   =  1.0144E-11   targ=  1.0094E-09     trig=  9.9929E-10
-  NANDDELAY2  =  1.0872E-11   targ=  2.0101E-09     trig=  1.9992E-09
-  MAXIGNDF    =  7.7813E-04     at=  1.0000E-09  from=  1.0000E-09     to=  2.0000E-09
-  MAXIVDDR    = -1.8337E-04     at=  2.0010E-09  from=  2.0000E-09     to=  3.0000E-09
-  MAXIGNDR    =  6.4009E-05     at=  2.0050E-09  from=  2.0000E-09     to=  3.0000E-09
-  MAXIVDDF    = -8.4465E-04     at=  2.0000E-09  from=  1.0000E-09     to=  2.0000E-09
-  MAXILOADF   = -6.0595E-06     at=  2.0000E-09  from=  1.0000E-09     to=  2.0000E-09
-  MAXILOADR   =  2.7417E-06     at=  2.0030E-09  from=  2.0000E-09     to=  3.0000E-09
-
-
-
-0************************************************************************************************************************
-
-
-run number 2 out of 5
-   value of parameter T_TRAN is 1.088000E-16
-1************************************************************************************************************************
-
-*** DATE: 25-May-2023 10:58:20
-*** TITLE: * Characterizing a simple nand with load variation
-
-TEMPERATURE : 27.000000 degrees C
-
-
-
-Warning: A transition time < HMIN (1.000000e-12Sec) found on VINB
-HMIN assumed.. Set Eldo option 'HMIN' to a lower value if needed.
-
-***> 25-May-2023 10:58:20 - DC FOR TRAN completed: TOTAL WALL CLOCK ELAPSED TIME 0s <***
-
-
-
-
-
-1***************25-May-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************10:58:20*****************
-
-0* Characterizing a simple nand with load variation
-0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
-
-0*************************************************************************************************************************
-
-
-  NODE         VOLTAGE      NODE         VOLTAGE      NODE         VOLTAGE    
-GND_INT      0.0         INA          1.2000E+00  INB          0.0         
-OUT          1.2000E+00  OUTBIS       1.2000E+00  VDD          1.2000E+00  
-VDD_INT      1.2000E+00  XNAND.NET15  4.0840E-06  
-
-
-   VOLTAGE SOURCE CURRENT
-
-NAME      CURRENT      VOLTAGE      POWER        
-VDUMMY_C   0.0          0.0          0.0         
-VDUMMY_GND   5.6590E-09   0.0          0.0         
-VDUMMY_VDD  -5.6590E-09   0.0          0.0         
-VINA       0.0          1.2000E+00   0.0         
-VINB       0.0          0.0          0.0         
-V_VDD     -5.6590E-09   1.2000E+00  -6.7908E-09  
-
-   TOTAL POWER DISSIPATION:  6.7908E-09 WATTS
-
-
-
-
-
-Eldo NEWTON: VNTOL=1.000000e-09 RELTOL=1.000000e-06
-
-................................................
-Simulation progress                : 25% (t = 817.5000 P)
-Thread CPU time                    :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
-CPU Usage                          :   0%               (  0%)
-................................................
-Simulation progress                : 50% (t = 1.6055 N)
-Thread CPU time                    :  0h  0mn  0s  30   ( 0h  0mn  0s  30)
-CPU Usage                          : 100%               (100%)
-................................................
-Simulation progress                : 75% (t = 2.2547 N)
-Thread CPU time                    :  0h  0mn  0s  20   ( 0h  0mn  0s  50)
-CPU Usage                          :  80%               ( 92%)
-................................................
-Simulation progress                : 100% (t = 3.0000 N)
-Thread CPU time                    :  0h  0mn  0s  10   ( 0h  0mn  0s  60)
-CPU Usage                          : 100%               (100%)
-
-***> 25-May-2023 10:58:20 - TRAN completed: TOTAL WALL CLOCK ELAPSED TIME 0s <***
-
-
-
-1***************25-May-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************10:58:20*****************
-
-0* Characterizing a simple nand with load variation
-0****                 EXTRACT INFORMATION                                    
-0****   PARAM T_TRAN =  1.0880E-16
-0****   TEMPERATURE =  2.7000E+01 Celsius
-
-0*************************************************************************************************************************
-
-
-
-  RNAND       =  1.6916E-11   targ=  2.0216E-09     trig=  2.0047E-09
-  FNAND       =  1.4217E-11   targ=  1.0188E-09     trig=  1.0046E-09
-  NANDDELAY   =  1.0144E-11   targ=  1.0094E-09     trig=  9.9929E-10
-  NANDDELAY2  =  1.0872E-11   targ=  2.0101E-09     trig=  1.9992E-09
-  MAXIGNDF    =  7.7813E-04     at=  1.0000E-09  from=  1.0000E-09     to=  2.0000E-09
-  MAXIVDDR    = -1.8337E-04     at=  2.0010E-09  from=  2.0000E-09     to=  3.0000E-09
-  MAXIGNDR    =  6.4009E-05     at=  2.0050E-09  from=  2.0000E-09     to=  3.0000E-09
-  MAXIVDDF    = -8.4465E-04     at=  2.0000E-09  from=  1.0000E-09     to=  2.0000E-09
-  MAXILOADF   = -6.0595E-06     at=  2.0000E-09  from=  1.0000E-09     to=  2.0000E-09
-  MAXILOADR   =  2.7417E-06     at=  2.0030E-09  from=  2.0000E-09     to=  3.0000E-09
-
-
-
-0************************************************************************************************************************
-
-
-run number 3 out of 5
-   value of parameter T_TRAN is 2.608000E-16
-1************************************************************************************************************************
-
-*** DATE: 25-May-2023 10:58:20
-*** TITLE: * Characterizing a simple nand with load variation
-
-TEMPERATURE : 27.000000 degrees C
-
-
-
-Warning: A transition time < HMIN (1.000000e-12Sec) found on VINB
-HMIN assumed.. Set Eldo option 'HMIN' to a lower value if needed.
-
-***> 25-May-2023 10:58:20 - DC FOR TRAN completed: TOTAL WALL CLOCK ELAPSED TIME 0s <***
-
-
-
-
-
-1***************25-May-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************10:58:20*****************
-
-0* Characterizing a simple nand with load variation
-0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
-
-0*************************************************************************************************************************
-
-
-  NODE         VOLTAGE      NODE         VOLTAGE      NODE         VOLTAGE    
-GND_INT      0.0         INA          1.2000E+00  INB          0.0         
-OUT          1.2000E+00  OUTBIS       1.2000E+00  VDD          1.2000E+00  
-VDD_INT      1.2000E+00  XNAND.NET15  4.0840E-06  
-
-
-   VOLTAGE SOURCE CURRENT
-
-NAME      CURRENT      VOLTAGE      POWER        
-VDUMMY_C   0.0          0.0          0.0         
-VDUMMY_GND   5.6590E-09   0.0          0.0         
-VDUMMY_VDD  -5.6590E-09   0.0          0.0         
-VINA       0.0          1.2000E+00   0.0         
-VINB       0.0          0.0          0.0         
-V_VDD     -5.6590E-09   1.2000E+00  -6.7908E-09  
-
-   TOTAL POWER DISSIPATION:  6.7908E-09 WATTS
-
-
-
-
-
-Eldo NEWTON: VNTOL=1.000000e-09 RELTOL=1.000000e-06
-
-................................................
-Simulation progress                : 25% (t = 817.5000 P)
-Thread CPU time                    :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
-CPU Usage                          :   0%               (  0%)
-................................................
-Simulation progress                : 50% (t = 1.6055 N)
-Thread CPU time                    :  0h  0mn  0s  20   ( 0h  0mn  0s  20)
-CPU Usage                          : 100%               ( 95%)
-................................................
-Simulation progress                : 75% (t = 2.2547 N)
-Thread CPU time                    :  0h  0mn  0s  20   ( 0h  0mn  0s  40)
-CPU Usage                          : 100%               ( 95%)
-................................................
-Simulation progress                : 100% (t = 3.0000 N)
-Thread CPU time                    :  0h  0mn  0s  10   ( 0h  0mn  0s  50)
-CPU Usage                          : 100%               (100%)
-
-***> 25-May-2023 10:58:20 - TRAN completed: TOTAL WALL CLOCK ELAPSED TIME 0s <***
-
-
-
-1***************25-May-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************10:58:20*****************
-
-0* Characterizing a simple nand with load variation
-0****                 EXTRACT INFORMATION                                    
-0****   PARAM T_TRAN =  2.6080E-16
-0****   TEMPERATURE =  2.7000E+01 Celsius
-
-0*************************************************************************************************************************
-
-
-
-  RNAND       =  1.6916E-11   targ=  2.0216E-09     trig=  2.0047E-09
-  FNAND       =  1.4217E-11   targ=  1.0188E-09     trig=  1.0046E-09
-  NANDDELAY   =  1.0144E-11   targ=  1.0094E-09     trig=  9.9929E-10
-  NANDDELAY2  =  1.0872E-11   targ=  2.0101E-09     trig=  1.9992E-09
-  MAXIGNDF    =  7.7813E-04     at=  1.0000E-09  from=  1.0000E-09     to=  2.0000E-09
-  MAXIVDDR    = -1.8337E-04     at=  2.0010E-09  from=  2.0000E-09     to=  3.0000E-09
-  MAXIGNDR    =  6.4009E-05     at=  2.0050E-09  from=  2.0000E-09     to=  3.0000E-09
-  MAXIVDDF    = -8.4465E-04     at=  2.0000E-09  from=  1.0000E-09     to=  2.0000E-09
-  MAXILOADF   = -6.0595E-06     at=  2.0000E-09  from=  1.0000E-09     to=  2.0000E-09
-  MAXILOADR   =  2.7417E-06     at=  2.0030E-09  from=  2.0000E-09     to=  3.0000E-09
-
-
-
-0************************************************************************************************************************
-
-
-run number 4 out of 5
-   value of parameter T_TRAN is 5.248000E-16
-1************************************************************************************************************************
-
-*** DATE: 25-May-2023 10:58:20
-*** TITLE: * Characterizing a simple nand with load variation
-
-TEMPERATURE : 27.000000 degrees C
-
-
-
-Warning: A transition time < HMIN (1.000000e-12Sec) found on VINB
-HMIN assumed.. Set Eldo option 'HMIN' to a lower value if needed.
-
-***> 25-May-2023 10:58:20 - DC FOR TRAN completed: TOTAL WALL CLOCK ELAPSED TIME 0s <***
-
-
-
-
-
-1***************25-May-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************10:58:20*****************
-
-0* Characterizing a simple nand with load variation
-0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
-
-0*************************************************************************************************************************
-
-
-  NODE         VOLTAGE      NODE         VOLTAGE      NODE         VOLTAGE    
-GND_INT      0.0         INA          1.2000E+00  INB          0.0         
-OUT          1.2000E+00  OUTBIS       1.2000E+00  VDD          1.2000E+00  
-VDD_INT      1.2000E+00  XNAND.NET15  4.0840E-06  
-
-
-   VOLTAGE SOURCE CURRENT
-
-NAME      CURRENT      VOLTAGE      POWER        
-VDUMMY_C   0.0          0.0          0.0         
-VDUMMY_GND   5.6590E-09   0.0          0.0         
-VDUMMY_VDD  -5.6590E-09   0.0          0.0         
-VINA       0.0          1.2000E+00   0.0         
-VINB       0.0          0.0          0.0         
-V_VDD     -5.6590E-09   1.2000E+00  -6.7908E-09  
-
-   TOTAL POWER DISSIPATION:  6.7908E-09 WATTS
-
-
-
-
-
-Eldo NEWTON: VNTOL=1.000000e-09 RELTOL=1.000000e-06
-
-................................................
-Simulation progress                : 25% (t = 817.5000 P)
-Thread CPU time                    :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
-CPU Usage                          :   0%               (  0%)
-................................................
-Simulation progress                : 50% (t = 1.6055 N)
-Thread CPU time                    :  0h  0mn  0s  20   ( 0h  0mn  0s  20)
-CPU Usage                          : 100%               (100%)
-................................................
-Simulation progress                : 75% (t = 2.2547 N)
-Thread CPU time                    :  0h  0mn  0s  20   ( 0h  0mn  0s  40)
-CPU Usage                          : 100%               (100%)
-................................................
-Simulation progress                : 100% (t = 3.0000 N)
-Thread CPU time                    :  0h  0mn  0s   0   ( 0h  0mn  0s  40)
-CPU Usage                          :   0%               ( 97%)
-
-***> 25-May-2023 10:58:20 - TRAN completed: TOTAL WALL CLOCK ELAPSED TIME 0s <***
-
-
-
-1***************25-May-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************10:58:20*****************
-
-0* Characterizing a simple nand with load variation
-0****                 EXTRACT INFORMATION                                    
-0****   PARAM T_TRAN =  5.2480E-16
-0****   TEMPERATURE =  2.7000E+01 Celsius
-
-0*************************************************************************************************************************
-
-
-
-  RNAND       =  1.6916E-11   targ=  2.0216E-09     trig=  2.0047E-09
-  FNAND       =  1.4217E-11   targ=  1.0188E-09     trig=  1.0046E-09
-  NANDDELAY   =  1.0144E-11   targ=  1.0094E-09     trig=  9.9929E-10
-  NANDDELAY2  =  1.0872E-11   targ=  2.0101E-09     trig=  1.9992E-09
-  MAXIGNDF    =  7.7813E-04     at=  1.0000E-09  from=  1.0000E-09     to=  2.0000E-09
-  MAXIVDDR    = -1.8337E-04     at=  2.0010E-09  from=  2.0000E-09     to=  3.0000E-09
-  MAXIGNDR    =  6.4009E-05     at=  2.0050E-09  from=  2.0000E-09     to=  3.0000E-09
-  MAXIVDDF    = -8.4465E-04     at=  2.0000E-09  from=  1.0000E-09     to=  2.0000E-09
-  MAXILOADF   = -6.0595E-06     at=  2.0000E-09  from=  1.0000E-09     to=  2.0000E-09
-  MAXILOADR   =  2.7417E-06     at=  2.0030E-09  from=  2.0000E-09     to=  3.0000E-09
-
-
-
-0************************************************************************************************************************
-
-
-run number 5 out of 5
-   value of parameter T_TRAN is 8.000000E-16
-1************************************************************************************************************************
-
-*** DATE: 25-May-2023 10:58:20
-*** TITLE: * Characterizing a simple nand with load variation
-
-TEMPERATURE : 27.000000 degrees C
-
-
-
-Warning: A transition time < HMIN (1.000000e-12Sec) found on VINB
-HMIN assumed.. Set Eldo option 'HMIN' to a lower value if needed.
- Reset internal minimum time step.
-hmin value is 2.500000e-07Nanos
-
-***> 25-May-2023 10:58:20 - DC FOR TRAN completed: TOTAL WALL CLOCK ELAPSED TIME 0s <***
-
-
-
-
-
-1***************25-May-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************10:58:20*****************
+1*************** 1-Jun-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************10:24:58*****************
 
 0* Characterizing a simple nand with load variation
 0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
@@ -2785,45 +2379,429 @@ Simulation progress                : 25% (t = 1.0000 N)
 Thread CPU time                    :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
 CPU Usage                          :   0%               (  0%)
 ................................................
-Simulation progress                : 50% (t = 1.6462 N)
-Thread CPU time                    :  0h  0mn  0s  50   ( 0h  0mn  0s  50)
+Simulation progress                : 50% (t = 1.6508 N)
+Thread CPU time                    :  0h  0mn  0s  30   ( 0h  0mn  0s  30)
 CPU Usage                          : 100%               (100%)
 ................................................
-Simulation progress                : 75% (t = 2.3734 N)
-Thread CPU time                    :  0h  0mn  0s  60   ( 0h  0mn  0s 110)
-CPU Usage                          :  92%               ( 99%)
+Simulation progress                : 75% (t = 2.2691 N)
+Thread CPU time                    :  0h  0mn  0s  20   ( 0h  0mn  0s  50)
+CPU Usage                          :  95%               (100%)
 ................................................
 Simulation progress                : 100% (t = 3.0000 N)
-Thread CPU time                    :  0h  0mn  0s   0   ( 0h  0mn  0s 110)
-CPU Usage                          :   0%               ( 98%)
+Thread CPU time                    :  0h  0mn  0s   0   ( 0h  0mn  0s  50)
+CPU Usage                          :   0%               (100%)
 
-***> 25-May-2023 10:58:20 - TRAN completed: TOTAL WALL CLOCK ELAPSED TIME 0s <***
+***>  1-Jun-2023 10:24:59 - TRAN completed: TOTAL WALL CLOCK ELAPSED TIME 0s <***
 
 
 
-1***************25-May-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************10:58:20*****************
+1*************** 1-Jun-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************10:24:58*****************
 
 0* Characterizing a simple nand with load variation
 0****                 EXTRACT INFORMATION                                    
-0****   PARAM T_TRAN =  8.0000E-16
+0****   PARAM T_TRAN =  4.8000E-12
 0****   TEMPERATURE =  2.7000E+01 Celsius
 
 0*************************************************************************************************************************
 
 
 
-  RNAND       =  1.6335E-11   targ=  2.0225E-09     trig=  2.0061E-09
-  FNAND       =  1.3810E-11   targ=  1.0198E-09     trig=  1.0060E-09
-  NANDDELAY   =  1.0737E-11   targ=  1.0107E-09     trig=  1.0000E-09
-  NANDDELAY2  =  1.1466E-11   targ=  2.0115E-09     trig=  2.0000E-09
-  MAXIGNDF    =  7.8419E-01     at=  1.0000E-09  from=  1.0000E-09     to=  2.0000E-09
-  MAXIVDDR    = -1.1057E+00     at=  2.0000E-09  from=  2.0000E-09     to=  3.0000E-09
-  MAXIGNDR    =  6.8332E-05     at=  2.0059E-09  from=  2.0000E-09     to=  3.0000E-09
-  MAXIVDDF    = -8.8340E-05     at=  1.0046E-09  from=  1.0000E-09     to=  2.0000E-09
-  MAXILOADF   = -2.8582E-06     at=  1.0081E-09  from=  1.0000E-09     to=  2.0000E-09
-  MAXILOADR   =  2.7612E-06     at=  2.0042E-09  from=  2.0000E-09     to=  3.0000E-09
+  RNAND       =  1.6917E-11   targ=  2.0261E-09     trig=  2.0091E-09
+  FNAND       =  1.4226E-11   targ=  1.0229E-09     trig=  1.0087E-09
+  NANDDELAY   =  1.0486E-11   targ=  1.0135E-09     trig=  1.0030E-09
+  NANDDELAY2  =  1.1520E-11   targ=  2.0145E-09     trig=  2.0030E-09
+  MAXIGNDF    =  3.1829E-04     at=  1.0055E-09  from=  1.0000E-09     to=  2.0000E-09
+  MAXIVDDR    = -3.4358E-04     at=  2.0055E-09  from=  2.0000E-09     to=  3.0000E-09
+  MAXIGNDR    =  6.3267E-05     at=  2.0105E-09  from=  2.0000E-09     to=  3.0000E-09
+  MAXIVDDF    = -8.8918E-05     at=  1.0075E-09  from=  1.0000E-09     to=  2.0000E-09
+  MAXILOADF   = -2.8519E-06     at=  1.0115E-09  from=  1.0000E-09     to=  2.0000E-09
+  MAXILOADR   =  2.7433E-06     at=  2.0075E-09  from=  2.0000E-09     to=  3.0000E-09
 
-1***************25-May-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************10:58:20*****************
+
+
+0************************************************************************************************************************
+
+
+run number 2 out of 5
+   value of parameter T_TRAN is 1.088000E-10
+1************************************************************************************************************************
+
+*** DATE:  1-Jun-2023 10:24:59
+*** TITLE: * Characterizing a simple nand with load variation
+
+TEMPERATURE : 27.000000 degrees C
+
+
+***>  1-Jun-2023 10:24:59 - DC FOR TRAN completed: TOTAL WALL CLOCK ELAPSED TIME 0s <***
+
+
+
+
+
+1*************** 1-Jun-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************10:24:59*****************
+
+0* Characterizing a simple nand with load variation
+0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+  NODE         VOLTAGE      NODE         VOLTAGE      NODE         VOLTAGE    
+GND_INT      0.0         INA          1.2000E+00  INB          0.0         
+OUT          1.2000E+00  OUTBIS       1.2000E+00  VDD          1.2000E+00  
+VDD_INT      1.2000E+00  XNAND.NET15  4.0840E-06  
+
+
+   VOLTAGE SOURCE CURRENT
+
+NAME      CURRENT      VOLTAGE      POWER        
+VDUMMY_C   0.0          0.0          0.0         
+VDUMMY_GND   5.6590E-09   0.0          0.0         
+VDUMMY_VDD  -5.6590E-09   0.0          0.0         
+VINA       0.0          1.2000E+00   0.0         
+VINB       0.0          0.0          0.0         
+V_VDD     -5.6590E-09   1.2000E+00  -6.7908E-09  
+
+   TOTAL POWER DISSIPATION:  6.7908E-09 WATTS
+
+
+
+
+
+Eldo NEWTON: VNTOL=1.000000e-09 RELTOL=1.000000e-06
+
+................................................
+Simulation progress                : 25% (t = 1.0000 N)
+Thread CPU time                    :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 50% (t = 1.6126 N)
+Thread CPU time                    :  0h  0mn  0s  40   ( 0h  0mn  0s  40)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 75% (t = 2.2758 N)
+Thread CPU time                    :  0h  0mn  0s  40   ( 0h  0mn  0s  80)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 100% (t = 3.0000 N)
+Thread CPU time                    :  0h  0mn  0s   0   ( 0h  0mn  0s  80)
+CPU Usage                          :   0%               (100%)
+
+***>  1-Jun-2023 10:25:00 - TRAN completed: TOTAL WALL CLOCK ELAPSED TIME 1s <***
+
+
+
+1*************** 1-Jun-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************10:24:59*****************
+
+0* Characterizing a simple nand with load variation
+0****                 EXTRACT INFORMATION                                    
+0****   PARAM T_TRAN =  1.0880E-10
+0****   TEMPERATURE =  2.7000E+01 Celsius
+
+0*************************************************************************************************************************
+
+
+
+  RNAND       =  3.8548E-11   targ=  2.1116E-09     trig=  2.0731E-09
+  FNAND       =  3.6956E-11   targ=  1.1014E-09     trig=  1.0645E-09
+  NANDDELAY   =  1.8417E-11   targ=  1.0864E-09     trig=  1.0680E-09
+  NANDDELAY2  =  2.5686E-11   targ=  2.0937E-09     trig=  2.0680E-09
+  MAXIGNDF    =  9.6350E-05     at=  1.0904E-09  from=  1.0000E-09     to=  2.0000E-09
+  MAXIVDDR    = -8.5379E-05     at=  2.0938E-09  from=  2.0000E-09     to=  3.0000E-09
+  MAXIGNDR    =  3.7061E-05     at=  2.0788E-09  from=  2.0000E-09     to=  3.0000E-09
+  MAXIVDDF    = -4.1051E-05     at=  1.0774E-09  from=  1.0000E-09     to=  2.0000E-09
+  MAXILOADF   = -1.1520E-06     at=  1.0914E-09  from=  1.0000E-09     to=  2.0000E-09
+  MAXILOADR   =  1.0233E-06     at=  2.0968E-09  from=  2.0000E-09     to=  3.0000E-09
+
+
+
+0************************************************************************************************************************
+
+
+run number 3 out of 5
+   value of parameter T_TRAN is 2.608000E-10
+1************************************************************************************************************************
+
+*** DATE:  1-Jun-2023 10:25:00
+*** TITLE: * Characterizing a simple nand with load variation
+
+TEMPERATURE : 27.000000 degrees C
+
+
+***>  1-Jun-2023 10:25:00 - DC FOR TRAN completed: TOTAL WALL CLOCK ELAPSED TIME 0s <***
+
+
+
+
+
+1*************** 1-Jun-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************10:25:00*****************
+
+0* Characterizing a simple nand with load variation
+0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+  NODE         VOLTAGE      NODE         VOLTAGE      NODE         VOLTAGE    
+GND_INT      0.0         INA          1.2000E+00  INB          0.0         
+OUT          1.2000E+00  OUTBIS       1.2000E+00  VDD          1.2000E+00  
+VDD_INT      1.2000E+00  XNAND.NET15  4.0840E-06  
+
+
+   VOLTAGE SOURCE CURRENT
+
+NAME      CURRENT      VOLTAGE      POWER        
+VDUMMY_C   0.0          0.0          0.0         
+VDUMMY_GND   5.6590E-09   0.0          0.0         
+VDUMMY_VDD  -5.6590E-09   0.0          0.0         
+VINA       0.0          1.2000E+00   0.0         
+VINB       0.0          0.0          0.0         
+V_VDD     -5.6590E-09   1.2000E+00  -6.7908E-09  
+
+   TOTAL POWER DISSIPATION:  6.7908E-09 WATTS
+
+
+
+
+
+Eldo NEWTON: VNTOL=1.000000e-09 RELTOL=1.000000e-06
+
+................................................
+Simulation progress                : 25% (t = 1.0000 N)
+Thread CPU time                    :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 50% (t = 1.5126 N)
+Thread CPU time                    :  0h  0mn  0s  50   ( 0h  0mn  0s  60)
+CPU Usage                          :  92%               (100%)
+................................................
+Simulation progress                : 75% (t = 2.2511 N)
+Thread CPU time                    :  0h  0mn  0s  40   ( 0h  0mn  0s 100)
+CPU Usage                          :  93%               (100%)
+................................................
+Simulation progress                : 100% (t = 3.0000 N)
+Thread CPU time                    :  0h  0mn  0s  10   ( 0h  0mn  0s 110)
+CPU Usage                          : 100%               (100%)
+
+***>  1-Jun-2023 10:25:00 - TRAN completed: TOTAL WALL CLOCK ELAPSED TIME 0s <***
+
+
+
+1*************** 1-Jun-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************10:25:00*****************
+
+0* Characterizing a simple nand with load variation
+0****                 EXTRACT INFORMATION                                    
+0****   PARAM T_TRAN =  2.6080E-10
+0****   TEMPERATURE =  2.7000E+01 Celsius
+
+0*************************************************************************************************************************
+
+
+
+  RNAND       =  6.7428E-11   targ=  2.2285E-09     trig=  2.1611E-09
+  FNAND       =  6.8692E-11   targ=  1.2072E-09     trig=  1.1385E-09
+  NANDDELAY   =  2.0691E-11   targ=  1.1837E-09     trig=  1.1630E-09
+  NANDDELAY2  =  3.8121E-11   targ=  2.2011E-09     trig=  2.1630E-09
+  MAXIGNDF    =  7.6801E-05     at=  1.1908E-09  from=  1.0000E-09     to=  2.0000E-09
+  MAXIVDDR    = -7.0220E-05     at=  2.2002E-09  from=  2.0000E-09     to=  3.0000E-09
+  MAXIGNDR    =  4.5783E-05     at=  2.1792E-09  from=  2.0000E-09     to=  3.0000E-09
+  MAXIVDDF    = -4.7793E-05     at=  1.1718E-09  from=  1.0000E-09     to=  2.0000E-09
+  MAXILOADF   = -7.0294E-07     at=  1.1938E-09  from=  1.0000E-09     to=  2.0000E-09
+  MAXILOADR   =  6.4228E-07     at=  2.2076E-09  from=  2.0000E-09     to=  3.0000E-09
+
+
+
+0************************************************************************************************************************
+
+
+run number 4 out of 5
+   value of parameter T_TRAN is 5.248000E-10
+1************************************************************************************************************************
+
+*** DATE:  1-Jun-2023 10:25:00
+*** TITLE: * Characterizing a simple nand with load variation
+
+TEMPERATURE : 27.000000 degrees C
+
+
+***>  1-Jun-2023 10:25:00 - DC FOR TRAN completed: TOTAL WALL CLOCK ELAPSED TIME 0s <***
+
+
+
+
+
+1*************** 1-Jun-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************10:25:00*****************
+
+0* Characterizing a simple nand with load variation
+0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+  NODE         VOLTAGE      NODE         VOLTAGE      NODE         VOLTAGE    
+GND_INT      0.0         INA          1.2000E+00  INB          0.0         
+OUT          1.2000E+00  OUTBIS       1.2000E+00  VDD          1.2000E+00  
+VDD_INT      1.2000E+00  XNAND.NET15  4.0840E-06  
+
+
+   VOLTAGE SOURCE CURRENT
+
+NAME      CURRENT      VOLTAGE      POWER        
+VDUMMY_C   0.0          0.0          0.0         
+VDUMMY_GND   5.6590E-09   0.0          0.0         
+VDUMMY_VDD  -5.6590E-09   0.0          0.0         
+VINA       0.0          1.2000E+00   0.0         
+VINB       0.0          0.0          0.0         
+V_VDD     -5.6590E-09   1.2000E+00  -6.7908E-09  
+
+   TOTAL POWER DISSIPATION:  6.7908E-09 WATTS
+
+
+
+
+
+Eldo NEWTON: VNTOL=1.000000e-09 RELTOL=1.000000e-06
+
+................................................
+Simulation progress                : 25% (t = 1.0000 N)
+Thread CPU time                    :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 50% (t = 1.5073 N)
+Thread CPU time                    :  0h  0mn  0s  50   ( 0h  0mn  0s  50)
+CPU Usage                          : 100%               ( 98%)
+................................................
+Simulation progress                : 75% (t = 2.2508 N)
+Thread CPU time                    :  0h  0mn  0s  20   ( 0h  0mn  0s  70)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 100% (t = 3.0000 N)
+Thread CPU time                    :  0h  0mn  0s  50   ( 0h  0mn  0s 120)
+CPU Usage                          :  89%               ( 98%)
+
+***>  1-Jun-2023 10:25:00 - TRAN completed: TOTAL WALL CLOCK ELAPSED TIME 0s <***
+
+
+
+1*************** 1-Jun-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************10:25:00*****************
+
+0* Characterizing a simple nand with load variation
+0****                 EXTRACT INFORMATION                                    
+0****   PARAM T_TRAN =  5.2480E-10
+0****   TEMPERATURE =  2.7000E+01 Celsius
+
+0*************************************************************************************************************************
+
+
+
+  RNAND       =  1.1468E-10   targ=  2.4276E-09     trig=  2.3129E-09
+  FNAND       =  1.1909E-10   targ=  1.3848E-09     trig=  1.2657E-09
+  NANDDELAY   =  1.9663E-11   targ=  1.3477E-09     trig=  1.3280E-09
+  NANDDELAY2  =  5.4303E-11   targ=  2.3823E-09     trig=  2.3280E-09
+  MAXIGNDF    =  6.8438E-05     at=  1.3576E-09  from=  1.0000E-09     to=  2.0000E-09
+  MAXIVDDR    = -6.4305E-05     at=  2.3798E-09  from=  2.0000E-09     to=  3.0000E-09
+  MAXIGNDR    =  4.9651E-05     at=  2.3507E-09  from=  2.0000E-09     to=  3.0000E-09
+  MAXIVDDF    = -5.0970E-05     at=  1.3325E-09  from=  1.0000E-09     to=  2.0000E-09
+  MAXILOADF   = -4.5344E-07     at=  1.3651E-09  from=  1.0000E-09     to=  2.0000E-09
+  MAXILOADR   =  4.2027E-07     at=  2.3914E-09  from=  2.0000E-09     to=  3.0000E-09
+
+
+
+0************************************************************************************************************************
+
+
+run number 5 out of 5
+   value of parameter T_TRAN is 8.000000E-10
+1************************************************************************************************************************
+
+*** DATE:  1-Jun-2023 10:25:00
+*** TITLE: * Characterizing a simple nand with load variation
+
+TEMPERATURE : 27.000000 degrees C
+
+
+***>  1-Jun-2023 10:25:00 - DC FOR TRAN completed: TOTAL WALL CLOCK ELAPSED TIME 0s <***
+
+
+
+
+
+1*************** 1-Jun-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************10:25:00*****************
+
+0* Characterizing a simple nand with load variation
+0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+  NODE         VOLTAGE      NODE         VOLTAGE      NODE         VOLTAGE    
+GND_INT      0.0         INA          1.2000E+00  INB          0.0         
+OUT          1.2000E+00  OUTBIS       1.2000E+00  VDD          1.2000E+00  
+VDD_INT      1.2000E+00  XNAND.NET15  4.0840E-06  
+
+
+   VOLTAGE SOURCE CURRENT
+
+NAME      CURRENT      VOLTAGE      POWER        
+VDUMMY_C   0.0          0.0          0.0         
+VDUMMY_GND   5.6590E-09   0.0          0.0         
+VDUMMY_VDD  -5.6590E-09   0.0          0.0         
+VINA       0.0          1.2000E+00   0.0         
+VINB       0.0          0.0          0.0         
+V_VDD     -5.6590E-09   1.2000E+00  -6.7908E-09  
+
+   TOTAL POWER DISSIPATION:  6.7908E-09 WATTS
+
+
+
+
+
+Eldo NEWTON: VNTOL=1.000000e-09 RELTOL=1.000000e-06
+
+................................................
+Simulation progress                : 25% (t = 1.0000 N)
+Thread CPU time                    :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
+CPU Usage                          :   0%               (  0%)
+................................................
+Simulation progress                : 50% (t = 1.5001 N)
+Thread CPU time                    :  0h  0mn  0s  30   ( 0h  0mn  0s  30)
+CPU Usage                          : 100%               ( 93%)
+................................................
+Simulation progress                : 75% (t = 2.2540 N)
+Thread CPU time                    :  0h  0mn  0s  40   ( 0h  0mn  0s  70)
+CPU Usage                          :  90%               ( 92%)
+................................................
+Simulation progress                : 100% (t = 3.0000 N)
+Thread CPU time                    :  0h  0mn  0s  60   ( 0h  0mn  0s 130)
+CPU Usage                          :  96%               ( 93%)
+
+***>  1-Jun-2023 10:25:00 - TRAN completed: TOTAL WALL CLOCK ELAPSED TIME 0s <***
+
+
+
+1*************** 1-Jun-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************10:25:00*****************
+
+0* Characterizing a simple nand with load variation
+0****                 EXTRACT INFORMATION                                    
+0****   PARAM T_TRAN =  8.0000E-10
+0****   TEMPERATURE =  2.7000E+01 Celsius
+
+0*************************************************************************************************************************
+
+
+
+  RNAND       =  1.6459E-10   targ=  2.6355E-09     trig=  2.4709E-09
+  FNAND       =  1.6926E-10   targ=  1.5672E-09     trig=  1.3979E-09
+  NANDDELAY   =  1.6097E-11   targ=  1.5161E-09     trig=  1.5000E-09
+  NANDDELAY2  =  6.8295E-11   targ=  2.5683E-09     trig=  2.5000E-09
+  MAXIGNDF    =  6.5153E-05     at=  1.5286E-09  from=  1.0000E-09     to=  2.0000E-09
+  MAXIVDDR    = -6.2087E-05     at=  2.5643E-09  from=  2.0000E-09     to=  3.0000E-09
+  MAXIGNDR    =  5.1208E-05     at=  2.5300E-09  from=  2.0000E-09     to=  3.0000E-09
+  MAXIVDDF    = -5.2292E-05     at=  1.5001E-09  from=  1.0000E-09     to=  2.0000E-09
+  MAXILOADF   = -3.4199E-07     at=  1.5379E-09  from=  1.0000E-09     to=  2.0000E-09
+  MAXILOADR   =  3.1900E-07     at=  2.5792E-09  from=  2.0000E-09     to=  3.0000E-09
+
+1*************** 1-Jun-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************10:25:00*****************
 
 0* Characterizing a simple nand with load variation
 0****                 ACCOUNTING INFORMATION                                 TEMPERATURE =   27.000 DEG C
@@ -2860,26 +2838,26 @@ Repartition per level of MOS
 Number of equations                 4
 Number of non-zero terms            10
 Percent Zeros                       37.5
-Number of Newton iterations         965
-Average number of Newton iterations 3.206
-Number of accepted time steps       301
-Number of rejected time steps       117
-      due to LTE                    117
+Number of Newton iterations         1080
+Average number of Newton iterations 2.992
+Number of accepted time steps       361
+Number of rejected time steps       63
+      due to LTE                    63
       due to Newton                 0
-Evaluation of active devices        4047
+Evaluation of active devices        4583
 Virtual memory size (MB)            423
 Peak memory size (MB)      46
 ---------------------------------------------------
 ***>MESSAGE SUMMARY: 20 warnings
 
-***> 25-May-2023 10:58:21 - GLOBAL CPU TIME 0s 550ms <***
+***>  1-Jun-2023 10:25:00 - GLOBAL CPU TIME 0s 750ms <***
 
 
-***> 25-May-2023 10:58:21 - GLOBAL WALL CLOCK ELAPSED TIME 3s <***
+***>  1-Jun-2023 10:25:00 - GLOBAL WALL CLOCK ELAPSED TIME 3s <***
 
 
-  Job started at 25-May-2023 10:58:18
-  Job end at     25-May-2023 10:58:21
+  Job started at  1-Jun-2023 10:24:57
+  Job end at      1-Jun-2023 10:25:00
 
   Run on localhost.localdomain (Linux 3.10.0-957.5.1.el7.x86_64)
 
@@ -2887,8 +2865,8 @@ Peak memory size (MB)      46
 Maximum number of license(s) consumed:
    1 Analog Simulator Kernel (eldokernel)
 
-Time spent acquiring licenses: 0.121 s (avg: 0.060 s, max: 0.073 s at Thu May 25 10:58:19 2023)
-Time spent releasing licenses: 0.019 s (avg: 0.009 s, max: 0.016 s at Thu May 25 10:58:21 2023)
+Time spent acquiring licenses: 0.121 s (avg: 0.060 s, max: 0.074 s at Thu Jun  1 10:24:58 2023)
+Time spent releasing licenses: 0.013 s (avg: 0.006 s, max: 0.010 s at Thu Jun  1 10:25:00 2023)
 -----------------------------------------
 
 Simulation Finished.

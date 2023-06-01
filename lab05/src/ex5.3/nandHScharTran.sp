@@ -42,11 +42,11 @@ v_vdd vdd 0 DC alim
 * defining load variations
 .data vectorload
 t_tran 			
-0.0048f
-0.1088f
-0.2608f
-0.5248f
-0.8000f
+0.0048n
+0.1088n
+0.2608n
+0.5248n
+0.8000n
 .enddata
 
 **********************************************************
