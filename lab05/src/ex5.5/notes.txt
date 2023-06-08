@@ -1,0 +1,28 @@
+Advantages vs disadvantages
+
+Analyzing the superposed waveforms we can see the differences between the two designs.
+
+The NANDs considered for standard values of load capacitance use more current, we can see the ...
+
+
+
+
+
+currents:
+left
+I_C8HS -> -730uA  
+I_C8LL -> -617uA
+I_C1HS -> -228uA
+I_C1LL -> -181uA
+
+right
+I_C8HS -> 659.9 uA
+I_C8LL -> 492.5 uA
+I_C1HS -> 201.2 uA
+I_C1LL -> 139.3 uA
+
+delays:
+
+
+
+
