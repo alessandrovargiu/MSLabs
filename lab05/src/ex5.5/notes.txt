@@ -1,0 +1,50 @@
+Advantages vs disadvantages
+
+Analyzing the superposed waveforms we can see the differences between the two designs.
+
+The NANDs considered for standard values of load capacitance have increased power consumption and use more current, we can clearly
+notice this looking at the waveform. The tradeoff is a smaller delay, since higher current means higher performance.
+
+
+
+Percentage values for delay:
+  LOAD: 5.00E-14   |  model: charMaxLoad
+  first row  -> LL
+  second row -> HS
+
+  RNAND       =  5.0239E-10  
+  RNAND       =  3.6391E-10 
+
+  FNAND       =  3.4771E-10  
+  FNAND       =  2.9652E-10
+ 
+  NANDDELAY   =  2.2684E-10  
+  NANDDELAY   =  1.8016E-10 
+ 
+  NANDDELAY2  =  2.9084E-10  
+  NANDDELAY2  =  2.0900E-10 
+  
+  MAXIGNDF    =  1.9225E-04  
+  MAXIGNDF    =  2.4077E-04
+  
+  MAXIVDDR    = -1.4975E-04  
+  MAXIVDDR    = -2.0919E-04 
+  
+  MAXIGNDR    =  1.9332E-06  
+  MAXIGNDR    =  1.2571E-05 
+  
+  MAXIVDDF    = -2.8654E-06  
+  MAXIVDDF    = -1.1039E-05 
+  
+  MAXILOADF   = -1.8338E-04  
+  MAXILOADF   = -2.3042E-04 
+  
+  MAXILOADR   =  1.4193E-04     
+  MAXILOADR   =  1.9972E-04        
+
+
+
+
+
+
+

@@ -1,0 +1,56 @@
+//###########################################################
+//# EZwave - Saved Window File
+//# Thursday, June 8, 2023 at 12:38:59 PM CEST
+//#
+//# Note: This is an auto-generated file.
+//#
+//# Any edits that you make may cause the restore of
+//# this window to fail - EDIT AT YOUR OWN RISK
+//###########################################################
+
+SET DOFILE VERSION 2.1
+
+// ===== Open required Database =====
+open wdb /home/ms23.51/Desktop/labs/lab05/src/ex5.4/nandHSX8MaxLoad.wdb nandHSX8MaxLoad
+open wdb /home/ms23.51/Desktop/labs/lab05/src/ex5.4/nandHScharMaxLoad.wdb nandHScharMaxLoad
+open wdb /home/ms23.51/Desktop/labs/lab05/src/ex5.5/nandLLX8MaxLoad.wdb nandLLX8MaxLoad
+open wdb /home/ms23.51/Desktop/labs/lab05/src/ex5.5/nandLLcharMaxLoad.wdb nandLLcharMaxLoad
+
+// ===== Open the window =====
+open window -maximized -divider 0.89
+
+// ===== Create row #1 =====
+add waveform -alias I(VDUMMY_C8)(LL) -color_compound {{"1" "-16711681"}} -expand <nandLLX8MaxLoad/TRAN>I(VDUMMY_C8) -transform "< none >"
+set axis properties -axis X -scale linear
+add waveform -row 1 -axis Y1 -alias I(VDUMMY_C)(LL) -color_compound {{"1" "-16711936"} {"2" "-256"}} -expand <nandLLcharMaxLoad/TRAN>I(VDUMMY_C) -transform "< none >"
+add waveform -row 1 -axis Y1 -alias I(VDUMMY_C)(HS) -color_compound {{"1" "-65281"} {"2" "-3650716"}} -expand <nandHScharMaxLoad/TRAN>I(VDUMMY_C) -transform "< none >"
+add waveform -row 1 -axis Y1 -alias I(VDUMMY_C8)(HS) -color_compound {{"1" "-2968436"} {"2" "-32768"}} -expand <nandHSX8MaxLoad/TRAN>I(VDUMMY_C8) -transform "< none >"
+set axis properties -row 1 -axis Y1 -autorange -zerolevel on
+set user scale Current 1.0 A -row 1 -axis Y1
+set row height -row 1 -init 256
+
+// ===== Create row #2 =====
+add waveform -alias I(VDUMMY_GND8)(LL) -color_compound {{"1" "-16711681"}} -expand <nandLLX8MaxLoad/TRAN>I(VDUMMY_GND8) -transform "< none >"
+add waveform -row 2 -axis Y1 -alias I(VDUMMY_GND)(LL) -color_compound {{"1" "-16711936"} {"2" "-256"}} -expand <nandLLcharMaxLoad/TRAN>I(VDUMMY_GND) -transform "< none >"
+add waveform -row 2 -axis Y1 -alias I(VDUMMY_GND)(HS) -color_compound {{"1" "-65281"} {"2" "-3650716"}} -expand <nandHScharMaxLoad/TRAN>I(VDUMMY_GND) -transform "< none >"
+add waveform -row 2 -axis Y1 -alias I(VDUMMY_GND8)(HS) -color_compound {{"1" "-2968436"} {"2" "-32768"}} -expand <nandHSX8MaxLoad/TRAN>I(VDUMMY_GND8) -transform "< none >"
+set axis properties -row 2 -axis Y1 -autorange -zerolevel on
+set user scale Current 1.0 A -row 2 -axis Y1
+set row height -row 2 -init 256
+
+// ===== Create row #3 =====
+add waveform -alias I(VDUMMY_VDD8)(LL) -color_compound {{"1" "-16711681"}} -expand <nandLLX8MaxLoad/TRAN>I(VDUMMY_VDD8) -transform "< none >"
+add waveform -row 3 -axis Y1 -alias I(VDUMMY_VDD)(LL) -color_compound {{"1" "-16711936"} {"2" "-256"}} -expand <nandLLcharMaxLoad/TRAN>I(VDUMMY_VDD) -transform "< none >"
+add waveform -row 3 -axis Y1 -alias I(VDUMMY_VDD)(HS) -color_compound {{"1" "-65281"} {"2" "-3650716"}} -expand <nandHScharMaxLoad/TRAN>I(VDUMMY_VDD) -transform "< none >"
+add waveform -row 3 -axis Y1 -alias I(VDUMMY_VDD8)(HS) -color_compound {{"1" "-2968436"} {"2" "-32768"}} -expand <nandHSX8MaxLoad/TRAN>I(VDUMMY_VDD8) -transform "< none >"
+set axis properties -row 3 -axis Y1 -autorange -zerolevel on
+set user scale Current 1.0 A -row 3 -axis Y1
+set row height -row 3 -init 256
+
+// ===== Set X-axis data units =====
+set user scale Time 1.0 s -axis X
+
+// ===== Set X-axis min/max extents =====
+set axis properties -axis X -min 1.9000000000000005E-9 -max 2.6500000000000014E-9
+
+// ====== Create the cursors, markers and measurements =====

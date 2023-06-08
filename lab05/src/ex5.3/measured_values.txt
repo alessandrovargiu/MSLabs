@@ -64,6 +64,4 @@ SPICE MEASURES
   MAXILOADR   =  3.1900E-07  
 
 
-50% delay between input and output -> find dx for both rising and falling
-compare with eldo results
 

@@ -35,18 +35,18 @@ v_vdd vdd 0 DC alim
 
 * average values for load and rise/fall times
 .param t_tran=0.2608n 
-.param load=0.028f
+.param load=0.016f
 
 
 *********************************************************
 * defining load variations
-.data vectorload
+.data vectortran
 t_tran 			
-0.0048f
-0.1088f
-0.2608f
-0.5248f
-0.8000f
+0.0048n
+0.1088n
+0.2608n
+0.5248n
+0.8000n
 .enddata
 
 **********************************************************
@@ -57,11 +57,11 @@ t_tran
 +TARG v(out) VAL='alim*0.1' FALL=1
 
 *    Measuring delay
-.measure tran nanddelay TRIG V(inB) VAL='alim*0.5' RISE=1 
+.measure tran nanddelayHL TRIG V(inB) VAL='alim*0.5' RISE=1 
 + TARG V(out) VAL='alim*0.5' FALL=1
 
 ** ADD THE instruction for the fall delay!!!
-.measure tran nanddelay2 TRIG V(inB) VAL='alim*0.5' FALL=1 
+.measure tran nanddelayLH TRIG V(inB) VAL='alim*0.5' FALL=1 
 + TARG V(out) VAL='alim*0.5' RISE=1
 
 
@@ -76,7 +76,7 @@ t_tran
 
 **********************************************************
 * defining the simulation step and duration  
-.tran 1p 3n sweep data=vectorload
+.tran 1p 3n sweep data=vectortran
 
 * instruction necessary for creating output data
 * to be processed by a waveform viewer 
