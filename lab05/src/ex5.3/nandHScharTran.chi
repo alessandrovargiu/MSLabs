@@ -13,17 +13,17 @@
 *** Freq  : 1994.996MHz
 *** Cache : 4096 KB
 *** MEM   : 65975116 kB
-*** Date  : Thu Jun  1 10:24:58 2023
+*** Date  : Thu Jun  8 11:24:05 2023
 
 *** Eldo VERSION : ELDO 2020.4 (64 bits) Thu Oct 15 15:59:13 GMT 2020
 
 /eda/mentor/2020-21/RHELx86/AMSV_2020.4/amsv/aol/bin/eldo_64.exe -i nandHScharTran.sp
 
 
-***>  1-Jun-2023 10:24:58 - STARTING PARSING PHASE ...
+***>  8-Jun-2023 11:24:05 - STARTING PARSING PHASE ...
 
 ***** PRE-PROCESSING ...
-1******* 1-Jun-23 *******  ELDO 2020.4 (64 bits)  (v20.4_0.1)  *******10:24:58******
+1******* 8-Jun-23 *******  ELDO 2020.4 (64 bits)  (v20.4_0.1)  *******11:24:05******
 
 0* Characterizing a simple nand with load variation
 
@@ -2197,10 +2197,10 @@ End of file
 ***** 18  warning(s). 
 
 
-***>  1-Jun-2023 10:24:58 - PARSING completed: WALL CLOCK ELAPSED TIME 0s <***
+***>  8-Jun-2023 11:24:05 - PARSING completed: WALL CLOCK ELAPSED TIME 0s <***
 
 
-***>  1-Jun-2023 10:24:58 - STARTING ELABORATION PHASE ...
+***>  8-Jun-2023 11:24:05 - STARTING ELABORATION PHASE ...
 Warning 252: In file "/home/repository/ms/cap5/lib/CMOS013.spi" line 14:
 +   OBJECT "XNAND.C2": Self-connected object not created.
 
@@ -2253,7 +2253,7 @@ run number 1 out of 5
    value of parameter T_TRAN is 4.800000E-12
 1************************************************************************************************************************
 
-*** DATE:  1-Jun-2023 10:24:58
+*** DATE:  8-Jun-2023 11:24:05
 *** TITLE: * Characterizing a simple nand with load variation
 
 TEMPERATURE : 27.000000 degrees C
@@ -2261,7 +2261,7 @@ TEMPERATURE : 27.000000 degrees C
 
 
 
-1*************** 1-Jun-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************10:24:58*****************
+1*************** 8-Jun-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************11:24:05*****************
 
 0* Characterizing a simple nand with load variation
 0****                 OPTION SUMMARY                                         TEMPERATURE =   27.000 DEG C
@@ -2331,18 +2331,18 @@ TIMING         = 0        MODWL          = 1        ULOGIC         = 0
 
 
 
-***>  1-Jun-2023 10:24:58 - ELABORATION completed: WALL CLOCK ELAPSED TIME 0s <***
+***>  8-Jun-2023 11:24:05 - ELABORATION completed: WALL CLOCK ELAPSED TIME 0s <***
 
 
-***>  1-Jun-2023 10:24:58 - STARTING SIMULATION PHASE ...
+***>  8-Jun-2023 11:24:05 - STARTING SIMULATION PHASE ...
 
-***>  1-Jun-2023 10:24:58 - DC FOR TRAN completed: TOTAL WALL CLOCK ELAPSED TIME 0s <***
-
-
+***>  8-Jun-2023 11:24:05 - DC FOR TRAN completed: TOTAL WALL CLOCK ELAPSED TIME 0s <***
 
 
 
-1*************** 1-Jun-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************10:24:58*****************
+
+
+1*************** 8-Jun-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************11:24:05*****************
 
 0* Characterizing a simple nand with load variation
 0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
@@ -2380,22 +2380,22 @@ Thread CPU time                    :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
 CPU Usage                          :   0%               (  0%)
 ................................................
 Simulation progress                : 50% (t = 1.6508 N)
-Thread CPU time                    :  0h  0mn  0s  30   ( 0h  0mn  0s  30)
+Thread CPU time                    :  0h  0mn  0s  20   ( 0h  0mn  0s  20)
 CPU Usage                          : 100%               (100%)
 ................................................
 Simulation progress                : 75% (t = 2.2691 N)
-Thread CPU time                    :  0h  0mn  0s  20   ( 0h  0mn  0s  50)
-CPU Usage                          :  95%               (100%)
+Thread CPU time                    :  0h  0mn  0s  20   ( 0h  0mn  0s  40)
+CPU Usage                          : 100%               (100%)
 ................................................
 Simulation progress                : 100% (t = 3.0000 N)
-Thread CPU time                    :  0h  0mn  0s   0   ( 0h  0mn  0s  50)
+Thread CPU time                    :  0h  0mn  0s   0   ( 0h  0mn  0s  40)
 CPU Usage                          :   0%               (100%)
 
-***>  1-Jun-2023 10:24:59 - TRAN completed: TOTAL WALL CLOCK ELAPSED TIME 0s <***
+***>  8-Jun-2023 11:24:06 - TRAN completed: TOTAL WALL CLOCK ELAPSED TIME 0s <***
 
 
 
-1*************** 1-Jun-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************10:24:58*****************
+1*************** 8-Jun-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************11:24:05*****************
 
 0* Characterizing a simple nand with load variation
 0****                 EXTRACT INFORMATION                                    
@@ -2426,19 +2426,19 @@ run number 2 out of 5
    value of parameter T_TRAN is 1.088000E-10
 1************************************************************************************************************************
 
-*** DATE:  1-Jun-2023 10:24:59
+*** DATE:  8-Jun-2023 11:24:07
 *** TITLE: * Characterizing a simple nand with load variation
 
 TEMPERATURE : 27.000000 degrees C
 
 
-***>  1-Jun-2023 10:24:59 - DC FOR TRAN completed: TOTAL WALL CLOCK ELAPSED TIME 0s <***
+***>  8-Jun-2023 11:24:07 - DC FOR TRAN completed: TOTAL WALL CLOCK ELAPSED TIME 0s <***
 
 
 
 
 
-1*************** 1-Jun-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************10:24:59*****************
+1*************** 8-Jun-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************11:24:07*****************
 
 0* Characterizing a simple nand with load variation
 0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
@@ -2472,26 +2472,26 @@ Eldo NEWTON: VNTOL=1.000000e-09 RELTOL=1.000000e-06
 
 ................................................
 Simulation progress                : 25% (t = 1.0000 N)
-Thread CPU time                    :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
-CPU Usage                          :   0%               (  0%)
+Thread CPU time                    :  0h  0mn  0s  10   ( 0h  0mn  0s  10)
+CPU Usage                          : 100%               (100%)
 ................................................
 Simulation progress                : 50% (t = 1.6126 N)
-Thread CPU time                    :  0h  0mn  0s  40   ( 0h  0mn  0s  40)
-CPU Usage                          : 100%               (100%)
+Thread CPU time                    :  0h  0mn  0s  30   ( 0h  0mn  0s  40)
+CPU Usage                          :  90%               (100%)
 ................................................
 Simulation progress                : 75% (t = 2.2758 N)
-Thread CPU time                    :  0h  0mn  0s  40   ( 0h  0mn  0s  80)
-CPU Usage                          : 100%               (100%)
+Thread CPU time                    :  0h  0mn  0s  30   ( 0h  0mn  0s  70)
+CPU Usage                          :  90%               (100%)
 ................................................
 Simulation progress                : 100% (t = 3.0000 N)
-Thread CPU time                    :  0h  0mn  0s   0   ( 0h  0mn  0s  80)
+Thread CPU time                    :  0h  0mn  0s   0   ( 0h  0mn  0s  70)
 CPU Usage                          :   0%               (100%)
 
-***>  1-Jun-2023 10:25:00 - TRAN completed: TOTAL WALL CLOCK ELAPSED TIME 1s <***
+***>  8-Jun-2023 11:24:07 - TRAN completed: TOTAL WALL CLOCK ELAPSED TIME 0s <***
 
 
 
-1*************** 1-Jun-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************10:24:59*****************
+1*************** 8-Jun-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************11:24:07*****************
 
 0* Characterizing a simple nand with load variation
 0****                 EXTRACT INFORMATION                                    
@@ -2522,19 +2522,19 @@ run number 3 out of 5
    value of parameter T_TRAN is 2.608000E-10
 1************************************************************************************************************************
 
-*** DATE:  1-Jun-2023 10:25:00
+*** DATE:  8-Jun-2023 11:24:07
 *** TITLE: * Characterizing a simple nand with load variation
 
 TEMPERATURE : 27.000000 degrees C
 
 
-***>  1-Jun-2023 10:25:00 - DC FOR TRAN completed: TOTAL WALL CLOCK ELAPSED TIME 0s <***
+***>  8-Jun-2023 11:24:07 - DC FOR TRAN completed: TOTAL WALL CLOCK ELAPSED TIME 0s <***
 
 
 
 
 
-1*************** 1-Jun-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************10:25:00*****************
+1*************** 8-Jun-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************11:24:07*****************
 
 0* Characterizing a simple nand with load variation
 0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
@@ -2572,22 +2572,22 @@ Thread CPU time                    :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
 CPU Usage                          :   0%               (  0%)
 ................................................
 Simulation progress                : 50% (t = 1.5126 N)
-Thread CPU time                    :  0h  0mn  0s  50   ( 0h  0mn  0s  60)
-CPU Usage                          :  92%               (100%)
+Thread CPU time                    :  0h  0mn  0s  40   ( 0h  0mn  0s  40)
+CPU Usage                          :  90%               ( 86%)
 ................................................
 Simulation progress                : 75% (t = 2.2511 N)
-Thread CPU time                    :  0h  0mn  0s  40   ( 0h  0mn  0s 100)
-CPU Usage                          :  93%               (100%)
+Thread CPU time                    :  0h  0mn  0s  40   ( 0h  0mn  0s  80)
+CPU Usage                          : 100%               ( 96%)
 ................................................
 Simulation progress                : 100% (t = 3.0000 N)
-Thread CPU time                    :  0h  0mn  0s  10   ( 0h  0mn  0s 110)
-CPU Usage                          : 100%               (100%)
+Thread CPU time                    :  0h  0mn  0s  10   ( 0h  0mn  0s  90)
+CPU Usage                          : 100%               ( 98%)
 
-***>  1-Jun-2023 10:25:00 - TRAN completed: TOTAL WALL CLOCK ELAPSED TIME 0s <***
+***>  8-Jun-2023 11:24:07 - TRAN completed: TOTAL WALL CLOCK ELAPSED TIME 0s <***
 
 
 
-1*************** 1-Jun-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************10:25:00*****************
+1*************** 8-Jun-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************11:24:07*****************
 
 0* Characterizing a simple nand with load variation
 0****                 EXTRACT INFORMATION                                    
@@ -2618,19 +2618,19 @@ run number 4 out of 5
    value of parameter T_TRAN is 5.248000E-10
 1************************************************************************************************************************
 
-*** DATE:  1-Jun-2023 10:25:00
+*** DATE:  8-Jun-2023 11:24:07
 *** TITLE: * Characterizing a simple nand with load variation
 
 TEMPERATURE : 27.000000 degrees C
 
 
-***>  1-Jun-2023 10:25:00 - DC FOR TRAN completed: TOTAL WALL CLOCK ELAPSED TIME 0s <***
+***>  8-Jun-2023 11:24:07 - DC FOR TRAN completed: TOTAL WALL CLOCK ELAPSED TIME 0s <***
 
 
 
 
 
-1*************** 1-Jun-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************10:25:00*****************
+1*************** 8-Jun-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************11:24:07*****************
 
 0* Characterizing a simple nand with load variation
 0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
@@ -2664,26 +2664,26 @@ Eldo NEWTON: VNTOL=1.000000e-09 RELTOL=1.000000e-06
 
 ................................................
 Simulation progress                : 25% (t = 1.0000 N)
-Thread CPU time                    :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
-CPU Usage                          :   0%               (  0%)
-................................................
-Simulation progress                : 50% (t = 1.5073 N)
-Thread CPU time                    :  0h  0mn  0s  50   ( 0h  0mn  0s  50)
-CPU Usage                          : 100%               ( 98%)
-................................................
-Simulation progress                : 75% (t = 2.2508 N)
-Thread CPU time                    :  0h  0mn  0s  20   ( 0h  0mn  0s  70)
+Thread CPU time                    :  0h  0mn  0s  10   ( 0h  0mn  0s  10)
 CPU Usage                          : 100%               (100%)
 ................................................
+Simulation progress                : 50% (t = 1.5073 N)
+Thread CPU time                    :  0h  0mn  0s  40   ( 0h  0mn  0s  50)
+CPU Usage                          :  90%               (100%)
+................................................
+Simulation progress                : 75% (t = 2.2508 N)
+Thread CPU time                    :  0h  0mn  0s  10   ( 0h  0mn  0s  60)
+CPU Usage                          :  76%               (100%)
+................................................
 Simulation progress                : 100% (t = 3.0000 N)
-Thread CPU time                    :  0h  0mn  0s  50   ( 0h  0mn  0s 120)
-CPU Usage                          :  89%               ( 98%)
+Thread CPU time                    :  0h  0mn  0s  50   ( 0h  0mn  0s 110)
+CPU Usage                          : 100%               (100%)
 
-***>  1-Jun-2023 10:25:00 - TRAN completed: TOTAL WALL CLOCK ELAPSED TIME 0s <***
+***>  8-Jun-2023 11:24:07 - TRAN completed: TOTAL WALL CLOCK ELAPSED TIME 0s <***
 
 
 
-1*************** 1-Jun-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************10:25:00*****************
+1*************** 8-Jun-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************11:24:07*****************
 
 0* Characterizing a simple nand with load variation
 0****                 EXTRACT INFORMATION                                    
@@ -2714,19 +2714,19 @@ run number 5 out of 5
    value of parameter T_TRAN is 8.000000E-10
 1************************************************************************************************************************
 
-*** DATE:  1-Jun-2023 10:25:00
+*** DATE:  8-Jun-2023 11:24:07
 *** TITLE: * Characterizing a simple nand with load variation
 
 TEMPERATURE : 27.000000 degrees C
 
 
-***>  1-Jun-2023 10:25:00 - DC FOR TRAN completed: TOTAL WALL CLOCK ELAPSED TIME 0s <***
+***>  8-Jun-2023 11:24:07 - DC FOR TRAN completed: TOTAL WALL CLOCK ELAPSED TIME 0s <***
 
 
 
 
 
-1*************** 1-Jun-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************10:25:00*****************
+1*************** 8-Jun-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************11:24:07*****************
 
 0* Characterizing a simple nand with load variation
 0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
@@ -2760,26 +2760,26 @@ Eldo NEWTON: VNTOL=1.000000e-09 RELTOL=1.000000e-06
 
 ................................................
 Simulation progress                : 25% (t = 1.0000 N)
-Thread CPU time                    :  0h  0mn  0s   0   ( 0h  0mn  0s   0)
-CPU Usage                          :   0%               (  0%)
+Thread CPU time                    :  0h  0mn  0s  10   ( 0h  0mn  0s  10)
+CPU Usage                          : 100%               (100%)
 ................................................
 Simulation progress                : 50% (t = 1.5001 N)
-Thread CPU time                    :  0h  0mn  0s  30   ( 0h  0mn  0s  30)
-CPU Usage                          : 100%               ( 93%)
+Thread CPU time                    :  0h  0mn  0s  20   ( 0h  0mn  0s  30)
+CPU Usage                          :  76%               (100%)
 ................................................
 Simulation progress                : 75% (t = 2.2540 N)
-Thread CPU time                    :  0h  0mn  0s  40   ( 0h  0mn  0s  70)
-CPU Usage                          :  90%               ( 92%)
+Thread CPU time                    :  0h  0mn  0s  30   ( 0h  0mn  0s  60)
+CPU Usage                          : 100%               (100%)
 ................................................
 Simulation progress                : 100% (t = 3.0000 N)
-Thread CPU time                    :  0h  0mn  0s  60   ( 0h  0mn  0s 130)
-CPU Usage                          :  96%               ( 93%)
+Thread CPU time                    :  0h  0mn  0s  50   ( 0h  0mn  0s 110)
+CPU Usage                          : 100%               (100%)
 
-***>  1-Jun-2023 10:25:00 - TRAN completed: TOTAL WALL CLOCK ELAPSED TIME 0s <***
+***>  8-Jun-2023 11:24:07 - TRAN completed: TOTAL WALL CLOCK ELAPSED TIME 0s <***
 
 
 
-1*************** 1-Jun-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************10:25:00*****************
+1*************** 8-Jun-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************11:24:07*****************
 
 0* Characterizing a simple nand with load variation
 0****                 EXTRACT INFORMATION                                    
@@ -2801,7 +2801,7 @@ CPU Usage                          :  96%               ( 93%)
   MAXILOADF   = -3.4199E-07     at=  1.5379E-09  from=  1.0000E-09     to=  2.0000E-09
   MAXILOADR   =  3.1900E-07     at=  2.5792E-09  from=  2.0000E-09     to=  3.0000E-09
 
-1*************** 1-Jun-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************10:25:00*****************
+1*************** 8-Jun-2023 ***********************  ELDO 2020.4 (64 bits)  (v20.4_0.1)  ***********************11:24:07*****************
 
 0* Characterizing a simple nand with load variation
 0****                 ACCOUNTING INFORMATION                                 TEMPERATURE =   27.000 DEG C
@@ -2850,14 +2850,14 @@ Peak memory size (MB)      46
 ---------------------------------------------------
 ***>MESSAGE SUMMARY: 20 warnings
 
-***>  1-Jun-2023 10:25:00 - GLOBAL CPU TIME 0s 750ms <***
+***>  8-Jun-2023 11:24:07 - GLOBAL CPU TIME 0s 640ms <***
 
 
-***>  1-Jun-2023 10:25:00 - GLOBAL WALL CLOCK ELAPSED TIME 3s <***
+***>  8-Jun-2023 11:24:07 - GLOBAL WALL CLOCK ELAPSED TIME 2s <***
 
 
-  Job started at  1-Jun-2023 10:24:57
-  Job end at      1-Jun-2023 10:25:00
+  Job started at  8-Jun-2023 11:24:05
+  Job end at      8-Jun-2023 11:24:07
 
   Run on localhost.localdomain (Linux 3.10.0-957.5.1.el7.x86_64)
 
@@ -2865,8 +2865,8 @@ Peak memory size (MB)      46
 Maximum number of license(s) consumed:
    1 Analog Simulator Kernel (eldokernel)
 
-Time spent acquiring licenses: 0.121 s (avg: 0.060 s, max: 0.074 s at Thu Jun  1 10:24:58 2023)
-Time spent releasing licenses: 0.013 s (avg: 0.006 s, max: 0.010 s at Thu Jun  1 10:25:00 2023)
+Time spent acquiring licenses: 0.114 s (avg: 0.057 s, max: 0.070 s at Thu Jun  8 11:24:05 2023)
+Time spent releasing licenses: 0.010 s (avg: 0.005 s, max: 0.009 s at Thu Jun  8 11:24:07 2023)
 -----------------------------------------
 
 Simulation Finished.
