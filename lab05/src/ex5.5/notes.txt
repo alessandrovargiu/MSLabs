@@ -5,8 +5,6 @@ Analyzing the superposed waveforms we can see the differences between the two de
 The NANDs considered for standard values of load capacitance have increased power consumption and use more current, we can clearly
 notice this looking at the waveform. The tradeoff is a smaller delay, since higher current means higher performance.
 
-
-
 Percentage values for delay:
   LOAD: 5.00E-14   |  model: charMaxLoad
   first row  -> LL
@@ -14,34 +12,43 @@ Percentage values for delay:
 
   RNAND       =  5.0239E-10  
   RNAND       =  3.6391E-10 
+  Variation = -27.54%
 
   FNAND       =  3.4771E-10  
   FNAND       =  2.9652E-10
- 
+  Variation = -14.74%
+
   NANDDELAY   =  2.2684E-10  
   NANDDELAY   =  1.8016E-10 
- 
+  Variation = -20.58%
+
   NANDDELAY2  =  2.9084E-10  
   NANDDELAY2  =  2.0900E-10 
-  
+  Variation = -28.15%
+
   MAXIGNDF    =  1.9225E-04  
   MAXIGNDF    =  2.4077E-04
-  
+  Variation = 25.24%
+
   MAXIVDDR    = -1.4975E-04  
   MAXIVDDR    = -2.0919E-04 
-  
+  Variation = 39.67%
+
   MAXIGNDR    =  1.9332E-06  
   MAXIGNDR    =  1.2571E-05 
-  
+  Variation = 550.58%
+
   MAXIVDDF    = -2.8654E-06  
   MAXIVDDF    = -1.1039E-05 
-  
+  Variation = 285.18%
+
   MAXILOADF   = -1.8338E-04  
   MAXILOADF   = -2.3042E-04 
-  
+  Variation = 25.68%
+
   MAXILOADR   =  1.4193E-04     
   MAXILOADR   =  1.9972E-04        
-
+  Variation = 40.66%
 
 
 
