@@ -1,0 +1,2801 @@
+(DELAYFILE
+  (SDFVERSION "3.0")
+  (DESIGN "p4_adder")
+  (DATE "Mon Jun 12 16:56:39 2023")
+  (VENDOR "Cadence Design Systems, Inc.")
+  (PROGRAM "Innovus")
+  (VERSION "v20.11-s130_1 ((64bit) 08/05/2020 15:53 (Linux 2.6.32-431.11.2.el6.x86_64))")
+  (DIVIDER /)
+  (VOLTAGE 1.100000::1.100000)
+  (PROCESS "1.000000::1.000000")
+  (TEMPERATURE 25.000000::25.000000)
+  (TIMESCALE 1.0 ns)
+
+  (CELL
+    (CELLTYPE  "p4_adder")
+    (INSTANCE)
+      (DELAY
+	(ABSOLUTE
+	(INTERCONNECT A[31] carrygen/m_PgNetwork/U44/B  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT A[31] carrygen/m_PgNetwork/U16/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT A[30] carrygen/m_PgNetwork/U45/B  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT A[30] carrygen/m_PgNetwork/U15/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT A[29] carrygen/m_PgNetwork/U47/B  (-0.000::0.001) (-0.000::0.001))
+	(INTERCONNECT A[29] carrygen/m_PgNetwork/U35/A2  (-0.000::0.001) (-0.000::0.001))
+	(INTERCONNECT A[28] carrygen/m_PgNetwork/U48/B  (-0.000::0.001) (-0.000::0.001))
+	(INTERCONNECT A[28] carrygen/m_PgNetwork/U36/A2  (-0.000::0.001) (-0.000::0.001))
+	(INTERCONNECT A[27] carrygen/m_PgNetwork/U49/B  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT A[27] carrygen/m_PgNetwork/U24/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT A[26] carrygen/m_PgNetwork/U50/B  (-0.000::0.000) (-0.000::0.000))
+	(INTERCONNECT A[26] carrygen/m_PgNetwork/U23/A2  (-0.000::0.000) (-0.000::0.000))
+	(INTERCONNECT A[25] carrygen/m_PgNetwork/U51/B  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT A[25] carrygen/m_PgNetwork/U30/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT A[24] carrygen/m_PgNetwork/U52/B  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT A[24] carrygen/m_PgNetwork/U29/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT A[23] carrygen/m_PgNetwork/U53/B  (0.000::0.001) (0.000::0.001))
+	(INTERCONNECT A[23] carrygen/m_PgNetwork/U20/A2  (0.000::0.001) (0.000::0.001))
+	(INTERCONNECT A[22] carrygen/m_PgNetwork/U54/B  (-0.000::0.001) (-0.000::0.001))
+	(INTERCONNECT A[22] carrygen/m_PgNetwork/U19/A2  (-0.000::0.001) (-0.000::0.001))
+	(INTERCONNECT A[21] carrygen/m_PgNetwork/U55/B  (-0.000::0.001) (-0.000::0.001))
+	(INTERCONNECT A[21] carrygen/m_PgNetwork/U28/A2  (-0.000::0.001) (-0.000::0.001))
+	(INTERCONNECT A[20] carrygen/m_PgNetwork/U56/B  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT A[20] carrygen/m_PgNetwork/U27/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT A[19] carrygen/m_PgNetwork/U58/B  (-0.000::0.001) (-0.000::0.001))
+	(INTERCONNECT A[19] carrygen/m_PgNetwork/U26/A2  (-0.000::0.001) (-0.000::0.001))
+	(INTERCONNECT A[18] carrygen/m_PgNetwork/U59/B  (-0.000::0.001) (-0.000::0.001))
+	(INTERCONNECT A[18] carrygen/m_PgNetwork/U25/A2  (-0.000::0.001) (-0.000::0.001))
+	(INTERCONNECT A[17] carrygen/m_PgNetwork/U60/B  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT A[17] carrygen/m_PgNetwork/U32/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT A[16] carrygen/m_PgNetwork/U61/B  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT A[16] carrygen/m_PgNetwork/U31/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT A[15] carrygen/m_PgNetwork/U62/B  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT A[15] carrygen/m_PgNetwork/U10/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT A[14] carrygen/m_PgNetwork/U63/B  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT A[14] carrygen/m_PgNetwork/U9/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT A[13] carrygen/m_PgNetwork/U64/B  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT A[13] carrygen/m_PgNetwork/U18/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT A[12] carrygen/m_PgNetwork/U65/B  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT A[12] carrygen/m_PgNetwork/U17/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT A[11] carrygen/m_PgNetwork/U66/B  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT A[11] carrygen/m_PgNetwork/U14/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT A[10] carrygen/m_PgNetwork/U67/B  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT A[10] carrygen/m_PgNetwork/U13/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT A[9] carrygen/m_PgNetwork/U37/B  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT A[9] carrygen/m_PgNetwork/U22/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT A[8] carrygen/m_PgNetwork/U38/B  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT A[8] carrygen/m_PgNetwork/U21/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT A[7] carrygen/m_PgNetwork/U39/B  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT A[7] carrygen/m_PgNetwork/U8/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT A[6] carrygen/m_PgNetwork/U40/B  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT A[6] carrygen/m_PgNetwork/U7/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT A[5] carrygen/m_PgNetwork/U41/B  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT A[5] carrygen/m_PgNetwork/U33/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT A[4] carrygen/m_PgNetwork/U42/B  (-0.000::0.001) (-0.000::0.001))
+	(INTERCONNECT A[4] carrygen/m_PgNetwork/U34/A2  (-0.000::0.001) (-0.000::0.001))
+	(INTERCONNECT A[3] carrygen/m_PgNetwork/U43/B  (-0.000::0.001) (-0.000::0.001))
+	(INTERCONNECT A[3] carrygen/m_PgNetwork/U12/A2  (-0.000::0.001) (-0.000::0.001))
+	(INTERCONNECT A[2] carrygen/m_PgNetwork/U46/B  (-0.000::0.001) (-0.000::0.001))
+	(INTERCONNECT A[2] carrygen/m_PgNetwork/U11/A2  (-0.000::0.001) (-0.000::0.001))
+	(INTERCONNECT A[1] carrygen/m_PgNetwork/U57/B  (-0.000::0.001) (-0.000::0.001))
+	(INTERCONNECT A[1] carrygen/m_PgNetwork/U6/A2  (-0.000::0.001) (-0.000::0.001))
+	(INTERCONNECT A[0] carrygen/m_PgNetwork/U1/B  (0.001::0.002) (0.001::0.002))
+	(INTERCONNECT A[0] carrygen/m_PgNetwork/U4/A  (0.001::0.002) (0.001::0.002))
+	(INTERCONNECT A[0] carrygen/m_PgNetwork/U5/B1  (0.001::0.002) (0.001::0.002))
+	(INTERCONNECT B[31] U8/B  (0.000::0.001) (0.000::0.001))
+	(INTERCONNECT B[30] U9/B  (0.000::0.001) (0.000::0.001))
+	(INTERCONNECT B[29] U11/B  (0.000::0.001) (0.000::0.001))
+	(INTERCONNECT B[28] U12/B  (0.000::0.001) (0.000::0.001))
+	(INTERCONNECT B[27] U13/B  (0.000::0.001) (0.000::0.001))
+	(INTERCONNECT B[26] U14/B  (0.000::0.001) (0.000::0.001))
+	(INTERCONNECT B[25] U15/B  (0.000::0.001) (0.000::0.001))
+	(INTERCONNECT B[24] U16/B  (0.000::0.001) (0.000::0.001))
+	(INTERCONNECT B[23] U17/B  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT B[22] U18/B  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT B[21] U19/B  (0.000::0.001) (0.000::0.001))
+	(INTERCONNECT B[20] U20/B  (0.000::0.001) (0.000::0.001))
+	(INTERCONNECT B[19] U22/B  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT B[18] U23/B  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT B[17] U24/B  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT B[16] U25/B  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT B[15] U26/B  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT B[14] U27/B  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT B[13] U28/B  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT B[12] U29/B  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT B[11] U30/B  (0.000::0.001) (0.000::0.001))
+	(INTERCONNECT B[10] U31/B  (0.000::0.001) (0.000::0.001))
+	(INTERCONNECT B[9] U1/B  (-0.000::0.001) (-0.000::0.001))
+	(INTERCONNECT B[8] U2/B  (0.000::0.001) (0.000::0.001))
+	(INTERCONNECT B[7] U3/B  (0.001::0.001) (0.001::0.001))
+	(INTERCONNECT B[6] U4/B  (0.000::0.001) (0.000::0.001))
+	(INTERCONNECT B[5] U5/B  (0.000::0.001) (0.000::0.001))
+	(INTERCONNECT B[4] U6/B  (0.000::0.001) (0.000::0.001))
+	(INTERCONNECT B[3] U7/B  (0.000::0.001) (0.000::0.001))
+	(INTERCONNECT B[2] U10/B  (0.000::0.001) (0.000::0.001))
+	(INTERCONNECT B[1] U21/B  (0.000::0.001) (0.000::0.001))
+	(INTERCONNECT B[0] U32/B  (0.000::0.001) (0.000::0.001))
+	(INTERCONNECT Cin carrygen/m_PgNetwork/U5/A  (0.002::0.002) (0.002::0.002))
+	(INTERCONNECT Cin U1/A  (0.006::0.007) (0.006::0.007))
+	(INTERCONNECT Cin U2/A  (0.007::0.007) (0.007::0.007))
+	(INTERCONNECT Cin U3/A  (0.006::0.006) (0.006::0.006))
+	(INTERCONNECT Cin U4/A  (0.005::0.006) (0.005::0.006))
+	(INTERCONNECT Cin U5/A  (0.004::0.005) (0.004::0.005))
+	(INTERCONNECT Cin U6/A  (0.004::0.005) (0.004::0.005))
+	(INTERCONNECT Cin U7/A  (0.004::0.004) (0.004::0.004))
+	(INTERCONNECT Cin U8/A  (0.002::0.002) (0.002::0.002))
+	(INTERCONNECT Cin U9/A  (0.002::0.002) (0.002::0.002))
+	(INTERCONNECT Cin U10/A  (0.004::0.004) (0.004::0.004))
+	(INTERCONNECT Cin U11/A  (0.001::0.001) (0.001::0.001))
+	(INTERCONNECT Cin U12/A  (0.001::0.001) (0.001::0.001))
+	(INTERCONNECT Cin U13/A  (0.007::0.007) (0.007::0.007))
+	(INTERCONNECT Cin U14/A  (0.007::0.007) (0.007::0.007))
+	(INTERCONNECT Cin U15/A  (0.003::0.003) (0.003::0.003))
+	(INTERCONNECT Cin U16/A  (0.003::0.003) (0.003::0.003))
+	(INTERCONNECT Cin U17/A  (0.009::0.010) (0.009::0.010))
+	(INTERCONNECT Cin U18/A  (0.009::0.010) (0.009::0.010))
+	(INTERCONNECT Cin U19/A  (0.001::0.001) (0.001::0.001))
+	(INTERCONNECT Cin U20/A  (0.001::0.001) (0.001::0.001))
+	(INTERCONNECT Cin U21/A  (0.002::0.002) (0.002::0.002))
+	(INTERCONNECT Cin U22/A  (0.009::0.010) (0.009::0.010))
+	(INTERCONNECT Cin U23/A  (0.009::0.010) (0.009::0.010))
+	(INTERCONNECT Cin U24/A  (0.008::0.008) (0.008::0.008))
+	(INTERCONNECT Cin U25/A  (0.008::0.008) (0.008::0.008))
+	(INTERCONNECT Cin U26/A  (0.008::0.009) (0.008::0.009))
+	(INTERCONNECT Cin U27/A  (0.008::0.009) (0.008::0.009))
+	(INTERCONNECT Cin U28/A  (0.009::0.009) (0.009::0.009))
+	(INTERCONNECT Cin U29/A  (0.009::0.009) (0.009::0.009))
+	(INTERCONNECT Cin U30/A  (0.008::0.008) (0.008::0.008))
+	(INTERCONNECT Cin U31/A  (0.008::0.008) (0.008::0.008))
+	(INTERCONNECT Cin U32/A  (0.002::0.002) (0.002::0.002))
+	(INTERCONNECT carrygen/m1_blockG_5_31/U1/ZN Cout  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U8/Z carrygen/m_PgNetwork/U44/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U8/Z carrygen/m_PgNetwork/U16/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U9/Z carrygen/m_PgNetwork/U45/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U9/Z carrygen/m_PgNetwork/U15/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U11/Z carrygen/m_PgNetwork/U47/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U11/Z carrygen/m_PgNetwork/U35/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U12/Z carrygen/m_PgNetwork/U48/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U12/Z carrygen/m_PgNetwork/U36/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U13/Z carrygen/m_PgNetwork/U49/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U13/Z carrygen/m_PgNetwork/U24/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U14/Z carrygen/m_PgNetwork/U50/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U14/Z carrygen/m_PgNetwork/U23/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U15/Z carrygen/m_PgNetwork/U51/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U15/Z carrygen/m_PgNetwork/U30/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U16/Z carrygen/m_PgNetwork/U52/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U16/Z carrygen/m_PgNetwork/U29/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U17/Z carrygen/m_PgNetwork/U53/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U17/Z carrygen/m_PgNetwork/U20/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U18/Z carrygen/m_PgNetwork/U54/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U18/Z carrygen/m_PgNetwork/U19/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U19/Z carrygen/m_PgNetwork/U55/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U19/Z carrygen/m_PgNetwork/U28/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U20/Z carrygen/m_PgNetwork/U56/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U20/Z carrygen/m_PgNetwork/U27/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U22/Z carrygen/m_PgNetwork/U58/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U22/Z carrygen/m_PgNetwork/U26/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U23/Z carrygen/m_PgNetwork/U59/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U23/Z carrygen/m_PgNetwork/U25/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U24/Z carrygen/m_PgNetwork/U60/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U24/Z carrygen/m_PgNetwork/U32/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U25/Z carrygen/m_PgNetwork/U61/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U25/Z carrygen/m_PgNetwork/U31/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U26/Z carrygen/m_PgNetwork/U62/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U26/Z carrygen/m_PgNetwork/U10/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U27/Z carrygen/m_PgNetwork/U63/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U27/Z carrygen/m_PgNetwork/U9/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U28/Z carrygen/m_PgNetwork/U64/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U28/Z carrygen/m_PgNetwork/U18/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U29/Z carrygen/m_PgNetwork/U65/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U29/Z carrygen/m_PgNetwork/U17/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U30/Z carrygen/m_PgNetwork/U66/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U30/Z carrygen/m_PgNetwork/U14/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U31/Z carrygen/m_PgNetwork/U67/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U31/Z carrygen/m_PgNetwork/U13/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U1/Z carrygen/m_PgNetwork/U37/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U1/Z carrygen/m_PgNetwork/U22/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U2/Z carrygen/m_PgNetwork/U38/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U2/Z carrygen/m_PgNetwork/U21/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U3/Z carrygen/m_PgNetwork/U39/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U3/Z carrygen/m_PgNetwork/U8/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U4/Z carrygen/m_PgNetwork/U40/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U4/Z carrygen/m_PgNetwork/U7/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U5/Z carrygen/m_PgNetwork/U41/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U5/Z carrygen/m_PgNetwork/U33/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U6/Z carrygen/m_PgNetwork/U42/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U6/Z carrygen/m_PgNetwork/U34/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U7/Z carrygen/m_PgNetwork/U43/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U7/Z carrygen/m_PgNetwork/U12/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U10/Z carrygen/m_PgNetwork/U46/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U10/Z carrygen/m_PgNetwork/U11/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U21/Z carrygen/m_PgNetwork/U57/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U21/Z carrygen/m_PgNetwork/U6/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U32/Z carrygen/m_PgNetwork/U2/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U32/Z carrygen/m_PgNetwork/U5/B2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m1_blockG_4_15/U1/ZN carrygen/m1_blockG_5_19/U2/B2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m1_blockG_4_15/U1/ZN carrygen/m1_blockG_5_23/U2/B2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m1_blockG_4_15/U1/ZN carrygen/m1_blockG_5_27/U2/B2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m1_blockG_4_15/U1/ZN carrygen/m1_blockG_5_31/U2/B2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m1_blockG_3_7/U1/ZN carrygen/m1_blockG_4_11/U2/B2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m1_blockG_3_7/U1/ZN carrygen/m1_blockG_4_15/U2/B2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockG_2_3/U1/ZN carrygen/m1_blockG_3_7/U2/B2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m1_blockPG_4_31/U2/ZN carrygen/m1_blockG_5_31/U2/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m1_blockPG_4_27/U2/ZN carrygen/m1_blockG_5_27/U2/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m1_blockPG_3_23/U1/ZN carrygen/m1_blockPG_4_27/U1/B1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m1_blockPG_3_23/U1/ZN carrygen/m1_blockPG_4_31/U3/B1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m1_blockPG_3_23/U1/ZN carrygen/m1_blockG_5_23/U2/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m1_blockPG_3_31/U1/ZN carrygen/m1_blockPG_4_31/U3/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_2_27/U1/ZN carrygen/m1_blockPG_3_31/U2/B1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_2_27/U1/ZN carrygen/m1_blockPG_4_27/U1/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_2_19/U1/ZN carrygen/m1_blockPG_3_23/U2/B1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_2_19/U1/ZN carrygen/m1_blockG_5_19/U2/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m1_blockPG_3_15/U2/ZN carrygen/m1_blockG_4_15/U2/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_2_11/U1/ZN carrygen/m1_blockPG_3_15/U3/B1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_2_11/U1/ZN carrygen/m1_blockG_4_11/U2/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_2_31/U2/ZN carrygen/m1_blockPG_3_31/U2/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_2_23/U1/ZN carrygen/m1_blockPG_3_23/U2/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_2_15/U1/ZN carrygen/m1_blockPG_3_15/U3/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_2_7/U2/ZN carrygen/m1_blockG_3_7/U2/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_31/U1/ZN carrygen/m_blockPG_2_31/U1/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_29/U1/ZN carrygen/m_blockPG_2_31/U1/B1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_27/U1/ZN carrygen/m_blockPG_2_27/U2/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_25/U1/ZN carrygen/m_blockPG_2_27/U2/B1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_23/U1/ZN carrygen/m_blockPG_2_23/U2/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_21/U1/ZN carrygen/m_blockPG_2_23/U2/B1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_19/U1/ZN carrygen/m_blockPG_2_19/U2/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_17/U1/ZN carrygen/m_blockPG_2_19/U2/B1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_15/U1/ZN carrygen/m_blockPG_2_15/U2/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_13/U1/ZN carrygen/m_blockPG_2_15/U2/B1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_11/U1/ZN carrygen/m_blockPG_2_11/U2/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_9/U1/ZN carrygen/m_blockPG_2_11/U2/B1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_7/U1/ZN carrygen/m_blockPG_2_7/U3/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_5/U1/ZN carrygen/m_blockPG_2_7/U3/B1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_3/U2/ZN carrygen/m_blockG_2_3/U2/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockG_1_1/U1/ZN carrygen/m_blockG_2_3/U2/B2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U16/ZN carrygen/m_blockPG_1_31/U2/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U15/ZN carrygen/m_blockPG_1_31/U2/B1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U35/ZN carrygen/m_blockPG_1_29/U2/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U36/ZN carrygen/m_blockPG_1_29/U2/B1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U24/ZN carrygen/m_blockPG_1_27/U2/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U23/ZN carrygen/m_blockPG_1_27/U2/B1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U30/ZN carrygen/m_blockPG_1_25/U2/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U29/ZN carrygen/m_blockPG_1_25/U2/B1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U20/ZN carrygen/m_blockPG_1_23/U2/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U19/ZN carrygen/m_blockPG_1_23/U2/B1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U28/ZN carrygen/m_blockPG_1_21/U2/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U27/ZN carrygen/m_blockPG_1_21/U2/B1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U26/ZN carrygen/m_blockPG_1_19/U2/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U25/ZN carrygen/m_blockPG_1_19/U2/B1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U32/ZN carrygen/m_blockPG_1_17/U2/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U31/ZN carrygen/m_blockPG_1_17/U2/B1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U10/ZN carrygen/m_blockPG_1_15/U2/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U9/ZN carrygen/m_blockPG_1_15/U2/B1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U18/ZN carrygen/m_blockPG_1_13/U2/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U17/ZN carrygen/m_blockPG_1_13/U2/B1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U14/ZN carrygen/m_blockPG_1_11/U2/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U13/ZN carrygen/m_blockPG_1_11/U2/B1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U22/ZN carrygen/m_blockPG_1_9/U2/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U21/ZN carrygen/m_blockPG_1_9/U2/B1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U8/ZN carrygen/m_blockPG_1_7/U2/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U7/ZN carrygen/m_blockPG_1_7/U2/B1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U33/ZN carrygen/m_blockPG_1_5/U2/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U34/ZN carrygen/m_blockPG_1_5/U2/B1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U12/ZN carrygen/m_blockPG_1_3/U3/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U11/ZN carrygen/m_blockPG_1_3/U3/B1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U6/ZN carrygen/m_blockG_1_1/U2/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U3/ZN carrygen/m_blockG_1_1/U2/B2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m1_blockPG_4_31/U1/ZN carrygen/m1_blockG_5_31/U2/B1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m1_blockPG_4_27/U3/ZN carrygen/m1_blockG_5_27/U2/B1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m1_blockPG_3_23/U3/ZN carrygen/m1_blockPG_4_27/U3/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m1_blockPG_3_23/U3/ZN carrygen/m1_blockPG_4_31/U1/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m1_blockPG_3_23/U3/ZN carrygen/m1_blockG_5_23/U2/B1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m1_blockPG_3_31/U3/ZN carrygen/m1_blockPG_4_31/U1/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m1_blockPG_3_31/U3/ZN carrygen/m1_blockPG_4_31/U3/B2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_2_27/U3/ZN carrygen/m1_blockPG_3_31/U3/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_2_27/U3/ZN carrygen/m1_blockPG_4_27/U1/B2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_2_27/U3/ZN carrygen/m1_blockPG_4_27/U3/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_2_19/U3/ZN carrygen/m1_blockPG_3_23/U3/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_2_19/U3/ZN carrygen/m1_blockG_5_19/U2/B1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m1_blockPG_3_15/U1/ZN carrygen/m1_blockG_4_15/U2/B1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_2_11/U3/ZN carrygen/m1_blockPG_3_15/U1/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_2_11/U3/ZN carrygen/m1_blockG_4_11/U2/B1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_2_31/U3/ZN carrygen/m1_blockPG_3_31/U2/B2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_2_31/U3/ZN carrygen/m1_blockPG_3_31/U3/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_2_23/U3/ZN carrygen/m1_blockPG_3_23/U2/B2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_2_23/U3/ZN carrygen/m1_blockPG_3_23/U3/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_2_15/U3/ZN carrygen/m1_blockPG_3_15/U1/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_2_15/U3/ZN carrygen/m1_blockPG_3_15/U3/B2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_2_7/U1/ZN carrygen/m1_blockG_3_7/U2/B1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_31/U3/ZN carrygen/m_blockPG_2_31/U1/B2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_31/U3/ZN carrygen/m_blockPG_2_31/U3/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_29/U3/ZN carrygen/m_blockPG_2_31/U3/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_27/U3/ZN carrygen/m_blockPG_2_27/U2/B2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_27/U3/ZN carrygen/m_blockPG_2_27/U3/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_25/U3/ZN carrygen/m_blockPG_2_27/U3/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_23/U3/ZN carrygen/m_blockPG_2_23/U2/B2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_23/U3/ZN carrygen/m_blockPG_2_23/U3/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_21/U3/ZN carrygen/m_blockPG_2_23/U3/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_19/U3/ZN carrygen/m_blockPG_2_19/U2/B2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_19/U3/ZN carrygen/m_blockPG_2_19/U3/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_17/U3/ZN carrygen/m_blockPG_2_19/U3/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_15/U3/ZN carrygen/m_blockPG_2_15/U2/B2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_15/U3/ZN carrygen/m_blockPG_2_15/U3/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_13/U3/ZN carrygen/m_blockPG_2_15/U3/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_11/U3/ZN carrygen/m_blockPG_2_11/U2/B2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_11/U3/ZN carrygen/m_blockPG_2_11/U3/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_9/U3/ZN carrygen/m_blockPG_2_11/U3/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_7/U3/ZN carrygen/m_blockPG_2_7/U1/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_7/U3/ZN carrygen/m_blockPG_2_7/U3/B2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_5/U3/ZN carrygen/m_blockPG_2_7/U1/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_3/U1/ZN carrygen/m_blockG_2_3/U2/B1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U44/Z carrygen/m_blockPG_1_31/U2/B2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U44/Z carrygen/m_blockPG_1_31/U3/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U45/Z carrygen/m_blockPG_1_31/U3/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U47/Z carrygen/m_blockPG_1_29/U2/B2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U47/Z carrygen/m_blockPG_1_29/U3/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U48/Z carrygen/m_blockPG_1_29/U3/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U49/Z carrygen/m_blockPG_1_27/U2/B2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U49/Z carrygen/m_blockPG_1_27/U3/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U50/Z carrygen/m_blockPG_1_27/U3/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U51/Z carrygen/m_blockPG_1_25/U2/B2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U51/Z carrygen/m_blockPG_1_25/U3/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U52/Z carrygen/m_blockPG_1_25/U3/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U53/Z carrygen/m_blockPG_1_23/U2/B2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U53/Z carrygen/m_blockPG_1_23/U3/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U54/Z carrygen/m_blockPG_1_23/U3/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U55/Z carrygen/m_blockPG_1_21/U2/B2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U55/Z carrygen/m_blockPG_1_21/U3/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U56/Z carrygen/m_blockPG_1_21/U3/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U58/Z carrygen/m_blockPG_1_19/U2/B2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U58/Z carrygen/m_blockPG_1_19/U3/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U59/Z carrygen/m_blockPG_1_19/U3/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U60/Z carrygen/m_blockPG_1_17/U2/B2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U60/Z carrygen/m_blockPG_1_17/U3/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U61/Z carrygen/m_blockPG_1_17/U3/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U62/Z carrygen/m_blockPG_1_15/U2/B2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U62/Z carrygen/m_blockPG_1_15/U3/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U63/Z carrygen/m_blockPG_1_15/U3/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U64/Z carrygen/m_blockPG_1_13/U2/B2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U64/Z carrygen/m_blockPG_1_13/U3/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U65/Z carrygen/m_blockPG_1_13/U3/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U66/Z carrygen/m_blockPG_1_11/U2/B2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U66/Z carrygen/m_blockPG_1_11/U3/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U67/Z carrygen/m_blockPG_1_11/U3/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U37/Z carrygen/m_blockPG_1_9/U2/B2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U37/Z carrygen/m_blockPG_1_9/U3/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U38/Z carrygen/m_blockPG_1_9/U3/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U39/Z carrygen/m_blockPG_1_7/U2/B2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U39/Z carrygen/m_blockPG_1_7/U3/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U40/Z carrygen/m_blockPG_1_7/U3/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U41/Z carrygen/m_blockPG_1_5/U2/B2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U41/Z carrygen/m_blockPG_1_5/U3/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U42/Z carrygen/m_blockPG_1_5/U3/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U43/Z carrygen/m_blockPG_1_3/U1/A2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U43/Z carrygen/m_blockPG_1_3/U3/B2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U46/Z carrygen/m_blockPG_1_3/U1/A1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U57/Z carrygen/m_blockG_1_1/U2/B1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U4/ZN carrygen/m_PgNetwork/U3/B2  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U2/ZN carrygen/m_PgNetwork/U1/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U2/ZN carrygen/m_PgNetwork/U3/B1  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_PgNetwork/U5/ZN carrygen/m_PgNetwork/U3/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockG_1_1/U2/ZN carrygen/m_blockG_1_1/U1/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_3/U3/ZN carrygen/m_blockPG_1_3/U2/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_5/U2/ZN carrygen/m_blockPG_1_5/U1/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_7/U2/ZN carrygen/m_blockPG_1_7/U1/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_9/U2/ZN carrygen/m_blockPG_1_9/U1/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_11/U2/ZN carrygen/m_blockPG_1_11/U1/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_13/U2/ZN carrygen/m_blockPG_1_13/U1/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_15/U2/ZN carrygen/m_blockPG_1_15/U1/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_17/U2/ZN carrygen/m_blockPG_1_17/U1/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_19/U2/ZN carrygen/m_blockPG_1_19/U1/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_21/U2/ZN carrygen/m_blockPG_1_21/U1/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_23/U2/ZN carrygen/m_blockPG_1_23/U1/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_25/U2/ZN carrygen/m_blockPG_1_25/U1/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_27/U2/ZN carrygen/m_blockPG_1_27/U1/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_29/U2/ZN carrygen/m_blockPG_1_29/U1/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_1_31/U2/ZN carrygen/m_blockPG_1_31/U1/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockG_2_3/U2/ZN carrygen/m_blockG_2_3/U1/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_2_7/U3/ZN carrygen/m_blockPG_2_7/U2/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_2_11/U2/ZN carrygen/m_blockPG_2_11/U1/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_2_15/U2/ZN carrygen/m_blockPG_2_15/U1/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_2_19/U2/ZN carrygen/m_blockPG_2_19/U1/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_2_23/U2/ZN carrygen/m_blockPG_2_23/U1/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_2_27/U2/ZN carrygen/m_blockPG_2_27/U1/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m_blockPG_2_31/U1/ZN carrygen/m_blockPG_2_31/U2/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m1_blockG_3_7/U2/ZN carrygen/m1_blockG_3_7/U1/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m1_blockPG_3_15/U3/ZN carrygen/m1_blockPG_3_15/U2/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m1_blockPG_3_23/U2/ZN carrygen/m1_blockPG_3_23/U1/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m1_blockPG_3_31/U2/ZN carrygen/m1_blockPG_3_31/U1/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m1_blockG_4_11/U2/ZN carrygen/m1_blockG_4_11/U1/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m1_blockG_4_15/U2/ZN carrygen/m1_blockG_4_15/U1/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m1_blockPG_4_27/U1/ZN carrygen/m1_blockPG_4_27/U2/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m1_blockPG_4_31/U3/ZN carrygen/m1_blockPG_4_31/U2/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m1_blockG_5_19/U2/ZN carrygen/m1_blockG_5_19/U1/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m1_blockG_5_23/U2/ZN carrygen/m1_blockG_5_23/U1/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m1_blockG_5_27/U2/ZN carrygen/m1_blockG_5_27/U1/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT carrygen/m1_blockG_5_31/U2/ZN carrygen/m1_blockG_5_31/U1/A  (0.000::0.000) (0.000::0.000))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U37)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.032::0.033) (0.021::0.022)))
+	(COND (B==1'b0) (IOPATH A Z  (0.056::0.057) (0.051::0.053)))
+	(COND (A==1'b1) (IOPATH B Z  (0.034::0.034) (0.014::0.014)))
+	(COND (A==1'b0) (IOPATH B Z  (0.047::0.047) (0.054::0.054)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U38)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.023::0.024) (0.016::0.017)))
+	(COND (B==1'b0) (IOPATH A Z  (0.047::0.048) (0.049::0.050)))
+	(COND (A==1'b1) (IOPATH B Z  (0.025::0.025) (0.011::0.011)))
+	(COND (A==1'b0) (IOPATH B Z  (0.038::0.038) (0.051::0.051)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U39)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.033::0.034) (0.021::0.022)))
+	(COND (B==1'b0) (IOPATH A Z  (0.057::0.058) (0.052::0.053)))
+	(COND (A==1'b1) (IOPATH B Z  (0.035::0.035) (0.014::0.014)))
+	(COND (A==1'b0) (IOPATH B Z  (0.047::0.047) (0.054::0.054)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U40)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.022::0.024) (0.016::0.016)))
+	(COND (B==1'b0) (IOPATH A Z  (0.047::0.048) (0.048::0.050)))
+	(COND (A==1'b1) (IOPATH B Z  (0.025::0.025) (0.011::0.011)))
+	(COND (A==1'b0) (IOPATH B Z  (0.038::0.038) (0.051::0.051)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U41)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.032::0.034) (0.021::0.022)))
+	(COND (B==1'b0) (IOPATH A Z  (0.057::0.057) (0.052::0.053)))
+	(COND (A==1'b1) (IOPATH B Z  (0.035::0.035) (0.014::0.014)))
+	(COND (A==1'b0) (IOPATH B Z  (0.047::0.047) (0.054::0.054)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U42)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.022::0.024) (0.016::0.016)))
+	(COND (B==1'b0) (IOPATH A Z  (0.047::0.047) (0.048::0.050)))
+	(COND (A==1'b1) (IOPATH B Z  (0.025::0.025) (0.011::0.011)))
+	(COND (A==1'b0) (IOPATH B Z  (0.037::0.037) (0.051::0.051)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U43)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.032::0.034) (0.021::0.022)))
+	(COND (B==1'b0) (IOPATH A Z  (0.056::0.057) (0.051::0.053)))
+	(COND (A==1'b1) (IOPATH B Z  (0.034::0.034) (0.014::0.014)))
+	(COND (A==1'b0) (IOPATH B Z  (0.047::0.047) (0.054::0.054)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U44)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.032::0.034) (0.021::0.022)))
+	(COND (B==1'b0) (IOPATH A Z  (0.056::0.057) (0.051::0.053)))
+	(COND (A==1'b1) (IOPATH B Z  (0.035::0.035) (0.014::0.014)))
+	(COND (A==1'b0) (IOPATH B Z  (0.047::0.047) (0.054::0.054)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U45)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.022::0.023) (0.015::0.016)))
+	(COND (B==1'b0) (IOPATH A Z  (0.046::0.047) (0.048::0.049)))
+	(COND (A==1'b1) (IOPATH B Z  (0.024::0.024) (0.010::0.010)))
+	(COND (A==1'b0) (IOPATH B Z  (0.036::0.036) (0.050::0.050)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U46)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.024::0.025) (0.017::0.018)))
+	(COND (B==1'b0) (IOPATH A Z  (0.048::0.049) (0.049::0.050)))
+	(COND (A==1'b1) (IOPATH B Z  (0.026::0.026) (0.011::0.011)))
+	(COND (A==1'b0) (IOPATH B Z  (0.039::0.039) (0.051::0.051)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U47)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.032::0.033) (0.021::0.021)))
+	(COND (B==1'b0) (IOPATH A Z  (0.056::0.057) (0.051::0.053)))
+	(COND (A==1'b1) (IOPATH B Z  (0.034::0.034) (0.014::0.014)))
+	(COND (A==1'b0) (IOPATH B Z  (0.047::0.047) (0.054::0.054)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U48)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.022::0.024) (0.016::0.016)))
+	(COND (B==1'b0) (IOPATH A Z  (0.047::0.048) (0.048::0.050)))
+	(COND (A==1'b1) (IOPATH B Z  (0.025::0.025) (0.011::0.011)))
+	(COND (A==1'b0) (IOPATH B Z  (0.037::0.037) (0.051::0.051)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U49)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.032::0.033) (0.021::0.021)))
+	(COND (B==1'b0) (IOPATH A Z  (0.056::0.057) (0.051::0.053)))
+	(COND (A==1'b1) (IOPATH B Z  (0.034::0.034) (0.014::0.014)))
+	(COND (A==1'b0) (IOPATH B Z  (0.047::0.047) (0.054::0.054)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U50)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.022::0.024) (0.016::0.016)))
+	(COND (B==1'b0) (IOPATH A Z  (0.047::0.048) (0.048::0.050)))
+	(COND (A==1'b1) (IOPATH B Z  (0.025::0.025) (0.011::0.011)))
+	(COND (A==1'b0) (IOPATH B Z  (0.037::0.037) (0.051::0.051)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U51)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.033::0.034) (0.021::0.022)))
+	(COND (B==1'b0) (IOPATH A Z  (0.057::0.058) (0.052::0.053)))
+	(COND (A==1'b1) (IOPATH B Z  (0.036::0.036) (0.014::0.014)))
+	(COND (A==1'b0) (IOPATH B Z  (0.048::0.048) (0.054::0.054)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U52)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.023::0.024) (0.016::0.017)))
+	(COND (B==1'b0) (IOPATH A Z  (0.047::0.048) (0.048::0.050)))
+	(COND (A==1'b1) (IOPATH B Z  (0.025::0.025) (0.011::0.011)))
+	(COND (A==1'b0) (IOPATH B Z  (0.038::0.038) (0.051::0.051)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U53)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.032::0.034) (0.021::0.022)))
+	(COND (B==1'b0) (IOPATH A Z  (0.056::0.057) (0.051::0.053)))
+	(COND (A==1'b1) (IOPATH B Z  (0.035::0.035) (0.014::0.014)))
+	(COND (A==1'b0) (IOPATH B Z  (0.047::0.047) (0.054::0.054)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U54)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.022::0.024) (0.016::0.017)))
+	(COND (B==1'b0) (IOPATH A Z  (0.047::0.048) (0.048::0.050)))
+	(COND (A==1'b1) (IOPATH B Z  (0.025::0.025) (0.011::0.011)))
+	(COND (A==1'b0) (IOPATH B Z  (0.037::0.037) (0.051::0.051)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U55)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.032::0.034) (0.021::0.022)))
+	(COND (B==1'b0) (IOPATH A Z  (0.056::0.057) (0.052::0.053)))
+	(COND (A==1'b1) (IOPATH B Z  (0.034::0.034) (0.014::0.014)))
+	(COND (A==1'b0) (IOPATH B Z  (0.047::0.047) (0.054::0.054)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U56)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.023::0.024) (0.016::0.017)))
+	(COND (B==1'b0) (IOPATH A Z  (0.047::0.048) (0.048::0.050)))
+	(COND (A==1'b1) (IOPATH B Z  (0.025::0.025) (0.011::0.011)))
+	(COND (A==1'b0) (IOPATH B Z  (0.038::0.038) (0.051::0.051)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U57)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.025::0.027) (0.018::0.019)))
+	(COND (B==1'b0) (IOPATH A Z  (0.050::0.051) (0.049::0.051)))
+	(COND (A==1'b1) (IOPATH B Z  (0.028::0.028) (0.012::0.012)))
+	(COND (A==1'b0) (IOPATH B Z  (0.040::0.040) (0.052::0.052)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U58)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.032::0.034) (0.021::0.022)))
+	(COND (B==1'b0) (IOPATH A Z  (0.057::0.057) (0.051::0.053)))
+	(COND (A==1'b1) (IOPATH B Z  (0.035::0.035) (0.014::0.014)))
+	(COND (A==1'b0) (IOPATH B Z  (0.047::0.047) (0.054::0.054)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U59)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.022::0.024) (0.016::0.016)))
+	(COND (B==1'b0) (IOPATH A Z  (0.047::0.047) (0.048::0.050)))
+	(COND (A==1'b1) (IOPATH B Z  (0.024::0.024) (0.011::0.011)))
+	(COND (A==1'b0) (IOPATH B Z  (0.037::0.037) (0.051::0.051)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U60)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.033::0.034) (0.021::0.022)))
+	(COND (B==1'b0) (IOPATH A Z  (0.057::0.058) (0.052::0.053)))
+	(COND (A==1'b1) (IOPATH B Z  (0.035::0.035) (0.014::0.014)))
+	(COND (A==1'b0) (IOPATH B Z  (0.047::0.047) (0.054::0.054)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U61)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.022::0.024) (0.016::0.016)))
+	(COND (B==1'b0) (IOPATH A Z  (0.047::0.048) (0.048::0.050)))
+	(COND (A==1'b1) (IOPATH B Z  (0.025::0.025) (0.011::0.011)))
+	(COND (A==1'b0) (IOPATH B Z  (0.037::0.037) (0.051::0.051)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U62)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.032::0.034) (0.021::0.022)))
+	(COND (B==1'b0) (IOPATH A Z  (0.057::0.057) (0.052::0.053)))
+	(COND (A==1'b1) (IOPATH B Z  (0.035::0.035) (0.014::0.014)))
+	(COND (A==1'b0) (IOPATH B Z  (0.047::0.047) (0.054::0.054)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U63)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.023::0.024) (0.016::0.017)))
+	(COND (B==1'b0) (IOPATH A Z  (0.047::0.048) (0.048::0.050)))
+	(COND (A==1'b1) (IOPATH B Z  (0.025::0.025) (0.011::0.011)))
+	(COND (A==1'b0) (IOPATH B Z  (0.038::0.038) (0.051::0.051)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U64)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.032::0.033) (0.021::0.021)))
+	(COND (B==1'b0) (IOPATH A Z  (0.056::0.056) (0.051::0.053)))
+	(COND (A==1'b1) (IOPATH B Z  (0.034::0.034) (0.014::0.014)))
+	(COND (A==1'b0) (IOPATH B Z  (0.046::0.046) (0.054::0.054)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U65)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.022::0.024) (0.016::0.017)))
+	(COND (B==1'b0) (IOPATH A Z  (0.047::0.048) (0.048::0.050)))
+	(COND (A==1'b1) (IOPATH B Z  (0.025::0.025) (0.011::0.011)))
+	(COND (A==1'b0) (IOPATH B Z  (0.037::0.037) (0.051::0.051)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U66)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.031::0.033) (0.020::0.021)))
+	(COND (B==1'b0) (IOPATH A Z  (0.056::0.056) (0.051::0.053)))
+	(COND (A==1'b1) (IOPATH B Z  (0.034::0.034) (0.014::0.014)))
+	(COND (A==1'b0) (IOPATH B Z  (0.046::0.046) (0.054::0.054)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U67)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.023::0.024) (0.016::0.017)))
+	(COND (B==1'b0) (IOPATH A Z  (0.047::0.048) (0.048::0.050)))
+	(COND (A==1'b1) (IOPATH B Z  (0.025::0.025) (0.011::0.011)))
+	(COND (A==1'b0) (IOPATH B Z  (0.037::0.037) (0.051::0.051)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XNOR2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U1)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b0) (IOPATH A ZN  (0.018::0.019) (0.010::0.010)))
+	(COND (B==1'b1) (IOPATH A ZN  (0.034::0.034) (0.034::0.034)))
+	(COND (A==1'b0) (IOPATH B ZN  (0.020::0.020) (0.009::0.009)))
+	(COND (A==1'b1) (IOPATH B ZN  (0.032::0.032) (0.031::0.031)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "INV_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U2)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A ZN  (0.018::0.021) (0.014::0.015))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "OAI21_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U3)
+      (DELAY
+	(ABSOLUTE
+	(COND (B1==1'b0)&&(B2==1'b1) (IOPATH A ZN  (0.017::0.022) (0.014::0.021)))
+	(COND (B1==1'b1)&&(B2==1'b0) (IOPATH A ZN  (0.017::0.022) (0.014::0.021)))
+	(COND (B1==1'b1)&&(B2==1'b1) (IOPATH A ZN  (0.017::0.022) (0.014::0.021)))
+	(IOPATH B1 ZN  (0.027::0.028) (0.014::0.014))
+	(IOPATH B2 ZN  (0.030::0.030) (0.014::0.014))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "INV_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U4)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A ZN  (0.009::0.009) (0.005::0.005))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "OAI21_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U5)
+      (DELAY
+	(ABSOLUTE
+	(COND (B1==1'b0)&&(B2==1'b1) (IOPATH A ZN  (0.016::0.017) (0.011::0.016)))
+	(COND (B1==1'b1)&&(B2==1'b0) (IOPATH A ZN  (0.016::0.017) (0.011::0.016)))
+	(COND (B1==1'b1)&&(B2==1'b1) (IOPATH A ZN  (0.016::0.017) (0.011::0.016)))
+	(IOPATH B1 ZN  (0.024::0.024) (0.011::0.011))
+	(IOPATH B2 ZN  (0.031::0.032) (0.021::0.022))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U6)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.036::0.037) (0.028::0.030))
+	(IOPATH A2 ZN  (0.029::0.029) (0.027::0.027))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U7)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.036::0.037) (0.028::0.030))
+	(IOPATH A2 ZN  (0.029::0.029) (0.027::0.027))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U8)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.036::0.037) (0.028::0.030))
+	(IOPATH A2 ZN  (0.028::0.028) (0.027::0.027))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U9)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.036::0.037) (0.028::0.030))
+	(IOPATH A2 ZN  (0.029::0.029) (0.027::0.027))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U10)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.036::0.037) (0.028::0.030))
+	(IOPATH A2 ZN  (0.028::0.028) (0.027::0.027))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U11)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.037::0.038) (0.029::0.031))
+	(IOPATH A2 ZN  (0.029::0.029) (0.028::0.028))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U12)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.036::0.038) (0.028::0.030))
+	(IOPATH A2 ZN  (0.029::0.029) (0.027::0.027))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U13)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.036::0.037) (0.028::0.030))
+	(IOPATH A2 ZN  (0.029::0.029) (0.027::0.027))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U14)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.036::0.037) (0.028::0.030))
+	(IOPATH A2 ZN  (0.029::0.029) (0.027::0.027))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U15)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.036::0.038) (0.028::0.030))
+	(IOPATH A2 ZN  (0.029::0.029) (0.027::0.027))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U16)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.036::0.037) (0.028::0.030))
+	(IOPATH A2 ZN  (0.029::0.029) (0.027::0.027))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U17)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.036::0.038) (0.028::0.030))
+	(IOPATH A2 ZN  (0.029::0.029) (0.027::0.027))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U18)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.037::0.038) (0.029::0.031))
+	(IOPATH A2 ZN  (0.029::0.029) (0.027::0.027))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U19)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.036::0.037) (0.028::0.030))
+	(IOPATH A2 ZN  (0.029::0.029) (0.027::0.027))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U20)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.036::0.037) (0.028::0.030))
+	(IOPATH A2 ZN  (0.029::0.029) (0.027::0.027))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U21)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.036::0.038) (0.028::0.030))
+	(IOPATH A2 ZN  (0.029::0.029) (0.027::0.027))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U22)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.036::0.037) (0.028::0.030))
+	(IOPATH A2 ZN  (0.029::0.029) (0.027::0.027))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U23)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.036::0.037) (0.028::0.030))
+	(IOPATH A2 ZN  (0.029::0.029) (0.027::0.027))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U24)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.036::0.038) (0.028::0.030))
+	(IOPATH A2 ZN  (0.029::0.029) (0.027::0.027))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U25)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.036::0.038) (0.028::0.030))
+	(IOPATH A2 ZN  (0.029::0.029) (0.027::0.027))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U26)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.036::0.037) (0.028::0.030))
+	(IOPATH A2 ZN  (0.028::0.028) (0.027::0.027))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U27)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.036::0.037) (0.028::0.030))
+	(IOPATH A2 ZN  (0.029::0.029) (0.027::0.027))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U28)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.036::0.037) (0.028::0.030))
+	(IOPATH A2 ZN  (0.029::0.029) (0.027::0.027))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U29)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.036::0.038) (0.028::0.030))
+	(IOPATH A2 ZN  (0.029::0.029) (0.027::0.027))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U30)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.036::0.037) (0.028::0.030))
+	(IOPATH A2 ZN  (0.028::0.028) (0.027::0.027))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U31)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.036::0.037) (0.028::0.030))
+	(IOPATH A2 ZN  (0.029::0.029) (0.027::0.027))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U32)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.036::0.037) (0.028::0.030))
+	(IOPATH A2 ZN  (0.029::0.029) (0.027::0.027))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U33)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.036::0.038) (0.028::0.030))
+	(IOPATH A2 ZN  (0.029::0.029) (0.027::0.027))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U34)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.036::0.037) (0.028::0.030))
+	(IOPATH A2 ZN  (0.029::0.029) (0.027::0.027))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U35)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.036::0.037) (0.028::0.030))
+	(IOPATH A2 ZN  (0.029::0.029) (0.027::0.027))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_PgNetwork/U36)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.036::0.037) (0.028::0.030))
+	(IOPATH A2 ZN  (0.029::0.029) (0.027::0.027))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "INV_X1")
+    (INSTANCE  carrygen/m_blockG_1_1/U1)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A ZN  (0.011::0.013) (0.009::0.009))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AOI21_X1")
+    (INSTANCE  carrygen/m_blockG_1_1/U2)
+      (DELAY
+	(ABSOLUTE
+	(COND (B1==1'b0)&&(B2==1'b0) (IOPATH A ZN  (0.027::0.037) (0.011::0.012)))
+	(COND (B1==1'b0)&&(B2==1'b1) (IOPATH A ZN  (0.027::0.037) (0.011::0.012)))
+	(COND (B1==1'b1)&&(B2==1'b0) (IOPATH A ZN  (0.027::0.037) (0.011::0.012)))
+	(IOPATH B1 ZN  (0.024::0.026) (0.016::0.017))
+	(IOPATH B2 ZN  (0.029::0.030) (0.015::0.017))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_blockPG_1_3/U1)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.033::0.034) (0.027::0.029))
+	(IOPATH A2 ZN  (0.036::0.036) (0.030::0.032))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "INV_X1")
+    (INSTANCE  carrygen/m_blockPG_1_3/U2)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A ZN  (0.011::0.012) (0.008::0.009))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AOI21_X1")
+    (INSTANCE  carrygen/m_blockPG_1_3/U3)
+      (DELAY
+	(ABSOLUTE
+	(COND (B1==1'b0)&&(B2==1'b0) (IOPATH A ZN  (0.027::0.037) (0.011::0.012)))
+	(COND (B1==1'b0)&&(B2==1'b1) (IOPATH A ZN  (0.027::0.037) (0.011::0.012)))
+	(COND (B1==1'b1)&&(B2==1'b0) (IOPATH A ZN  (0.027::0.037) (0.011::0.012)))
+	(IOPATH B1 ZN  (0.024::0.024) (0.013::0.013))
+	(IOPATH B2 ZN  (0.030::0.032) (0.018::0.018))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "INV_X1")
+    (INSTANCE  carrygen/m_blockPG_1_5/U1)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A ZN  (0.011::0.012) (0.008::0.009))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AOI21_X1")
+    (INSTANCE  carrygen/m_blockPG_1_5/U2)
+      (DELAY
+	(ABSOLUTE
+	(COND (B1==1'b0)&&(B2==1'b0) (IOPATH A ZN  (0.027::0.037) (0.011::0.012)))
+	(COND (B1==1'b0)&&(B2==1'b1) (IOPATH A ZN  (0.027::0.037) (0.011::0.012)))
+	(COND (B1==1'b1)&&(B2==1'b0) (IOPATH A ZN  (0.027::0.037) (0.011::0.012)))
+	(IOPATH B1 ZN  (0.024::0.024) (0.013::0.013))
+	(IOPATH B2 ZN  (0.030::0.032) (0.018::0.018))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_blockPG_1_5/U3)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.030::0.031) (0.025::0.027))
+	(IOPATH A2 ZN  (0.033::0.034) (0.028::0.031))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "INV_X1")
+    (INSTANCE  carrygen/m_blockPG_1_7/U1)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A ZN  (0.010::0.012) (0.008::0.009))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AOI21_X1")
+    (INSTANCE  carrygen/m_blockPG_1_7/U2)
+      (DELAY
+	(ABSOLUTE
+	(COND (B1==1'b0)&&(B2==1'b0) (IOPATH A ZN  (0.027::0.037) (0.010::0.012)))
+	(COND (B1==1'b0)&&(B2==1'b1) (IOPATH A ZN  (0.027::0.037) (0.010::0.012)))
+	(COND (B1==1'b1)&&(B2==1'b0) (IOPATH A ZN  (0.027::0.037) (0.010::0.012)))
+	(IOPATH B1 ZN  (0.024::0.024) (0.013::0.013))
+	(IOPATH B2 ZN  (0.030::0.032) (0.018::0.019))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_blockPG_1_7/U3)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.036::0.037) (0.028::0.031))
+	(IOPATH A2 ZN  (0.039::0.039) (0.032::0.034))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "INV_X1")
+    (INSTANCE  carrygen/m_blockPG_1_9/U1)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A ZN  (0.012::0.013) (0.009::0.010))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AOI21_X1")
+    (INSTANCE  carrygen/m_blockPG_1_9/U2)
+      (DELAY
+	(ABSOLUTE
+	(COND (B1==1'b0)&&(B2==1'b0) (IOPATH A ZN  (0.028::0.038) (0.011::0.012)))
+	(COND (B1==1'b0)&&(B2==1'b1) (IOPATH A ZN  (0.028::0.038) (0.011::0.012)))
+	(COND (B1==1'b1)&&(B2==1'b0) (IOPATH A ZN  (0.028::0.038) (0.011::0.012)))
+	(IOPATH B1 ZN  (0.024::0.024) (0.013::0.013))
+	(IOPATH B2 ZN  (0.030::0.032) (0.018::0.019))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_blockPG_1_9/U3)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.031::0.032) (0.025::0.028))
+	(IOPATH A2 ZN  (0.033::0.034) (0.029::0.031))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "INV_X1")
+    (INSTANCE  carrygen/m_blockPG_1_11/U1)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A ZN  (0.011::0.012) (0.008::0.009))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AOI21_X1")
+    (INSTANCE  carrygen/m_blockPG_1_11/U2)
+      (DELAY
+	(ABSOLUTE
+	(COND (B1==1'b0)&&(B2==1'b0) (IOPATH A ZN  (0.027::0.037) (0.011::0.012)))
+	(COND (B1==1'b0)&&(B2==1'b1) (IOPATH A ZN  (0.027::0.037) (0.011::0.012)))
+	(COND (B1==1'b1)&&(B2==1'b0) (IOPATH A ZN  (0.027::0.037) (0.011::0.012)))
+	(IOPATH B1 ZN  (0.024::0.024) (0.013::0.013))
+	(IOPATH B2 ZN  (0.030::0.032) (0.018::0.018))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_blockPG_1_11/U3)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.035::0.036) (0.028::0.031))
+	(IOPATH A2 ZN  (0.038::0.039) (0.032::0.034))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "INV_X1")
+    (INSTANCE  carrygen/m_blockPG_1_13/U1)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A ZN  (0.011::0.012) (0.008::0.009))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AOI21_X1")
+    (INSTANCE  carrygen/m_blockPG_1_13/U2)
+      (DELAY
+	(ABSOLUTE
+	(COND (B1==1'b0)&&(B2==1'b0) (IOPATH A ZN  (0.028::0.037) (0.011::0.012)))
+	(COND (B1==1'b0)&&(B2==1'b1) (IOPATH A ZN  (0.028::0.037) (0.011::0.012)))
+	(COND (B1==1'b1)&&(B2==1'b0) (IOPATH A ZN  (0.028::0.037) (0.011::0.012)))
+	(IOPATH B1 ZN  (0.024::0.024) (0.013::0.013))
+	(IOPATH B2 ZN  (0.030::0.032) (0.018::0.019))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_blockPG_1_13/U3)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.030::0.031) (0.025::0.027))
+	(IOPATH A2 ZN  (0.033::0.033) (0.028::0.031))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "INV_X1")
+    (INSTANCE  carrygen/m_blockPG_1_15/U1)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A ZN  (0.011::0.012) (0.008::0.009))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AOI21_X1")
+    (INSTANCE  carrygen/m_blockPG_1_15/U2)
+      (DELAY
+	(ABSOLUTE
+	(COND (B1==1'b0)&&(B2==1'b0) (IOPATH A ZN  (0.027::0.037) (0.010::0.012)))
+	(COND (B1==1'b0)&&(B2==1'b1) (IOPATH A ZN  (0.027::0.037) (0.010::0.012)))
+	(COND (B1==1'b1)&&(B2==1'b0) (IOPATH A ZN  (0.027::0.037) (0.010::0.012)))
+	(IOPATH B1 ZN  (0.024::0.024) (0.013::0.013))
+	(IOPATH B2 ZN  (0.030::0.032) (0.018::0.019))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_blockPG_1_15/U3)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.036::0.037) (0.028::0.031))
+	(IOPATH A2 ZN  (0.038::0.039) (0.032::0.034))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "INV_X1")
+    (INSTANCE  carrygen/m_blockPG_1_17/U1)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A ZN  (0.011::0.012) (0.008::0.009))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AOI21_X1")
+    (INSTANCE  carrygen/m_blockPG_1_17/U2)
+      (DELAY
+	(ABSOLUTE
+	(COND (B1==1'b0)&&(B2==1'b0) (IOPATH A ZN  (0.027::0.037) (0.011::0.012)))
+	(COND (B1==1'b0)&&(B2==1'b1) (IOPATH A ZN  (0.027::0.037) (0.011::0.012)))
+	(COND (B1==1'b1)&&(B2==1'b0) (IOPATH A ZN  (0.027::0.037) (0.011::0.012)))
+	(IOPATH B1 ZN  (0.024::0.024) (0.013::0.013))
+	(IOPATH B2 ZN  (0.030::0.032) (0.018::0.019))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_blockPG_1_17/U3)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.031::0.032) (0.025::0.028))
+	(IOPATH A2 ZN  (0.034::0.034) (0.029::0.031))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "INV_X1")
+    (INSTANCE  carrygen/m_blockPG_1_19/U1)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A ZN  (0.011::0.012) (0.008::0.009))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AOI21_X1")
+    (INSTANCE  carrygen/m_blockPG_1_19/U2)
+      (DELAY
+	(ABSOLUTE
+	(COND (B1==1'b0)&&(B2==1'b0) (IOPATH A ZN  (0.027::0.037) (0.010::0.012)))
+	(COND (B1==1'b0)&&(B2==1'b1) (IOPATH A ZN  (0.027::0.037) (0.010::0.012)))
+	(COND (B1==1'b1)&&(B2==1'b0) (IOPATH A ZN  (0.027::0.037) (0.010::0.012)))
+	(IOPATH B1 ZN  (0.024::0.024) (0.013::0.013))
+	(IOPATH B2 ZN  (0.030::0.032) (0.018::0.018))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_blockPG_1_19/U3)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.035::0.036) (0.028::0.031))
+	(IOPATH A2 ZN  (0.038::0.039) (0.032::0.034))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "INV_X1")
+    (INSTANCE  carrygen/m_blockPG_1_21/U1)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A ZN  (0.011::0.012) (0.008::0.009))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AOI21_X1")
+    (INSTANCE  carrygen/m_blockPG_1_21/U2)
+      (DELAY
+	(ABSOLUTE
+	(COND (B1==1'b0)&&(B2==1'b0) (IOPATH A ZN  (0.028::0.037) (0.011::0.012)))
+	(COND (B1==1'b0)&&(B2==1'b1) (IOPATH A ZN  (0.028::0.037) (0.011::0.012)))
+	(COND (B1==1'b1)&&(B2==1'b0) (IOPATH A ZN  (0.028::0.037) (0.011::0.012)))
+	(IOPATH B1 ZN  (0.024::0.024) (0.013::0.013))
+	(IOPATH B2 ZN  (0.030::0.032) (0.018::0.019))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_blockPG_1_21/U3)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.030::0.031) (0.025::0.027))
+	(IOPATH A2 ZN  (0.033::0.034) (0.028::0.031))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "INV_X1")
+    (INSTANCE  carrygen/m_blockPG_1_23/U1)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A ZN  (0.011::0.012) (0.008::0.009))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AOI21_X1")
+    (INSTANCE  carrygen/m_blockPG_1_23/U2)
+      (DELAY
+	(ABSOLUTE
+	(COND (B1==1'b0)&&(B2==1'b0) (IOPATH A ZN  (0.028::0.038) (0.011::0.012)))
+	(COND (B1==1'b0)&&(B2==1'b1) (IOPATH A ZN  (0.028::0.038) (0.011::0.012)))
+	(COND (B1==1'b1)&&(B2==1'b0) (IOPATH A ZN  (0.028::0.038) (0.011::0.012)))
+	(IOPATH B1 ZN  (0.025::0.025) (0.013::0.014))
+	(IOPATH B2 ZN  (0.031::0.032) (0.018::0.019))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_blockPG_1_23/U3)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.036::0.037) (0.029::0.031))
+	(IOPATH A2 ZN  (0.039::0.039) (0.032::0.034))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "INV_X1")
+    (INSTANCE  carrygen/m_blockPG_1_25/U1)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A ZN  (0.011::0.012) (0.008::0.009))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AOI21_X1")
+    (INSTANCE  carrygen/m_blockPG_1_25/U2)
+      (DELAY
+	(ABSOLUTE
+	(COND (B1==1'b0)&&(B2==1'b0) (IOPATH A ZN  (0.027::0.037) (0.010::0.012)))
+	(COND (B1==1'b0)&&(B2==1'b1) (IOPATH A ZN  (0.027::0.037) (0.010::0.012)))
+	(COND (B1==1'b1)&&(B2==1'b0) (IOPATH A ZN  (0.027::0.037) (0.010::0.012)))
+	(IOPATH B1 ZN  (0.024::0.024) (0.013::0.013))
+	(IOPATH B2 ZN  (0.030::0.032) (0.018::0.019))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_blockPG_1_25/U3)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.030::0.031) (0.025::0.027))
+	(IOPATH A2 ZN  (0.033::0.034) (0.029::0.031))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "INV_X1")
+    (INSTANCE  carrygen/m_blockPG_1_27/U1)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A ZN  (0.011::0.012) (0.008::0.009))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AOI21_X1")
+    (INSTANCE  carrygen/m_blockPG_1_27/U2)
+      (DELAY
+	(ABSOLUTE
+	(COND (B1==1'b0)&&(B2==1'b0) (IOPATH A ZN  (0.027::0.037) (0.011::0.012)))
+	(COND (B1==1'b0)&&(B2==1'b1) (IOPATH A ZN  (0.027::0.037) (0.011::0.012)))
+	(COND (B1==1'b1)&&(B2==1'b0) (IOPATH A ZN  (0.027::0.037) (0.011::0.012)))
+	(IOPATH B1 ZN  (0.024::0.024) (0.013::0.013))
+	(IOPATH B2 ZN  (0.030::0.032) (0.018::0.018))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_blockPG_1_27/U3)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.035::0.036) (0.028::0.031))
+	(IOPATH A2 ZN  (0.038::0.039) (0.032::0.034))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "INV_X1")
+    (INSTANCE  carrygen/m_blockPG_1_29/U1)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A ZN  (0.011::0.012) (0.008::0.009))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AOI21_X1")
+    (INSTANCE  carrygen/m_blockPG_1_29/U2)
+      (DELAY
+	(ABSOLUTE
+	(COND (B1==1'b0)&&(B2==1'b0) (IOPATH A ZN  (0.028::0.037) (0.011::0.012)))
+	(COND (B1==1'b0)&&(B2==1'b1) (IOPATH A ZN  (0.028::0.037) (0.011::0.012)))
+	(COND (B1==1'b1)&&(B2==1'b0) (IOPATH A ZN  (0.028::0.037) (0.011::0.012)))
+	(IOPATH B1 ZN  (0.024::0.024) (0.013::0.013))
+	(IOPATH B2 ZN  (0.030::0.032) (0.018::0.019))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_blockPG_1_29/U3)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.031::0.032) (0.025::0.027))
+	(IOPATH A2 ZN  (0.033::0.034) (0.029::0.031))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "INV_X1")
+    (INSTANCE  carrygen/m_blockPG_1_31/U1)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A ZN  (0.011::0.012) (0.008::0.009))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AOI21_X1")
+    (INSTANCE  carrygen/m_blockPG_1_31/U2)
+      (DELAY
+	(ABSOLUTE
+	(COND (B1==1'b0)&&(B2==1'b0) (IOPATH A ZN  (0.028::0.038) (0.011::0.012)))
+	(COND (B1==1'b0)&&(B2==1'b1) (IOPATH A ZN  (0.028::0.038) (0.011::0.012)))
+	(COND (B1==1'b1)&&(B2==1'b0) (IOPATH A ZN  (0.028::0.038) (0.011::0.012)))
+	(IOPATH B1 ZN  (0.025::0.025) (0.014::0.014))
+	(IOPATH B2 ZN  (0.031::0.033) (0.019::0.019))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_blockPG_1_31/U3)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.036::0.037) (0.029::0.031))
+	(IOPATH A2 ZN  (0.039::0.040) (0.032::0.034))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "INV_X1")
+    (INSTANCE  carrygen/m_blockG_2_3/U1)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A ZN  (0.011::0.011) (0.008::0.009))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AOI21_X1")
+    (INSTANCE  carrygen/m_blockG_2_3/U2)
+      (DELAY
+	(ABSOLUTE
+	(COND (B1==1'b0)&&(B2==1'b0) (IOPATH A ZN  (0.027::0.038) (0.010::0.011)))
+	(COND (B1==1'b0)&&(B2==1'b1) (IOPATH A ZN  (0.027::0.038) (0.010::0.011)))
+	(COND (B1==1'b1)&&(B2==1'b0) (IOPATH A ZN  (0.027::0.038) (0.010::0.011)))
+	(IOPATH B1 ZN  (0.024::0.024) (0.013::0.013))
+	(IOPATH B2 ZN  (0.029::0.029) (0.014::0.014))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_blockPG_2_7/U1)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.029::0.029) (0.026::0.026))
+	(IOPATH A2 ZN  (0.032::0.032) (0.029::0.029))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "INV_X1")
+    (INSTANCE  carrygen/m_blockPG_2_7/U2)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A ZN  (0.011::0.012) (0.009::0.009))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AOI21_X1")
+    (INSTANCE  carrygen/m_blockPG_2_7/U3)
+      (DELAY
+	(ABSOLUTE
+	(COND (B1==1'b0)&&(B2==1'b0) (IOPATH A ZN  (0.028::0.038) (0.010::0.011)))
+	(COND (B1==1'b0)&&(B2==1'b1) (IOPATH A ZN  (0.028::0.038) (0.010::0.011)))
+	(COND (B1==1'b1)&&(B2==1'b0) (IOPATH A ZN  (0.028::0.038) (0.010::0.011)))
+	(IOPATH B1 ZN  (0.025::0.025) (0.013::0.013))
+	(IOPATH B2 ZN  (0.030::0.030) (0.015::0.015))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "INV_X1")
+    (INSTANCE  carrygen/m_blockPG_2_11/U1)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A ZN  (0.015::0.015) (0.011::0.013))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AOI21_X1")
+    (INSTANCE  carrygen/m_blockPG_2_11/U2)
+      (DELAY
+	(ABSOLUTE
+	(COND (B1==1'b0)&&(B2==1'b0) (IOPATH A ZN  (0.027::0.038) (0.010::0.011)))
+	(COND (B1==1'b0)&&(B2==1'b1) (IOPATH A ZN  (0.027::0.038) (0.010::0.011)))
+	(COND (B1==1'b1)&&(B2==1'b0) (IOPATH A ZN  (0.027::0.038) (0.010::0.011)))
+	(IOPATH B1 ZN  (0.024::0.024) (0.013::0.013))
+	(IOPATH B2 ZN  (0.029::0.029) (0.015::0.015))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_blockPG_2_11/U3)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.032::0.032) (0.028::0.028))
+	(IOPATH A2 ZN  (0.034::0.034) (0.031::0.031))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "INV_X1")
+    (INSTANCE  carrygen/m_blockPG_2_15/U1)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A ZN  (0.011::0.012) (0.009::0.009))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AOI21_X1")
+    (INSTANCE  carrygen/m_blockPG_2_15/U2)
+      (DELAY
+	(ABSOLUTE
+	(COND (B1==1'b0)&&(B2==1'b0) (IOPATH A ZN  (0.028::0.038) (0.010::0.011)))
+	(COND (B1==1'b0)&&(B2==1'b1) (IOPATH A ZN  (0.028::0.038) (0.010::0.011)))
+	(COND (B1==1'b1)&&(B2==1'b0) (IOPATH A ZN  (0.028::0.038) (0.010::0.011)))
+	(IOPATH B1 ZN  (0.024::0.025) (0.013::0.013))
+	(IOPATH B2 ZN  (0.030::0.030) (0.015::0.015))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_blockPG_2_15/U3)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.032::0.033) (0.028::0.028))
+	(IOPATH A2 ZN  (0.035::0.035) (0.032::0.032))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "INV_X1")
+    (INSTANCE  carrygen/m_blockPG_2_19/U1)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A ZN  (0.015::0.015) (0.011::0.012))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AOI21_X1")
+    (INSTANCE  carrygen/m_blockPG_2_19/U2)
+      (DELAY
+	(ABSOLUTE
+	(COND (B1==1'b0)&&(B2==1'b0) (IOPATH A ZN  (0.027::0.038) (0.010::0.011)))
+	(COND (B1==1'b0)&&(B2==1'b1) (IOPATH A ZN  (0.027::0.038) (0.010::0.011)))
+	(COND (B1==1'b1)&&(B2==1'b0) (IOPATH A ZN  (0.027::0.038) (0.010::0.011)))
+	(IOPATH B1 ZN  (0.024::0.024) (0.012::0.013))
+	(IOPATH B2 ZN  (0.029::0.029) (0.015::0.015))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_blockPG_2_19/U3)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.032::0.032) (0.028::0.028))
+	(IOPATH A2 ZN  (0.034::0.034) (0.031::0.031))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "INV_X1")
+    (INSTANCE  carrygen/m_blockPG_2_23/U1)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A ZN  (0.011::0.011) (0.008::0.009))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AOI21_X1")
+    (INSTANCE  carrygen/m_blockPG_2_23/U2)
+      (DELAY
+	(ABSOLUTE
+	(COND (B1==1'b0)&&(B2==1'b0) (IOPATH A ZN  (0.027::0.038) (0.010::0.011)))
+	(COND (B1==1'b0)&&(B2==1'b1) (IOPATH A ZN  (0.027::0.038) (0.010::0.011)))
+	(COND (B1==1'b1)&&(B2==1'b0) (IOPATH A ZN  (0.027::0.038) (0.010::0.011)))
+	(IOPATH B1 ZN  (0.024::0.024) (0.012::0.013))
+	(IOPATH B2 ZN  (0.030::0.030) (0.015::0.015))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_blockPG_2_23/U3)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.032::0.032) (0.028::0.028))
+	(IOPATH A2 ZN  (0.035::0.035) (0.031::0.031))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "INV_X1")
+    (INSTANCE  carrygen/m_blockPG_2_27/U1)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A ZN  (0.015::0.016) (0.012::0.013))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AOI21_X1")
+    (INSTANCE  carrygen/m_blockPG_2_27/U2)
+      (DELAY
+	(ABSOLUTE
+	(COND (B1==1'b0)&&(B2==1'b0) (IOPATH A ZN  (0.027::0.037) (0.010::0.011)))
+	(COND (B1==1'b0)&&(B2==1'b1) (IOPATH A ZN  (0.027::0.037) (0.010::0.011)))
+	(COND (B1==1'b1)&&(B2==1'b0) (IOPATH A ZN  (0.027::0.037) (0.010::0.011)))
+	(IOPATH B1 ZN  (0.024::0.024) (0.012::0.013))
+	(IOPATH B2 ZN  (0.029::0.029) (0.015::0.015))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_blockPG_2_27/U3)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.035::0.035) (0.030::0.030))
+	(IOPATH A2 ZN  (0.037::0.037) (0.033::0.033))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AOI21_X1")
+    (INSTANCE  carrygen/m_blockPG_2_31/U1)
+      (DELAY
+	(ABSOLUTE
+	(COND (B1==1'b0)&&(B2==1'b0) (IOPATH A ZN  (0.027::0.038) (0.010::0.011)))
+	(COND (B1==1'b0)&&(B2==1'b1) (IOPATH A ZN  (0.027::0.038) (0.010::0.011)))
+	(COND (B1==1'b1)&&(B2==1'b0) (IOPATH A ZN  (0.027::0.038) (0.010::0.011)))
+	(IOPATH B1 ZN  (0.024::0.024) (0.012::0.013))
+	(IOPATH B2 ZN  (0.030::0.030) (0.015::0.015))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "INV_X1")
+    (INSTANCE  carrygen/m_blockPG_2_31/U2)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A ZN  (0.011::0.011) (0.008::0.009))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m_blockPG_2_31/U3)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.032::0.033) (0.028::0.028))
+	(IOPATH A2 ZN  (0.035::0.035) (0.032::0.032))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "INV_X1")
+    (INSTANCE  carrygen/m1_blockG_3_7/U1)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A ZN  (0.015::0.016) (0.012::0.013))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AOI21_X1")
+    (INSTANCE  carrygen/m1_blockG_3_7/U2)
+      (DELAY
+	(ABSOLUTE
+	(COND (B1==1'b0)&&(B2==1'b0) (IOPATH A ZN  (0.029::0.040) (0.010::0.012)))
+	(COND (B1==1'b0)&&(B2==1'b1) (IOPATH A ZN  (0.029::0.040) (0.010::0.012)))
+	(COND (B1==1'b1)&&(B2==1'b0) (IOPATH A ZN  (0.029::0.040) (0.010::0.012)))
+	(IOPATH B1 ZN  (0.026::0.026) (0.014::0.014))
+	(IOPATH B2 ZN  (0.031::0.031) (0.014::0.014))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m1_blockPG_3_15/U1)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.031::0.031) (0.027::0.027))
+	(IOPATH A2 ZN  (0.031::0.031) (0.029::0.029))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "INV_X1")
+    (INSTANCE  carrygen/m1_blockPG_3_15/U2)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A ZN  (0.010::0.011) (0.008::0.009))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AOI21_X1")
+    (INSTANCE  carrygen/m1_blockPG_3_15/U3)
+      (DELAY
+	(ABSOLUTE
+	(COND (B1==1'b0)&&(B2==1'b0) (IOPATH A ZN  (0.027::0.038) (0.010::0.011)))
+	(COND (B1==1'b0)&&(B2==1'b1) (IOPATH A ZN  (0.027::0.038) (0.010::0.011)))
+	(COND (B1==1'b1)&&(B2==1'b0) (IOPATH A ZN  (0.027::0.038) (0.010::0.011)))
+	(IOPATH B1 ZN  (0.024::0.025) (0.014::0.014))
+	(IOPATH B2 ZN  (0.029::0.029) (0.015::0.015))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "INV_X1")
+    (INSTANCE  carrygen/m1_blockPG_3_23/U1)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A ZN  (0.019::0.020) (0.014::0.016))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AOI21_X1")
+    (INSTANCE  carrygen/m1_blockPG_3_23/U2)
+      (DELAY
+	(ABSOLUTE
+	(COND (B1==1'b0)&&(B2==1'b0) (IOPATH A ZN  (0.028::0.038) (0.010::0.011)))
+	(COND (B1==1'b0)&&(B2==1'b1) (IOPATH A ZN  (0.028::0.038) (0.010::0.011)))
+	(COND (B1==1'b1)&&(B2==1'b0) (IOPATH A ZN  (0.028::0.038) (0.010::0.011)))
+	(IOPATH B1 ZN  (0.025::0.026) (0.014::0.014))
+	(IOPATH B2 ZN  (0.030::0.030) (0.015::0.015))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m1_blockPG_3_23/U3)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.036::0.036) (0.031::0.031))
+	(IOPATH A2 ZN  (0.037::0.037) (0.033::0.033))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "INV_X1")
+    (INSTANCE  carrygen/m1_blockPG_3_31/U1)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A ZN  (0.011::0.012) (0.008::0.009))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AOI21_X1")
+    (INSTANCE  carrygen/m1_blockPG_3_31/U2)
+      (DELAY
+	(ABSOLUTE
+	(COND (B1==1'b0)&&(B2==1'b0) (IOPATH A ZN  (0.028::0.038) (0.010::0.011)))
+	(COND (B1==1'b0)&&(B2==1'b1) (IOPATH A ZN  (0.028::0.038) (0.010::0.011)))
+	(COND (B1==1'b1)&&(B2==1'b0) (IOPATH A ZN  (0.028::0.038) (0.010::0.011)))
+	(IOPATH B1 ZN  (0.025::0.025) (0.014::0.014))
+	(IOPATH B2 ZN  (0.030::0.030) (0.015::0.015))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m1_blockPG_3_31/U3)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.034::0.034) (0.029::0.029))
+	(IOPATH A2 ZN  (0.034::0.034) (0.031::0.031))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "INV_X1")
+    (INSTANCE  carrygen/m1_blockG_4_11/U1)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A ZN  (0.007::0.007) (0.005::0.005))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AOI21_X1")
+    (INSTANCE  carrygen/m1_blockG_4_11/U2)
+      (DELAY
+	(ABSOLUTE
+	(COND (B1==1'b0)&&(B2==1'b0) (IOPATH A ZN  (0.028::0.038) (0.011::0.012)))
+	(COND (B1==1'b0)&&(B2==1'b1) (IOPATH A ZN  (0.028::0.038) (0.011::0.012)))
+	(COND (B1==1'b1)&&(B2==1'b0) (IOPATH A ZN  (0.028::0.038) (0.011::0.012)))
+	(IOPATH B1 ZN  (0.024::0.024) (0.014::0.014))
+	(IOPATH B2 ZN  (0.029::0.030) (0.015::0.015))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "INV_X1")
+    (INSTANCE  carrygen/m1_blockG_4_15/U1)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A ZN  (0.023::0.024) (0.016::0.018))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AOI21_X1")
+    (INSTANCE  carrygen/m1_blockG_4_15/U2)
+      (DELAY
+	(ABSOLUTE
+	(COND (B1==1'b0)&&(B2==1'b0) (IOPATH A ZN  (0.027::0.038) (0.009::0.011)))
+	(COND (B1==1'b0)&&(B2==1'b1) (IOPATH A ZN  (0.027::0.038) (0.009::0.011)))
+	(COND (B1==1'b1)&&(B2==1'b0) (IOPATH A ZN  (0.027::0.038) (0.009::0.011)))
+	(IOPATH B1 ZN  (0.024::0.024) (0.013::0.013))
+	(IOPATH B2 ZN  (0.030::0.030) (0.014::0.015))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AOI21_X1")
+    (INSTANCE  carrygen/m1_blockPG_4_27/U1)
+      (DELAY
+	(ABSOLUTE
+	(COND (B1==1'b0)&&(B2==1'b0) (IOPATH A ZN  (0.028::0.038) (0.011::0.013)))
+	(COND (B1==1'b0)&&(B2==1'b1) (IOPATH A ZN  (0.028::0.038) (0.011::0.013)))
+	(COND (B1==1'b1)&&(B2==1'b0) (IOPATH A ZN  (0.028::0.038) (0.011::0.013)))
+	(IOPATH B1 ZN  (0.025::0.025) (0.015::0.015))
+	(IOPATH B2 ZN  (0.029::0.030) (0.015::0.015))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "INV_X1")
+    (INSTANCE  carrygen/m1_blockPG_4_27/U2)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A ZN  (0.011::0.012) (0.008::0.009))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m1_blockPG_4_27/U3)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.031::0.031) (0.027::0.027))
+	(IOPATH A2 ZN  (0.032::0.032) (0.030::0.030))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AND2_X1")
+    (INSTANCE  carrygen/m1_blockPG_4_31/U1)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 ZN  (0.031::0.031) (0.027::0.027))
+	(IOPATH A2 ZN  (0.031::0.031) (0.029::0.029))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "INV_X1")
+    (INSTANCE  carrygen/m1_blockPG_4_31/U2)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A ZN  (0.011::0.012) (0.008::0.009))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AOI21_X1")
+    (INSTANCE  carrygen/m1_blockPG_4_31/U3)
+      (DELAY
+	(ABSOLUTE
+	(COND (B1==1'b0)&&(B2==1'b0) (IOPATH A ZN  (0.027::0.037) (0.010::0.011)))
+	(COND (B1==1'b0)&&(B2==1'b1) (IOPATH A ZN  (0.027::0.037) (0.010::0.011)))
+	(COND (B1==1'b1)&&(B2==1'b0) (IOPATH A ZN  (0.027::0.037) (0.010::0.011)))
+	(IOPATH B1 ZN  (0.025::0.025) (0.015::0.015))
+	(IOPATH B2 ZN  (0.029::0.029) (0.015::0.015))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "INV_X1")
+    (INSTANCE  carrygen/m1_blockG_5_19/U1)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A ZN  (0.007::0.007) (0.005::0.005))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AOI21_X1")
+    (INSTANCE  carrygen/m1_blockG_5_19/U2)
+      (DELAY
+	(ABSOLUTE
+	(COND (B1==1'b0)&&(B2==1'b0) (IOPATH A ZN  (0.028::0.038) (0.011::0.012)))
+	(COND (B1==1'b0)&&(B2==1'b1) (IOPATH A ZN  (0.028::0.038) (0.011::0.012)))
+	(COND (B1==1'b1)&&(B2==1'b0) (IOPATH A ZN  (0.028::0.038) (0.011::0.012)))
+	(IOPATH B1 ZN  (0.024::0.024) (0.014::0.014))
+	(IOPATH B2 ZN  (0.030::0.031) (0.017::0.017))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "INV_X1")
+    (INSTANCE  carrygen/m1_blockG_5_23/U1)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A ZN  (0.007::0.008) (0.005::0.005))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AOI21_X1")
+    (INSTANCE  carrygen/m1_blockG_5_23/U2)
+      (DELAY
+	(ABSOLUTE
+	(COND (B1==1'b0)&&(B2==1'b0) (IOPATH A ZN  (0.029::0.039) (0.013::0.014)))
+	(COND (B1==1'b0)&&(B2==1'b1) (IOPATH A ZN  (0.029::0.039) (0.013::0.014)))
+	(COND (B1==1'b1)&&(B2==1'b0) (IOPATH A ZN  (0.029::0.039) (0.013::0.014)))
+	(IOPATH B1 ZN  (0.025::0.025) (0.015::0.015))
+	(IOPATH B2 ZN  (0.030::0.031) (0.017::0.017))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "INV_X1")
+    (INSTANCE  carrygen/m1_blockG_5_27/U1)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A ZN  (0.007::0.007) (0.005::0.005))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AOI21_X1")
+    (INSTANCE  carrygen/m1_blockG_5_27/U2)
+      (DELAY
+	(ABSOLUTE
+	(COND (B1==1'b0)&&(B2==1'b0) (IOPATH A ZN  (0.027::0.038) (0.010::0.011)))
+	(COND (B1==1'b0)&&(B2==1'b1) (IOPATH A ZN  (0.027::0.038) (0.010::0.011)))
+	(COND (B1==1'b1)&&(B2==1'b0) (IOPATH A ZN  (0.027::0.038) (0.010::0.011)))
+	(IOPATH B1 ZN  (0.024::0.024) (0.013::0.013))
+	(IOPATH B2 ZN  (0.030::0.031) (0.017::0.017))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "INV_X1")
+    (INSTANCE  carrygen/m1_blockG_5_31/U1)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A ZN  (0.010::0.011) (0.008::0.008))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AOI21_X1")
+    (INSTANCE  carrygen/m1_blockG_5_31/U2)
+      (DELAY
+	(ABSOLUTE
+	(COND (B1==1'b0)&&(B2==1'b0) (IOPATH A ZN  (0.027::0.037) (0.010::0.011)))
+	(COND (B1==1'b0)&&(B2==1'b1) (IOPATH A ZN  (0.027::0.037) (0.010::0.011)))
+	(COND (B1==1'b1)&&(B2==1'b0) (IOPATH A ZN  (0.027::0.037) (0.010::0.011)))
+	(IOPATH B1 ZN  (0.024::0.024) (0.013::0.013))
+	(IOPATH B2 ZN  (0.030::0.031) (0.017::0.017))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  U1)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.034::0.035) (0.016::0.017)))
+	(COND (B==1'b0) (IOPATH A Z  (0.054::0.055) (0.052::0.052)))
+	(COND (A==1'b1) (IOPATH B Z  (0.037::0.038) (0.015::0.015)))
+	(COND (A==1'b0) (IOPATH B Z  (0.049::0.050) (0.055::0.055)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  U2)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.033::0.034) (0.016::0.016)))
+	(COND (B==1'b0) (IOPATH A Z  (0.054::0.055) (0.052::0.052)))
+	(COND (A==1'b1) (IOPATH B Z  (0.036::0.037) (0.015::0.015)))
+	(COND (A==1'b0) (IOPATH B Z  (0.049::0.050) (0.055::0.055)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  U3)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.033::0.034) (0.016::0.016)))
+	(COND (B==1'b0) (IOPATH A Z  (0.054::0.055) (0.052::0.052)))
+	(COND (A==1'b1) (IOPATH B Z  (0.036::0.037) (0.015::0.015)))
+	(COND (A==1'b0) (IOPATH B Z  (0.049::0.050) (0.055::0.055)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  U4)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.033::0.034) (0.015::0.016)))
+	(COND (B==1'b0) (IOPATH A Z  (0.053::0.054) (0.051::0.052)))
+	(COND (A==1'b1) (IOPATH B Z  (0.036::0.037) (0.015::0.015)))
+	(COND (A==1'b0) (IOPATH B Z  (0.048::0.049) (0.054::0.055)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  U5)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.034::0.035) (0.016::0.016)))
+	(COND (B==1'b0) (IOPATH A Z  (0.054::0.055) (0.052::0.052)))
+	(COND (A==1'b1) (IOPATH B Z  (0.037::0.038) (0.015::0.016)))
+	(COND (A==1'b0) (IOPATH B Z  (0.049::0.050) (0.055::0.055)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  U6)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.032::0.034) (0.015::0.016)))
+	(COND (B==1'b0) (IOPATH A Z  (0.053::0.054) (0.051::0.052)))
+	(COND (A==1'b1) (IOPATH B Z  (0.036::0.037) (0.015::0.015)))
+	(COND (A==1'b0) (IOPATH B Z  (0.048::0.049) (0.054::0.055)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  U7)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.033::0.034) (0.015::0.016)))
+	(COND (B==1'b0) (IOPATH A Z  (0.053::0.054) (0.051::0.052)))
+	(COND (A==1'b1) (IOPATH B Z  (0.036::0.037) (0.015::0.015)))
+	(COND (A==1'b0) (IOPATH B Z  (0.049::0.050) (0.055::0.055)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  U8)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.032::0.033) (0.014::0.015)))
+	(COND (B==1'b0) (IOPATH A Z  (0.052::0.053) (0.051::0.051)))
+	(COND (A==1'b1) (IOPATH B Z  (0.036::0.037) (0.015::0.015)))
+	(COND (A==1'b0) (IOPATH B Z  (0.049::0.050) (0.055::0.055)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  U9)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.032::0.033) (0.014::0.015)))
+	(COND (B==1'b0) (IOPATH A Z  (0.052::0.053) (0.050::0.051)))
+	(COND (A==1'b1) (IOPATH B Z  (0.036::0.037) (0.015::0.015)))
+	(COND (A==1'b0) (IOPATH B Z  (0.049::0.049) (0.055::0.055)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  U10)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.033::0.034) (0.015::0.016)))
+	(COND (B==1'b0) (IOPATH A Z  (0.053::0.054) (0.051::0.052)))
+	(COND (A==1'b1) (IOPATH B Z  (0.037::0.038) (0.015::0.015)))
+	(COND (A==1'b0) (IOPATH B Z  (0.049::0.050) (0.055::0.055)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  U11)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.031::0.032) (0.014::0.014)))
+	(COND (B==1'b0) (IOPATH A Z  (0.051::0.052) (0.050::0.050)))
+	(COND (A==1'b1) (IOPATH B Z  (0.036::0.037) (0.015::0.015)))
+	(COND (A==1'b0) (IOPATH B Z  (0.048::0.049) (0.054::0.055)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  U12)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.032::0.033) (0.014::0.014)))
+	(COND (B==1'b0) (IOPATH A Z  (0.052::0.053) (0.050::0.051)))
+	(COND (A==1'b1) (IOPATH B Z  (0.036::0.038) (0.015::0.015)))
+	(COND (A==1'b0) (IOPATH B Z  (0.049::0.050) (0.055::0.055)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  U13)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.033::0.034) (0.016::0.016)))
+	(COND (B==1'b0) (IOPATH A Z  (0.053::0.054) (0.052::0.052)))
+	(COND (A==1'b1) (IOPATH B Z  (0.036::0.037) (0.015::0.015)))
+	(COND (A==1'b0) (IOPATH B Z  (0.049::0.049) (0.055::0.055)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  U14)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.033::0.034) (0.016::0.016)))
+	(COND (B==1'b0) (IOPATH A Z  (0.054::0.055) (0.052::0.052)))
+	(COND (A==1'b1) (IOPATH B Z  (0.036::0.037) (0.015::0.015)))
+	(COND (A==1'b0) (IOPATH B Z  (0.049::0.050) (0.055::0.055)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  U15)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.032::0.034) (0.015::0.015)))
+	(COND (B==1'b0) (IOPATH A Z  (0.052::0.054) (0.051::0.051)))
+	(COND (A==1'b1) (IOPATH B Z  (0.036::0.037) (0.015::0.015)))
+	(COND (A==1'b0) (IOPATH B Z  (0.049::0.050) (0.055::0.055)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  U16)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.032::0.033) (0.015::0.015)))
+	(COND (B==1'b0) (IOPATH A Z  (0.052::0.054) (0.051::0.051)))
+	(COND (A==1'b1) (IOPATH B Z  (0.036::0.037) (0.015::0.015)))
+	(COND (A==1'b0) (IOPATH B Z  (0.049::0.049) (0.055::0.055)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  U17)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.033::0.034) (0.016::0.016)))
+	(COND (B==1'b0) (IOPATH A Z  (0.053::0.055) (0.052::0.052)))
+	(COND (A==1'b1) (IOPATH B Z  (0.036::0.037) (0.015::0.015)))
+	(COND (A==1'b0) (IOPATH B Z  (0.048::0.049) (0.055::0.055)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  U18)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.034::0.035) (0.016::0.017)))
+	(COND (B==1'b0) (IOPATH A Z  (0.054::0.055) (0.052::0.052)))
+	(COND (A==1'b1) (IOPATH B Z  (0.036::0.037) (0.015::0.015)))
+	(COND (A==1'b0) (IOPATH B Z  (0.049::0.050) (0.055::0.055)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  U19)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.032::0.033) (0.014::0.014)))
+	(COND (B==1'b0) (IOPATH A Z  (0.052::0.053) (0.051::0.051)))
+	(COND (A==1'b1) (IOPATH B Z  (0.037::0.038) (0.015::0.015)))
+	(COND (A==1'b0) (IOPATH B Z  (0.049::0.050) (0.055::0.055)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  U20)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.032::0.033) (0.014::0.014)))
+	(COND (B==1'b0) (IOPATH A Z  (0.052::0.053) (0.050::0.051)))
+	(COND (A==1'b1) (IOPATH B Z  (0.037::0.038) (0.015::0.015)))
+	(COND (A==1'b0) (IOPATH B Z  (0.049::0.050) (0.055::0.055)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  U21)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.032::0.032) (0.014::0.014)))
+	(COND (B==1'b0) (IOPATH A Z  (0.052::0.052) (0.050::0.051)))
+	(COND (A==1'b1) (IOPATH B Z  (0.036::0.037) (0.015::0.015)))
+	(COND (A==1'b0) (IOPATH B Z  (0.048::0.049) (0.054::0.055)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  U22)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.033::0.034) (0.016::0.017)))
+	(COND (B==1'b0) (IOPATH A Z  (0.054::0.055) (0.052::0.052)))
+	(COND (A==1'b1) (IOPATH B Z  (0.036::0.037) (0.015::0.015)))
+	(COND (A==1'b0) (IOPATH B Z  (0.049::0.049) (0.055::0.055)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  U23)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.034::0.036) (0.016::0.017)))
+	(COND (B==1'b0) (IOPATH A Z  (0.054::0.056) (0.052::0.053)))
+	(COND (A==1'b1) (IOPATH B Z  (0.037::0.038) (0.015::0.016)))
+	(COND (A==1'b0) (IOPATH B Z  (0.050::0.051) (0.055::0.055)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  U24)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.034::0.035) (0.016::0.017)))
+	(COND (B==1'b0) (IOPATH A Z  (0.054::0.055) (0.052::0.052)))
+	(COND (A==1'b1) (IOPATH B Z  (0.037::0.038) (0.015::0.015)))
+	(COND (A==1'b0) (IOPATH B Z  (0.049::0.050) (0.055::0.055)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  U25)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.034::0.035) (0.016::0.017)))
+	(COND (B==1'b0) (IOPATH A Z  (0.054::0.055) (0.052::0.052)))
+	(COND (A==1'b1) (IOPATH B Z  (0.037::0.038) (0.015::0.015)))
+	(COND (A==1'b0) (IOPATH B Z  (0.049::0.050) (0.055::0.055)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  U26)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.034::0.035) (0.016::0.017)))
+	(COND (B==1'b0) (IOPATH A Z  (0.054::0.055) (0.052::0.052)))
+	(COND (A==1'b1) (IOPATH B Z  (0.036::0.037) (0.015::0.015)))
+	(COND (A==1'b0) (IOPATH B Z  (0.049::0.050) (0.055::0.055)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  U27)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.033::0.035) (0.016::0.017)))
+	(COND (B==1'b0) (IOPATH A Z  (0.054::0.055) (0.052::0.052)))
+	(COND (A==1'b1) (IOPATH B Z  (0.036::0.037) (0.015::0.015)))
+	(COND (A==1'b0) (IOPATH B Z  (0.049::0.050) (0.055::0.055)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  U28)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.034::0.035) (0.016::0.017)))
+	(COND (B==1'b0) (IOPATH A Z  (0.054::0.056) (0.052::0.052)))
+	(COND (A==1'b1) (IOPATH B Z  (0.037::0.038) (0.015::0.016)))
+	(COND (A==1'b0) (IOPATH B Z  (0.049::0.050) (0.055::0.055)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  U29)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.034::0.035) (0.016::0.017)))
+	(COND (B==1'b0) (IOPATH A Z  (0.054::0.055) (0.052::0.052)))
+	(COND (A==1'b1) (IOPATH B Z  (0.036::0.038) (0.015::0.015)))
+	(COND (A==1'b0) (IOPATH B Z  (0.049::0.050) (0.055::0.055)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  U30)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.033::0.034) (0.016::0.016)))
+	(COND (B==1'b0) (IOPATH A Z  (0.053::0.055) (0.052::0.052)))
+	(COND (A==1'b1) (IOPATH B Z  (0.036::0.037) (0.015::0.015)))
+	(COND (A==1'b0) (IOPATH B Z  (0.048::0.049) (0.055::0.055)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  U31)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.033::0.034) (0.016::0.016)))
+	(COND (B==1'b0) (IOPATH A Z  (0.053::0.055) (0.052::0.052)))
+	(COND (A==1'b1) (IOPATH B Z  (0.036::0.037) (0.015::0.015)))
+	(COND (A==1'b0) (IOPATH B Z  (0.049::0.049) (0.055::0.055)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2_X1")
+    (INSTANCE  U32)
+      (DELAY
+	(ABSOLUTE
+	(COND (B==1'b1) (IOPATH A Z  (0.033::0.033) (0.014::0.014)))
+	(COND (B==1'b0) (IOPATH A Z  (0.053::0.053) (0.050::0.050)))
+	(COND (A==1'b1) (IOPATH B Z  (0.037::0.037) (0.015::0.015)))
+	(COND (A==1'b0) (IOPATH B Z  (0.049::0.049) (0.055::0.055)))
+	)
+      )
+  )
+)

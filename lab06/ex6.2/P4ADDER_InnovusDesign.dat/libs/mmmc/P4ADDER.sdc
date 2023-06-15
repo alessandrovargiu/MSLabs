@@ -1,0 +1,1 @@
+/home/ms23.51/Desktop/labs/LAB06AA/ex6.2/P4ADDER.sdc

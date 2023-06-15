@@ -1,0 +1,2 @@
+# Format: clock  timeReq  slackR/slackF  setupR/setupF  instName/pinName   # cycle(s)
+@(R)->@(R)	5.000    */4.657         */0.000         Cout    1

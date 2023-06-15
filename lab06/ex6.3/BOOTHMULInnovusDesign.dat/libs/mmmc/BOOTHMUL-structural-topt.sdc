@@ -1,0 +1,1 @@
+/home/ms23.51/Desktop/setupGio/lab6Gio/BOOTHMUL-structural-topt.sdc

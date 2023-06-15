@@ -1,0 +1,34 @@
+Gate area 0.7980 um^2
+Level 0 Module BOOTHMUL                                 Gates=     11360 Cells=    7585 Area=    9065.3 um^2
+Level 1 Module FinilizingNegativeSignal                 Gates=243        Cells=182      Area=     193.9 um^2
+Level 1 Module MUX0_0                                   Gates=367        Cells=268      Area=     292.9 um^2
+Level 1 Module MUXI_1                                   Gates=337        Cells=200      Area=     269.2 um^2
+Level 1 Module MUXI_2                                   Gates=301        Cells=193      Area=     240.7 um^2
+Level 1 Module MUXI_3                                   Gates=290        Cells=187      Area=     232.0 um^2
+Level 1 Module MUXI_4                                   Gates=307        Cells=190      Area=     245.3 um^2
+Level 1 Module MUXI_5                                   Gates=283        Cells=176      Area=     225.8 um^2
+Level 1 Module MUXI_6                                   Gates=278        Cells=172      Area=     222.4 um^2
+Level 1 Module MUXI_7                                   Gates=284        Cells=171      Area=     227.2 um^2
+Level 1 Module MUXI_8                                   Gates=274        Cells=167      Area=     218.7 um^2
+Level 1 Module MUXI_9                                   Gates=287        Cells=172      Area=     229.3 um^2
+Level 1 Module MUXI_10                                  Gates=278        Cells=168      Area=     222.1 um^2
+Level 1 Module MUXI_11                                  Gates=275        Cells=168      Area=     220.0 um^2
+Level 1 Module MUXI_12                                  Gates=273        Cells=169      Area=     217.9 um^2
+Level 1 Module MUXI_13                                  Gates=277        Cells=169      Area=     221.0 um^2
+Level 1 Module MUXI_14                                  Gates=280        Cells=165      Area=     223.7 um^2
+Level 1 Module MUXI_15                                  Gates=276        Cells=165      Area=     220.5 um^2
+Level 1 Module SUM0                                     Gates=406        Cells=263      Area=     324.3 um^2
+Level 1 Module SUMI_1                                   Gates=414        Cells=282      Area=     330.9 um^2
+Level 1 Module SUMI_2                                   Gates=413        Cells=287      Area=     329.8 um^2
+Level 1 Module SUMI_3                                   Gates=417        Cells=296      Area=     332.8 um^2
+Level 1 Module SUMI_4                                   Gates=419        Cells=300      Area=     334.6 um^2
+Level 1 Module SUMI_5                                   Gates=421        Cells=298      Area=     336.0 um^2
+Level 1 Module SUMI_6                                   Gates=415        Cells=293      Area=     331.2 um^2
+Level 1 Module SUMI_7                                   Gates=418        Cells=295      Area=     333.6 um^2
+Level 1 Module SUMI_8                                   Gates=415        Cells=291      Area=     331.4 um^2
+Level 1 Module SUMI_9                                   Gates=413        Cells=288      Area=     329.6 um^2
+Level 1 Module SUMI_10                                  Gates=416        Cells=289      Area=     332.2 um^2
+Level 1 Module SUMI_11                                  Gates=421        Cells=290      Area=     336.5 um^2
+Level 1 Module SUMI_12                                  Gates=405        Cells=275      Area=     323.5 um^2
+Level 1 Module SUMI_13                                  Gates=393        Cells=257      Area=     313.6 um^2
+Level 1 Module SUMI_14                                  Gates=391        Cells=253      Area=     312.6 um^2
