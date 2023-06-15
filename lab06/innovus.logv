@@ -1,0 +1,217 @@
+[06/01 12:54:18      0s] 
+[06/01 12:54:18      0s] Cadence Innovus(TM) Implementation System.
+[06/01 12:54:18      0s] Copyright 2020 Cadence Design Systems, Inc. All rights reserved worldwide.
+[06/01 12:54:18      0s] 
+[06/01 12:54:18      0s] Version:	v20.11-s130_1, built Wed Aug 5 15:53:11 PDT 2020
+[06/01 12:54:18      0s] Options:	
+[06/01 12:54:18      0s] Date:		Thu Jun  1 12:54:18 2023
+[06/01 12:54:18      0s] Host:		localhost.localdomain (x86_64 w/Linux 3.10.0-957.5.1.el7.x86_64) (1core*12cpus*Intel Core i7 9xx (Nehalem Class Core i7) 4096KB)
+[06/01 12:54:18      0s] OS:		CentOS Linux release 7.6.1810 (Core) 
+[06/01 12:54:18      0s] 
+[06/01 12:54:18      0s] License:
+[06/01 12:54:18      0s] 		invs	Innovus Implementation System	20.1	checkout succeeded
+[06/01 12:54:18      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[06/01 12:55:04     39s] @(#)CDS: Innovus v20.11-s130_1 (64bit) 08/05/2020 15:53 (Linux 2.6.32-431.11.2.el6.x86_64)
+[06/01 12:55:04     39s] @(#)CDS: NanoRoute 20.11-s130_1 NR200802-2257/20_11-UB (database version 18.20.512) {superthreading v2.9}
+[06/01 12:55:04     39s] @(#)CDS: AAE 20.11-s008 (64bit) 08/05/2020 (Linux 2.6.32-431.11.2.el6.x86_64)
+[06/01 12:55:04     39s] @(#)CDS: CTE 20.11-s059_1 () Aug  2 2020 05:46:30 ( )
+[06/01 12:55:04     39s] @(#)CDS: SYNTECH 20.11-s028_1 () Aug  1 2020 06:14:27 ( )
+[06/01 12:55:04     39s] @(#)CDS: CPE v20.11-s013
+[06/01 12:55:04     39s] @(#)CDS: IQuantus/TQuantus 19.1.3-s260 (64bit) Thu May 28 10:57:28 PDT 2020 (Linux 2.6.32-431.11.2.el6.x86_64)
+[06/01 12:55:04     39s] @(#)CDS: OA 22.60-s011 Tue Jun 16 12:27:00 2020
+[06/01 12:55:04     39s] @(#)CDS: SGN 20.10-d001 (01-Jun-2020) (64 bit executable, Qt5.9.0)
+[06/01 12:55:04     39s] @(#)CDS: RCDB 11.15.0
+[06/01 12:55:04     39s] @(#)CDS: STYLUS 20.10-p011_1 (06/03/2020 04:47 PDT)
+[06/01 12:55:04     39s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_12334_localhost.localdomain_ms23.51_sTmyRO.
+
+[06/01 12:55:04     39s] Change the soft stacksize limit to 0.2%RAM (128 mbytes). Set global soft_stack_size_limit to change the value.
+[06/01 12:55:06     42s] 
+[06/01 12:55:06     42s] **INFO:  MMMC transition support version v31-84 
+[06/01 12:55:06     42s] 
+[06/01 12:55:06     42s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[06/01 12:55:06     42s] <CMD> suppressMessage ENCEXT-2799
+[06/01 12:55:07     42s] <CMD> win
+[06/01 12:57:16     71s] <CMD> set defHierChar /
+[06/01 12:57:16     71s] Set Default Input Pin Transition as 0.1 ps.
+[06/01 12:57:16     71s] <CMD> set delaycal_input_transition_delay 0.1ps
+[06/01 12:57:16     71s] <CMD> set fpIsMaxIoHeight 0
+[06/01 12:57:16     71s] <CMD> set init_gnd_net gnd
+[06/01 12:57:16     71s] <CMD> set init_mmmc_file Default.view
+[06/01 12:57:16     71s] <CMD> set init_oa_search_lib {}
+[06/01 12:57:16     71s] <CMD> set init_pwr_net vdd
+[06/01 12:57:16     71s] <CMD> set init_verilog sum.v
+[06/01 12:57:16     71s] <CMD> set init_lef_file /eda/dk/nangate45/lef/NangateOpenCellLibrary.lef
+[06/01 12:57:42     76s] <CMD> init_design
+[06/01 12:57:42     77s] #% Begin Load MMMC data ... (date=06/01 12:57:42, mem=626.8M)
+[06/01 12:57:42     77s] #% End Load MMMC data ... (date=06/01 12:57:42, total cpu=0:00:00.1, real=0:00:00.0, peak res=627.0M, current mem=627.0M)
+[06/01 12:57:42     77s] 
+[06/01 12:57:42     77s] Loading LEF file /eda/dk/nangate45/lef/NangateOpenCellLibrary.lef ...
+[06/01 12:57:42     77s] Set DBUPerIGU to M2 pitch 380.
+[06/01 12:57:42     77s] 
+[06/01 12:57:42     77s] viaInitial starts at Thu Jun  1 12:57:42 2023
+viaInitial ends at Thu Jun  1 12:57:42 2023
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+[06/01 12:57:42     77s] Loading view definition file from Default.view
+[06/01 12:57:42     77s] Reading libsTYP timing library '/eda/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib' ...
+[06/01 12:57:44     79s] **ERROR: (TECHLIB-1346):	The attribute 'index_1' defined in group 'ecsm_waveform' on line 393863 is not monotonically increasing for values '0.000041' to '0.000037'. This may lead to undesirable analysis results. The attribute will be ignored. (File /eda/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**ERROR: (TECHLIB-1256):	The ecsm_waveform group 1 is being ignored due to errors in this group. This group will be excluded for any further library checks. Refer to the previous messages issued for ecsm_waveform group 1 to find the details of the issues in this group. (File /eda/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib, Line 393862)
+**ERROR: (TECHLIB-420):	Number of ecsm_waveforms in the 'rise_transition' table on pin ZN of cell OAI222_X2 does not match the number of transition table axis points specified in the template 'Timing_7_7'. Ignoring waveform data. (File /eda/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib, Line 393848)
+**ERROR: (TECHLIB-1346):	The attribute 'index_1' defined in group 'ecsm_waveform' on line 395723 is not monotonically increasing for values '0.000041' to '0.000037'. This may lead to undesirable analysis results. The attribute will be ignored. (File /eda/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**ERROR: (TECHLIB-1256):	The ecsm_waveform group 1 is being ignored due to errors in this group. This group will be excluded for any further library checks. Refer to the previous messages issued for ecsm_waveform group 1 to find the details of the issues in this group. (File /eda/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib, Line 395722)
+**ERROR: (TECHLIB-420):	Number of ecsm_waveforms in the 'rise_transition' table on pin ZN of cell OAI222_X2 does not match the number of transition table axis points specified in the template 'Timing_7_7'. Ignoring waveform data. (File /eda/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib, Line 395708)
+Read 134 cells in library 'NangateOpenCellLibrary' 
+[06/01 12:57:45     80s] Ending "PreSetAnalysisView" (total cpu=0:00:03.1, real=0:00:03.0, peak res=719.1M, current mem=641.2M)
+[06/01 12:57:45     80s] *** End library_loading (cpu=0.05min, real=0.05min, mem=12.0M, fe_cpu=1.34min, fe_real=3.45min, fe_mem=832.1M) ***
+[06/01 12:57:45     80s] #% Begin Load netlist data ... (date=06/01 12:57:45, mem=641.2M)
+[06/01 12:57:45     80s] *** Begin netlist parsing (mem=832.1M) ***
+[06/01 12:57:45     80s] Created 134 new cells from 1 timing libraries.
+[06/01 12:57:45     80s] Reading netlist ...
+[06/01 12:57:45     80s] Backslashed names will retain backslash and a trailing blank character.
+[06/01 12:57:45     80s] Reading verilog netlist 'sum.v'
+[06/01 12:57:45     80s] 
+[06/01 12:57:45     80s] *** Memory Usage v#2 (Current mem = 832.090M, initial mem = 272.285M) ***
+[06/01 12:57:45     80s] *** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=832.1M) ***
+[06/01 12:57:45     80s] #% End Load netlist data ... (date=06/01 12:57:45, total cpu=0:00:00.1, real=0:00:00.0, peak res=646.1M, current mem=646.1M)
+[06/01 12:57:45     80s] Top level cell is SUM.
+[06/01 12:57:46     81s] Hooked 134 DB cells to tlib cells.
+[06/01 12:57:46     81s] Ending "BindLib:" (total cpu=0:00:00.1, real=0:00:00.0, peak res=652.7M, current mem=652.7M)
+[06/01 12:57:46     81s] Starting recursive module instantiation check.
+[06/01 12:57:46     81s] No recursion found.
+[06/01 12:57:46     81s] Building hierarchical netlist for Cell SUM ...
+[06/01 12:57:46     81s] *** Netlist is unique.
+[06/01 12:57:46     81s] Setting Std. cell height to 2800 DBU (smallest netlist inst).
+[06/01 12:57:46     81s] ** info: there are 264 modules.
+[06/01 12:57:46     81s] ** info: there are 1109 stdCell insts.
+[06/01 12:57:46     81s] 
+[06/01 12:57:46     81s] *** Memory Usage v#2 (Current mem = 875.516M, initial mem = 272.285M) ***
+[06/01 12:57:46     81s] Generated pitch 1.68 in metal10 is different from 1.6 defined in technology file in preferred direction.
+[06/01 12:57:46     81s] Generated pitch 0.84 in metal8 is different from 0.8 defined in technology file in preferred direction.
+[06/01 12:57:46     81s] Generated pitch 0.84 in metal7 is different from 0.8 defined in technology file in preferred direction.
+[06/01 12:57:46     81s] Set Default Net Delay as 1000 ps.
+[06/01 12:57:46     81s] Set Default Net Load as 0.5 pF. 
+[06/01 12:57:46     81s] Set Default Input Pin Transition as 0.1 ps.
+[06/01 12:57:47     81s] Extraction setup Started 
+[06/01 12:57:47     81s] Initializing multi-corner RC extraction with 1 active RC Corners ...
+[06/01 12:57:47     81s] Reading Capacitance Table File /eda/dk/nangate45/lef/captables/NCSU_FreePDK_45nm.capTbl ...
+[06/01 12:57:47     81s] Cap table was created using Encounter 08.10-p004_1.
+[06/01 12:57:47     81s] Process name: master_techFreePDK45.
+[06/01 12:57:47     81s] Importing multi-corner RC tables ... 
+[06/01 12:57:47     81s] Summary of Active RC-Corners : 
+[06/01 12:57:47     81s]  
+[06/01 12:57:47     81s]  Analysis View: default
+[06/01 12:57:47     81s]     RC-Corner Name        : standard
+[06/01 12:57:47     81s]     RC-Corner Index       : 0
+[06/01 12:57:47     81s]     RC-Corner Temperature : 300 Celsius
+[06/01 12:57:47     81s]     RC-Corner Cap Table   : '/eda/dk/nangate45/lef/captables/NCSU_FreePDK_45nm.capTbl'
+[06/01 12:57:47     81s]     RC-Corner PreRoute Res Factor         : 1
+[06/01 12:57:47     81s]     RC-Corner PreRoute Cap Factor         : 1
+[06/01 12:57:47     81s]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[06/01 12:57:47     81s]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[06/01 12:57:47     81s]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[06/01 12:57:47     81s]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[06/01 12:57:47     81s]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[06/01 12:57:47     81s]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[06/01 12:57:47     81s]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[06/01 12:57:47     81s] LayerId::1 widthSet size::4
+[06/01 12:57:47     81s] LayerId::2 widthSet size::4
+[06/01 12:57:47     81s] LayerId::3 widthSet size::4
+[06/01 12:57:47     81s] LayerId::4 widthSet size::4
+[06/01 12:57:47     81s] LayerId::5 widthSet size::4
+[06/01 12:57:47     81s] LayerId::6 widthSet size::4
+[06/01 12:57:47     81s] LayerId::7 widthSet size::4
+[06/01 12:57:47     81s] LayerId::8 widthSet size::4
+[06/01 12:57:47     81s] LayerId::9 widthSet size::4
+[06/01 12:57:47     81s] LayerId::10 widthSet size::3
+[06/01 12:57:47     81s] Updating RC grid for preRoute extraction ...
+[06/01 12:57:47     81s] Initializing multi-corner capacitance tables ... 
+[06/01 12:57:47     81s] Initializing multi-corner resistance tables ...
+[06/01 12:57:47     81s] **Info: Trial Route has Max Route Layer 15/10.
+[06/01 12:57:47     81s] {RT standard 0 10 10 {4 1} {7 0} {9 0} 3}
+[06/01 12:57:47     81s] Preroute length aware model : LLS: 2-3 ; HLS: 3-5 ; rDens: 0.000000 ; uaWl: 0.000000 ; uaWlH: 0.000000 ; aWlH: 0.000000 ; Pmax: 0.850000 ; wcR: 0.000000 ; newSi: 0.000000 ; pMod: 82 ; 
+[06/01 12:57:47     81s] *Info: initialize multi-corner CTS.
+[06/01 12:57:47     81s] Ending "SetAnalysisView" (total cpu=0:00:00.1, real=0:00:00.0, peak res=876.4M, current mem=674.0M)
+[06/01 12:57:47     82s] Reading timing constraints file 'SUM.sdc' ...
+[06/01 12:57:47     82s] Current (total cpu=0:01:22, real=0:03:29, peak res=876.4M, current mem=876.1M)
+[06/01 12:57:47     82s] INFO (CTE): Constraints read successfully.
+[06/01 12:57:47     82s] Ending "Constraint file reading stats" (total cpu=0:00:00.2, real=0:00:00.0, peak res=908.4M, current mem=908.4M)
+[06/01 12:57:48     82s] Current (total cpu=0:01:22, real=0:03:30, peak res=908.4M, current mem=908.4M)
+[06/01 12:57:48     82s] Tech dependent Parameter, Build TLibAnalyzer for: cellAreaConsiderPadding
+[06/01 12:57:48     82s] Creating Cell Server ...(0, 1, 1, 1)
+[06/01 12:57:48     82s] Summary for sequential cells identification: 
+[06/01 12:57:48     82s]   Identified SBFF number: 16
+[06/01 12:57:48     82s]   Identified MBFF number: 0
+[06/01 12:57:48     82s]   Identified SB Latch number: 0
+[06/01 12:57:48     82s]   Identified MB Latch number: 0
+[06/01 12:57:48     82s]   Not identified SBFF number: 0
+[06/01 12:57:48     82s]   Not identified MBFF number: 0
+[06/01 12:57:48     82s]   Not identified SB Latch number: 0
+[06/01 12:57:48     82s]   Not identified MB Latch number: 0
+[06/01 12:57:48     82s]   Number of sequential cells which are not FFs: 13
+[06/01 12:57:48     82s] Total number of combinational cells: 99
+[06/01 12:57:48     82s] Total number of sequential cells: 29
+[06/01 12:57:48     82s] Total number of tristate cells: 6
+[06/01 12:57:48     82s] Total number of level shifter cells: 0
+[06/01 12:57:48     82s] Total number of power gating cells: 0
+[06/01 12:57:48     82s] Total number of isolation cells: 0
+[06/01 12:57:48     82s] Total number of power switch cells: 0
+[06/01 12:57:48     82s] Total number of pulse generator cells: 0
+[06/01 12:57:48     82s] Total number of always on buffers: 0
+[06/01 12:57:48     82s] Total number of retention cells: 0
+[06/01 12:57:48     82s] List of usable buffers: BUF_X1 BUF_X2 BUF_X4 BUF_X8 BUF_X16 BUF_X32 CLKBUF_X1 CLKBUF_X2 CLKBUF_X3
+[06/01 12:57:48     82s] Total number of usable buffers: 9
+[06/01 12:57:48     82s] List of unusable buffers:
+[06/01 12:57:48     82s] Total number of unusable buffers: 0
+[06/01 12:57:48     82s] List of usable inverters: INV_X1 INV_X2 INV_X4 INV_X8 INV_X16 INV_X32
+[06/01 12:57:48     82s] Total number of usable inverters: 6
+[06/01 12:57:48     82s] List of unusable inverters:
+[06/01 12:57:48     82s] Total number of unusable inverters: 0
+[06/01 12:57:48     82s] List of identified usable delay cells:
+[06/01 12:57:48     82s] Total number of identified usable delay cells: 0
+[06/01 12:57:48     82s] List of identified unusable delay cells:
+[06/01 12:57:48     82s] Total number of identified unusable delay cells: 0
+[06/01 12:57:48     82s] Creating Cell Server, finished. 
+[06/01 12:57:48     82s] 
+[06/01 12:57:48     82s] No delay cells were detected in the set of buffers. Buffers will be used to fix hold violations.
+[06/01 12:57:48     82s] Deleting Cell Server ...
+[06/01 12:57:48     82s] Ending "Cell type marking" (total cpu=0:00:00.0, real=0:00:00.0, peak res=918.2M, current mem=918.2M)
+[06/01 12:57:48     82s] Creating Cell Server ...(0, 0, 0, 0)
+[06/01 12:57:48     82s] Summary for sequential cells identification: 
+[06/01 12:57:48     82s]   Identified SBFF number: 16
+[06/01 12:57:48     82s]   Identified MBFF number: 0
+[06/01 12:57:48     82s]   Identified SB Latch number: 0
+[06/01 12:57:48     82s]   Identified MB Latch number: 0
+[06/01 12:57:48     82s]   Not identified SBFF number: 0
+[06/01 12:57:48     82s]   Not identified MBFF number: 0
+[06/01 12:57:48     82s]   Not identified SB Latch number: 0
+[06/01 12:57:48     82s]   Not identified MB Latch number: 0
+[06/01 12:57:48     82s]   Number of sequential cells which are not FFs: 13
+[06/01 12:57:48     82s]  Visiting view : default
+[06/01 12:57:48     82s]    : PowerDomain = none : Weighted F : unweighted  = 10.10 (1.000) with rcCorner = 0
+[06/01 12:57:48     82s]    : PowerDomain = none : Weighted F : unweighted  = 7.80 (1.000) with rcCorner = -1
+[06/01 12:57:48     82s]  Visiting view : default
+[06/01 12:57:48     82s]    : PowerDomain = none : Weighted F : unweighted  = 10.10 (1.000) with rcCorner = 0
+[06/01 12:57:48     82s]    : PowerDomain = none : Weighted F : unweighted  = 7.80 (1.000) with rcCorner = -1
+[06/01 12:57:48     82s]  Setting StdDelay to 10.10
+[06/01 12:57:48     82s] Creating Cell Server, finished. 
+[06/01 12:57:48     82s] 
+[06/01 12:57:48     82s] 
+[06/01 12:57:48     82s] *** Summary of all messages that are not suppressed in this session:
+[06/01 12:57:48     82s] Severity  ID               Count  Summary                                  
+[06/01 12:57:48     82s] ERROR     TECHLIB-420          2  Number of ecsm_waveforms in the '%s' tab...
+[06/01 12:57:48     82s] ERROR     TECHLIB-1256         2  The %s is being ignored due to errors in...
+[06/01 12:57:48     82s] ERROR     TECHLIB-1346         2  The attribute '%s' defined in group '%s'...
+[06/01 12:57:48     82s] *** Message Summary: 0 warning(s), 6 error(s)
+[06/01 12:57:48     82s] 
+[06/01 12:59:22    102s] <CMD> getIoFlowFlag
+[06/01 13:00:46    120s] <CMD> setIoFlowFlag 0
+[06/01 13:00:46    120s] <CMD> floorPlan -coreMarginsBy die -site FreePDK45_38x28_10R_NP_162NW_34O -r 1.0 0.6 5.0 5.0 5.0 5.0
+[06/01 13:00:46    120s] Generated pitch 1.68 in metal10 is different from 1.6 defined in technology file in preferred direction.
+[06/01 13:00:46    120s] Generated pitch 0.84 in metal8 is different from 0.8 defined in technology file in preferred direction.
+[06/01 13:00:46    120s] Generated pitch 0.84 in metal7 is different from 0.8 defined in technology file in preferred direction.
+[06/01 13:00:46    120s] **WARN: (IMPFP-325):	Floorplan of the design is resized. All current floorplan objects are automatically derived based on specified new floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
+[06/01 13:00:46    120s] <CMD> uiSetTool select
+[06/01 13:00:46    120s] <CMD> getIoFlowFlag
+[06/01 13:00:46    120s] <CMD> fit
