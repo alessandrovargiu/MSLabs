@@ -24,6 +24,8 @@ Exercises from the Microelectronic Systems course of Politecnico di Torino.
       - Hardwired version
       - FSM version
       - Microprogrammed version
- 
+- Lab05:
+    - Characterization of SPICE cells and comparison of their properties
+    - Characterization of a Flip-Flop
 
 
